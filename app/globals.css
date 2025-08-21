@@ -23,4 +23,179 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* === Custom fonts and tokens for Revive === */
+@font-face {
+  font-family: "Helvetica Light";
+  src: url("/Fonts/helvetica-light-587ebe5a59211.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Test element to verify font loading */
+.font-test {
+  font-family: "Helvetica Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+}
+@font-face {
+  font-family: "Isenheim";
+  src: url("/Fonts/Isenheim_Regulier.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tokens */
+:root {
+  --gold: #ffa600;
+  --muted: #595959;
+  --black: #000000;
+  --surface: #1e1e1e;
+  --nav-text: #ffffff;
+  --gold-texture: url("/Images/default-bg.png");
+}
+
+/* Font helpers */
+.font-helvetica {
+  font-family: "Helvetica Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+}
+.font-isenheim {
+  font-family: "Isenheim", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 58px !important;
+  line-height: 115% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Isenheim font family without fixed sizing for flexible typography */
+.isenheim-family {
+  font-family: "Isenheim", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-gold-texture {
+  background-image: linear-gradient(180deg,#f7d37a 0%, #c79a2f 55%, #8f6b1f 100%), var(--gold-texture);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navbar specific text styling */
+.navbar-text {
+  font-family: "Helvetica Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 17px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero subtitle typography */
+.subtitle-text {
+  font-family: "Helvetica Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 17px !important;
+  line-height: 155% !important;
+  letter-spacing: 0% !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Constrain subtitle width to control line count on desktop */
+.subtitle-width {
+  max-width: 26ch;
+}
+
+/* Get started button typography */
+.btn-isenheim {
+  font-family: "Isenheim", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 25px !important;
+  line-height: 30px !important;
+  letter-spacing: 0% !important;
+}
+
+/* Card title typography */
+.card-title-isenheim {
+  font-family: "Isenheim", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 25px !important;
+  line-height: 120% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtitle typography */
+.subtitle-isenheim {
+  font-family: "Isenheim", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-size: 25px !important;
+  line-height: 120% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Card description typography */
+.card-description {
+  font-family: "Helvetica Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 18px !important;
+  line-height: 140% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* About page: card description typography override */
+.about-card-desc {
+  font-family: var(--font-inter-tight), "Inter Tight", Arial, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  font-size: 18px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  text-align: center !important;
+}
+
+/* Force single-line titles for philosophy cards */
+.about-card-title {
+  white-space: nowrap !important;
+}
+
+/* Retreats page background */
+.bg-retreats {
+  background-image: url("/Images/BGfor3-4Section.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
 }
