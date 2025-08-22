@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 // Blog Detail Layout Content Data
-export const blogDetailLayoutData = {
+const blogDetailLayoutData = {
   header: {
     title: "Our Blog",
     subtitle: [

@@ -14,11 +14,11 @@ export const blogContentData = {
 		slug: "what-to-expect-first-yoga-retreat",
 		title: "What to Expect on Your First Yoga Retreat",
 		subtitle: "A beginner&apos;s guide to your first wellness journey",
-		intro: "Going on your first yoga retreat? Here's a simple guide to what you can expect - so you feel confident, calm, and ready.",
+		intro: "Going on your first yoga retreat? Here&apos;s a simple guide to what you can expect - so you feel confident, calm, and ready.",
 		sections: [
 			{
 				title: "1. Warm Welcome",
-				content: "You'll be gently introduced to the space, schedule, and fellow guests. The vibe is relaxed, kind, and inclusive."
+				content: "You&apos;ll be gently introduced to the space, schedule, and fellow guests. The vibe is relaxed, kind, and inclusive."
 			},
 			{
 				title: "2. Peaceful Setting", 
@@ -34,7 +34,7 @@ export const blogContentData = {
 			},
 			{
 				title: "5. Like-Minded Community",
-				content: "Even solo travelers quickly feel at home. It's a space to connect, share, and grow."
+				content: "Even solo travelers quickly feel at home. It&apos;s a space to connect, share, and grow."
 			}
 		]
 	},
@@ -42,7 +42,7 @@ export const blogContentData = {
 		slug: "mindfulness-meditation-benefits",
 		title: "The Transformative Benefits of Mindfulness Meditation",
 		subtitle: "Discover how daily meditation can change your life",
-		intro: "Mindfulness meditation isn't just a trend—it's a powerful tool for transforming your mental and physical well-being. Here's what science tells us about its benefits.",
+		intro: "Mindfulness meditation isn&apos;t just a trend—it&apos;s a powerful tool for transforming your mental and physical well-being. Here&apos;s what science tells us about its benefits.",
 		sections: [
 			{
 				title: "Mental Health Benefits",
@@ -71,7 +71,7 @@ export const blogContentData = {
 		slug: "holistic-wellness-approach",
 		title: "A Holistic Approach to Wellness",
 		subtitle: "Balancing mind, body, and spirit for complete well-being",
-		intro: "True wellness goes beyond physical health. It's about creating harmony between your mind, body, and spirit. Here's how to embrace a holistic approach.",
+		intro: "True wellness goes beyond physical health. It&apos;s about creating harmony between your mind, body, and spirit. Here&apos;s how to embrace a holistic approach.",
 		sections: [
 			{
 				title: "Mind",
@@ -79,7 +79,7 @@ export const blogContentData = {
 			},
 			{
 				title: "Body",
-				content: "Nourish your physical vessel with movement, wholesome nutrition, and adequate rest. Honor your body's needs."
+				content: "Nourish your physical vessel with movement, wholesome nutrition, and adequate rest. Honor your body&apos;s needs."
 			},
 			{
 				title: "Spirit",
@@ -92,7 +92,7 @@ export const blogContentData = {
 		slug: "yoga-for-beginners",
 		title: "Yoga for Beginners: Start Your Journey",
 		subtitle: "Essential poses and tips for new practitioners",
-		intro: "New to yoga? Don't worry! Everyone starts somewhere. Here are the fundamental poses and principles to begin your practice.",
+		intro: "New to yoga? Don&apos;t worry! Everyone starts somewhere. Here are the fundamental poses and principles to begin your practice.",
 		sections: [
 			{
 				title: "Essential Beginner Poses",
@@ -103,7 +103,7 @@ export const blogContentData = {
 						description: "Foundation for all standing poses"
 					},
 					{
-						name: "2. Child's Pose (Balasana)",
+						name: "2. Child&apos;s Pose (Balasana)",
 						description: "Gentle resting pose"
 					},
 					{
@@ -120,10 +120,10 @@ export const blogContentData = {
 				title: "Beginner Tips",
 				type: "list",
 				items: [
-					"Listen to your body - don't push beyond your limits",
-					"Focus on breath - it's the foundation of yoga",
+					"Listen to your body - don&apos;t push beyond your limits",
+					"Focus on breath - it&apos;s the foundation of yoga",
 					"Be consistent - even 10 minutes daily makes a difference",
-					"Don't compare yourself to others"
+					"Don&apos;t compare yourself to others"
 				]
 			}
 		]
@@ -151,7 +151,7 @@ export const blogContentData = {
 			},
 			{
 				title: "Eating Mindfully",
-				content: "Slow down, savor each bite, and listen to your body's hunger and fullness cues. Mindful eating enhances digestion and satisfaction."
+				content: "Slow down, savor each bite, and listen to your body&apos;s hunger and fullness cues. Mindful eating enhances digestion and satisfaction."
 			}
 		]
 	},
@@ -159,7 +159,7 @@ export const blogContentData = {
 		slug: "stress-management-techniques",
 		title: "Effective Stress Management Techniques",
 		subtitle: "Practical strategies for finding peace in a busy world",
-		intro: "In today's fast-paced world, stress management is essential for maintaining our health and happiness. Here are proven techniques to help you find balance.",
+		intro: "In today&apos;s fast-paced world, stress management is essential for maintaining our health and happiness. Here are proven techniques to help you find balance.",
 		sections: [
 			{
 				title: "Breathing Techniques",
