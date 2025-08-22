@@ -137,7 +137,7 @@ export default function AboutPage() {
           {/* Our Story Badge */}
           <div className="mb-6 text-center">
             <div 
-              className="inline-block px-6 py-3 rounded-full text-white text-base font-medium shadow-lg"
+              className="inline-block px-6 py-3 rounded-full text-white text-base font-medium shadow-lg mt-10"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
                 backgroundSize: 'cover',
