@@ -1,8 +1,15 @@
 import InsightsSection from "../components/InsightsSection";
 import RetreatCard from "../components/RetreatCard";
-export default function FourthPage() {
-  // Retreat data objects
-  const retreats = [
+
+// Retreats Page Content Data
+export const retreatsPageData = {
+  title: "Retreats",
+  subtitle: [
+    "Experience transformative wellness in the world's most",
+    "exclusive and serene locations"
+  ],
+  buttonText: "Contact us",
+  retreats: [
     {
       id: 1,
       title: "Retreat 1",
@@ -45,11 +52,28 @@ export default function FourthPage() {
       location: "Arizona",
       description: "Drawing from ancient wisdom and modern techniques to support deep inner healing."
     }
-  ];
+  ],
+  footer: {
+    phone: {
+      value: "+966 53 867 4556",
+      label: "contact us with phone"
+    },
+    email: {
+      value: "rita1yoga@hotmail.com",
+      label: "contact us with mail"
+    },
+    address: {
+      heading: "United States",
+      details: "205 Middle Road, 2nd Floor, New York"
+    }
+  }
+};
+
+export default function FourthPage() {
+  const data = retreatsPageData;
 
   return (
     <section className="relative min-h-screen w-full mt-28">
-      {/* Main Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -57,21 +81,16 @@ export default function FourthPage() {
         }}
       />
       
-      {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         
-        {/* Upper Background Overlay */}
         <div 
           className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100 bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')"
           }}
         >
-          {/* Section Title - Now positioned inside UpperBG.png */}
           <div className="text-center pt-2 md:pt-4">
             
-            
-            {/* White Box Container */}
             <div 
               className="bg-white rounded-[40px] mx-auto flex flex-col justify-center items-center"
               style={{
@@ -85,28 +104,25 @@ export default function FourthPage() {
                 fontWeight: '400',
                 lineHeight: '115%'
               }}>
-               Retreats
+               {data.title}
               </h2>
               
               <p className="text-[#595959] max-w-3xl mx-auto text-center" style={{ fontSize: '17px' }}>
-              Experience transformative wellness in the world's most 
+              {data.subtitle[0]}
                 </p>
                 <p className="text-[#595959] max-w-3xl mx-auto text-center" style={{ fontSize: '17px'}}>
-                exclusive and serene locations
+                {data.subtitle[1]}
 
                 </p>
 
             </div>
           </div>
-          {/* Content Container within the overlay */}
           <div className="relative z-20 p-6 md:p-12">
-            {/* Retreat Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-              {retreats.map((retreat) => (
-                <RetreatCard key={retreat.id} retreat={retreat} />
+              {data.retreats.map((retreat) => (
+                <RetreatCard key={retreat.id} retreat={retreat} href="#" />
               ))}
             </div>
-               {/* Contact Us Button - Below both cards */}
         <div className="text-center">
           <button 
             className="text-white transition-colors shadow-lg mt-22"
@@ -126,7 +142,7 @@ export default function FourthPage() {
               letterSpacing: '0%'
             }}
           >
-            Contact us
+            {data.buttonText}
           </button>
         </div>
           </div>
@@ -138,10 +154,8 @@ export default function FourthPage() {
           >
             <InsightsSection size="lg"/>
           </div>
-        </div>
-           {/* Footer Section with rock image and info card */}
+                  </div>
            <div className="relative mx-auto" style={{ maxWidth: '1440px', height: '360px' }}>
-            {/* Left Rock Image */}
             <div
               className="absolute"
               style={{
@@ -158,7 +172,6 @@ export default function FourthPage() {
               }}
             />
 
-            {/* Info Card */}
             <div
               className="absolute rounded-[30px] bg-white flex items-center"
               style={{
@@ -174,26 +187,26 @@ export default function FourthPage() {
               <div className="w-full grid grid-cols-3 gap-8 px-10">
                 <div className="text-left">
                   <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
-                    +966 53 867 4556
+                    {data.footer.phone.value}
                   </div>
                   <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
-                    contact us with phone
+                    {data.footer.phone.label}
                   </div>
                 </div>
                 <div className="text-left">
                   <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
-                    rita1yoga@hotmail.com
+                    {data.footer.email.value}
                   </div>
                   <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
-                    contact us with mail
+                    {data.footer.email.label}
                   </div>
                 </div>
                 <div className="text-left">
                   <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
-                    United States
+                    {data.footer.address.heading}
                   </div>
                   <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
-                    205 Middle Road, 2nd Floor, New York
+                    {data.footer.address.details}
                   </div>
                 </div>
               </div>

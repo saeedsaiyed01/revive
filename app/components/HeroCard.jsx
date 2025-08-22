@@ -43,13 +43,7 @@ export default function HeroCard(props) {
           <div className="mt-8 flex items-center gap-10">
             <Link
               href={content.button.href}
-              className="inline-flex items-center justify-center w-[240px] h-[72px] rounded-[20px] text-white transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2"
-              style={{
-                backgroundImage: "url(/Images/default-bg.png)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
+              className="inline-flex items-center justify-center w-[240px] h-[72px] rounded-[20px] text-white transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 bg-[url('/Images/default-bg.png')] bg-cover bg-center bg-no-repeat"
             >
               <span className="btn-isenheim">{content.button.text}</span>
 

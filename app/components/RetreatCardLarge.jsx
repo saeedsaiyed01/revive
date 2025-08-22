@@ -1,5 +1,8 @@
-export default function RetreatCardLarge({ retreat }) {
+import Link from 'next/link';
+
+export default function RetreatCardLarge({ retreat, href }) {
 	return (
+		<Link href={href || '#'} className="block focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-[30px]">
 		<div
 			className="rounded-[30px] overflow-hidden"
 			style={{
@@ -40,6 +43,7 @@ export default function RetreatCardLarge({ retreat }) {
 				<p className="text-black text-sm leading-relaxed text-left">{retreat.description}</p>
 			</div>
 		</div>
+		</Link>
 	);
 }
 

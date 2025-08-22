@@ -1,5 +1,35 @@
-// Component-local data
 'use client'
+
+// Account Popup Content
+export const accountPopupData = {
+  profile: {
+    name: "Kate Johnson",
+    image: "/Images/SecondPageBG.png",
+    editIcon: "/logos/Editlogo.png"
+  },
+  menuItems: [
+    {
+      label: "Account settings",
+      icon: "/logos/Settinglogo.png",
+      alt: "Settings"
+    },
+    {
+      label: "Payment method", 
+      icon: "/logos/PurchaseMethod.png",
+      alt: "Payment"
+    },
+    {
+      label: "My purchases",
+      icon: "/logos/Mypurchase.png", 
+      alt: "Purchases"
+    }
+  ],
+  logout: {
+    label: "Log out"
+  }
+};
+
+// Navigation Data
 export const data = {
   logo: { src: "/logos/LogoMain.png", alt: "Revive logo" },
   bgTexture: "/Images/default-bg.png",
@@ -25,7 +55,9 @@ import { useState } from "react";
 
 export default function Navbar(props) {
   const content = { ...data, ...(props?.data || {}) };
+  const popupContent = accountPopupData;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAccountPopupOpen, setIsAccountPopupOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -37,7 +69,7 @@ export default function Navbar(props) {
   return (
     <header
       className="w-full z-50 absolute top-0 left-0 right-0"
-      style={{
+      style={isHome ? {} : {
         backgroundImage: "url(/Images/BGfor3-4Section.jpg)",
         backgroundSize: "100% auto",
         backgroundRepeat: "repeat-y",
@@ -46,7 +78,6 @@ export default function Navbar(props) {
     >
       <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-4">
         <div className="flex items-center gap-4">
-          {/* Logo - Left aligned; boxed on non-home routes */}
           <div className="flex-shrink-0">
             <Link href="/" aria-label="Home">
               {isHome ? (
@@ -62,9 +93,7 @@ export default function Navbar(props) {
             </Link>
           </div>
 
-          {/* Desktop center group: nav + icons */}
           <div className="hidden lg:flex items-center gap-6 mx-auto">
-            {/* Desktop Navigation - Center with gold texture background */}
             <div
               className="rounded-[28px] h-[56px] flex items-center overflow-hidden px-0 mt-1"
               style={{
@@ -93,17 +122,25 @@ export default function Navbar(props) {
               </ul>
             </div>
 
-            {/* Desktop Icons - placed next to center nav */}
             <div className="hidden lg:flex items-center gap-4 pr-1">
               {content.icons.map((icon) => (
-                <Link key={icon.alt} href={icon.href || '#'}>
-                  <Image src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
-                </Link>
+                icon.alt === "Account" ? (
+                  <button
+                    key={icon.alt}
+                    onClick={() => setIsAccountPopupOpen(!isAccountPopupOpen)}
+                    className="shrink-0"
+                  >
+                    <Image src={icon.src} alt={icon.alt} width={24} height={24} />
+                  </button>
+                ) : (
+                  <Link key={icon.alt} href={icon.href || '#'}>
+                    <Image src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
+                  </Link>
+                )
               ))}
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -119,7 +156,6 @@ export default function Navbar(props) {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4">
             <div className="rounded-2xl bg-black/30 backdrop-blur-sm p-6">
@@ -145,11 +181,102 @@ export default function Navbar(props) {
                 ))}
               </ul>
               
-              {/* Mobile Icons */}
               <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/20">
                 {content.icons.map((icon) => (
-                  <Image key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
+                  icon.alt === "Account" ? (
+                    <button
+                      key={icon.alt}
+                      onClick={() => {
+                        setIsAccountPopupOpen(!isAccountPopupOpen);
+                        setIsMobileMenuOpen(false);
+                        }}
+                      className="shrink-0"
+                    >
+                      <Image src={icon.src} alt={icon.alt} width={28} height={28} />
+                    </button>
+                  ) : (
+                    <Image key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
+                  )
                 ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {isAccountPopupOpen && (
+          <div className="fixed inset-0 z-50 flex items-start justify-end pt-20">
+            <div 
+              className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+              onClick={() => setIsAccountPopupOpen(false)}
+            />
+            
+            <div 
+              className="relative bg-white shadow-2xl mx-4 mt-4 overflow-hidden"
+              style={{
+                width: '350px',
+                height: '460px',
+                opacity: 1,
+                borderRadius: '40px'
+              }}
+            >
+              <div className="p-4 text-center border-b border-gray-100">
+                <div className="w-[80px] h-[80px] mx-auto mb-3 rounded-full overflow-hidden">
+                  <Image 
+                    src={popupContent.profile.image} 
+                    alt="Profile" 
+                    width={80} 
+                    height={80} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="flex items-center justify-center gap-2">
+                  <h3 className="text-base font-semibold text-gray-800">{popupContent.profile.name}</h3>
+                  <button className="text-[#FFA600] hover:text-[#FFA600]">
+                    <Image 
+                      src={popupContent.profile.editIcon} 
+                      alt="Edit" 
+                      width={14} 
+                      height={14} 
+                      className="w-3.5 h-3.5"
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-4">
+                <div className="space-y-0">
+                  {popupContent.menuItems.map((item, index) => (
+                    <div key={index}>
+                      <button className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                        <div className="w-[26px] h-[26px] text-[#FFA600]">
+                          <Image 
+                            src={item.icon} 
+                            alt={item.alt} 
+                            width={26} 
+                            height={26} 
+                            className="w-[26px] h-[26px]"
+                          />
+                        </div>
+                        <span className="text-gray-700">{item.label}</span>
+                      </button>
+                      {index < popupContent.menuItems.length - 1 && (
+                        <div className="h-[2px] bg-[#FFA600] mx-3 my-2"></div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="h-[2px] bg-[#FFA600] mx-3 my-2"></div>
+
+              <div className="p-4">
+                <button className="w-full flex items-center justify-center gap-2 p-3 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">
+                  <span>{popupContent.logout.label}</span>
+                  <svg className="w-4 h-4 text-[#FFA600]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

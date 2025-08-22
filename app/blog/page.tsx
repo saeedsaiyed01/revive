@@ -1,208 +1,195 @@
+import Link from "next/link";
 import RetreatCard from "../components/RetreatCard";
 import RetreatCardLarge from "../components/RetreatCardLarge";
 
 export default function BlogPage() {
 	return (
 		<section
-			className="relative w-full"
-			style={{
-				backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-				backgroundSize: '100% auto',
-				backgroundPosition: 'center top',
-				backgroundRepeat: 'repeat-y',
-			}}
+			className="relative w-full bg-[url('/Images/BGfor3-4Section.jpg')] bg-[length:100%_auto] bg-center bg-repeat-y"
 		>
 			{/* Frame */}
-			<div className="relative mx-auto" style={{ width: '1440px', minHeight: '2800px' }}>
+			<div className="relative mx-auto w-[1440px] min-h-[2800px]">
 				{/* UpperBG overlay (double height) */}
 				<div
-					className="absolute overflow-hidden"
-					style={{
-						width: '1385px',
-						height: `${1047 * 2}px`,
-						top: '162px',
-						left: '28px',
-						opacity: 1,
-						borderTopLeftRadius: '50px',
-						borderTopRightRadius: '50px',
-						backgroundImage: "url('/Images/UpperBG.png')",
-						backgroundRepeat: 'repeat-y',
-						backgroundSize: '100% auto',
-						backgroundPosition: 'center top',
-					}}
+					className="absolute overflow-hidden w-[1385px] h-[2094px] top-[162px] left-[28px] opacity-100 rounded-t-[50px] bg-[url('/Images/UpperBG.png')] bg-repeat-y bg-[length:100%_auto] bg-center"
 				/>
 
 				{/* Blog header card (upper section) */}
 				<div
-					className="absolute bg-white/95 text-black text-center shadow-sm"
-					style={{ width: '787px', height: '189px', top: '224px', left: '314px', borderRadius: '40px', opacity: 1 }}
+					className="absolute bg-white/95 text-black text-center shadow-sm w-[787px] h-[169px] top-[224px] left-[314px] rounded-[40px] opacity-100"
 				>
 					<div className="pt-6 px-8">
-						<h1 className="isenheim-family text-black" style={{ fontSize: '32px', lineHeight: '1.1' }}>
+						<h1 className="isenheim-family text-black text-[50px] leading-[1.1]">
 							Blog
 						</h1>
-						<p className="mt-2 text-black/70 font-helvetica" style={{ fontSize: '13px' }}>
-							Explore our articles on wellness, mindfulness, and holistic living.
+
+						<div className="flex flex-col gap-2">
+						<p>
+						Explore our articles on wellness, mindfulness, and 
 						</p>
+						<p>holistic living</p>
+						</div>
+						
 					</div>
 				</div>
 
 				{/* Cards positioned to spec */}
 				{/* Row 1 */}
-				<div className="absolute" style={{ top: '545px', left: '161px' }}>
-					<div className="relative" style={{ width: '420px', height: '492px' }}>
+				<div className="absolute top-[545px] left-[161px]">
+					<div className="relative w-[420px] h-[492px]">
 						<RetreatCard
 							retreat={{
-								image: '/Images/Photo1.png',
+								image: '/Images/Retreat1.png',
 								location: 'Oasis',
-								title: 'The Power of Daily Practice',
-								description: 'Discover how even 10 minutes a day can transform your energy.'
+								title: 'Mindfulness Meditation Benefits',
+								description: 'Discover how daily meditation can change your life.'
 							}}
+							href={'/blog/mindfulness-meditation-benefits'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '22px', bottom: '75px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/mindfulness-meditation-benefits'} aria-label="Open blog: Mindfulness Meditation Benefits">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[22px] bottom-[75px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
-				<div className="absolute" style={{ top: '545px', left: '620px' }}>
-					<div className="relative" style={{ width: '420px', height: '492px' }}>
+				<div className="absolute top-[545px] left-[620px]">
+					<div className="relative w-[420px] h-[492px]">
 						<RetreatCardLarge
 							retreat={{
-								image: '/Images/Photo2.png',
+								image: '/Images/yoga.png',
 								location: 'Canyon',
 								title: 'What to Expect on Your First Yoga Retreat',
-								description: 'Get ready for your journey: meals, sessions, and mindful rest.'
+								description: 'A beginner\'s guide to your first wellness journey.'
 							}}
+							href={'/blog/what-to-expect-first-yoga-retreat'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '-230px', bottom: '24px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/what-to-expect-first-yoga-retreat'} aria-label="Open blog: What to Expect on Your First Yoga Retreat">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[-230px] bottom-[24px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
 
 				{/* Row 2 */}
-				<div className="absolute" style={{ top: '1060px', left: '161px' }}>
-					<div className="relative" style={{ width: '420px', height: '492px' }}>
+				<div className="absolute top-[1060px] left-[161px]">
+					<div className="relative w-[420px] h-[492px]">
 						<RetreatCardLarge
 							retreat={{
-								image: '/Images/Retreat3.png',
+								image: '/Images/SecondPageBG.png',
 								location: 'Dunes',
-								title: 'Mindful Living Off the Mat',
-								description: 'Take the lessons of yoga into your everyday life for balance and clarity.'
+								title: 'A Holistic Approach to Wellness',
+								description: 'Balancing mind, body, and spirit for complete well-being.'
 							}}
+							href={'/blog/holistic-wellness-approach'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '-230px', bottom: '24px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/holistic-wellness-approach'} aria-label="Open blog: A Holistic Approach to Wellness">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[-230px] bottom-[24px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
-				<div className="absolute ml-72" style={{ top: '1060px', left: '620px' }}>
-					<div className="relative" style={{ width: '420px', height: '492px' }}>
+				<div className="absolute ml-72 top-[1060px] left-[620px]">
+					<div className="relative w-[420px] h-[492px]">
 						<RetreatCard
 							retreat={{
-								image: '/Images/Retreat4.png',
+								image: '/Images/Retreat6.png',
 								location: 'Garden',
-								title: 'Yoga for Every Body',
-								description: 'Beginner to advanced, find a class that works for your body and goals.'
+								title: 'Yoga for Beginners: Start Your Journey',
+								description: 'Essential poses and tips for new practitioners.'
 							}}
+							href={'/blog/yoga-for-beginners'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '24px', bottom: '74px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/yoga-for-beginners'} aria-label="Open blog: Yoga for Beginners">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[74px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
 
 				{/* Row 3 */}
-				<div className="absolute" style={{ top: '1590px', left: '161px' }}>
-					<div className="relative" style={{ width: '420px', height: '492px' }}>
+				<div className="absolute top-[1590px] left-[161px]">
+					<div className="relative w-[420px] h-[492px]">
 						<RetreatCard
 							retreat={{
-								image: '/Images/Retreat5.png',
+								image: '/Images/Retreat4.png',
 								location: 'Forest',
-								title: 'Breathwork: The Heart of Yoga',
-								description: 'Learn how conscious breathing can transform practice and reduce stress.'
+								title: 'Nutrition for Wellness: Fuel Your Body Right',
+								description: 'How food choices impact your overall well-being.'
 							}}
+							href={'/blog/nutrition-for-wellness'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '24px', bottom: '74px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/nutrition-for-wellness'} aria-label="Open blog: Nutrition for Wellness">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[74px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
-				<div className="absolute" style={{ top: '1590px', left: '620px' }}>
-					<div className="relative" style={{ width: '689px', height: '489px' }}>
+				<div className="absolute top-[1590px] left-[620px]">
+					<div className="relative w-[689px] h-[489px]">
 						<RetreatCardLarge
 							retreat={{
-								image: '/Images/Retreat6.png',
+								image: '/Images/HomeBG.png',
 								location: 'Sunset',
-								title: 'Nourish Your Body: Retreat Recipes We Love',
-								description: 'Wholesome, plant-based recipes to fuel your practice and life.'
+								title: 'Effective Stress Management Techniques',
+								description: 'Practical strategies for finding peace in a busy world.'
 							}}
+							href={'/blog/stress-management-techniques'}
 						/>
-						<div className="absolute flex items-center justify-center" style={{ width: '67px', height: '67px', right: '24px', bottom: '24px', borderRadius: '20px', background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)', boxShadow: '0 8px 18px rgba(0,0,0,0.2)' }}>
-							<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-						</div>
+						<Link href={'/blog/stress-management-techniques'} aria-label="Open blog: Stress Management Techniques">
+							<div className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[24px] rounded-[20px] shadow-lg" style={{ background: 'linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)' }}>
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+							</div>
+						</Link>
 					</div>
 				</div>
                  {/* Footer Section with rock image and info card */}
-		  <div className="absolute mt-20" style={{ width: '1440px', height: '360px', top: '2060px', left: '0px', zIndex: 10 }}>
+		  <div className="absolute mt-20 w-[1440px] h-[360px] top-[2060px] left-0 z-10">
 		   {/* Left Rock Image */}
 		   <div
-		     className="absolute"
+		     className="absolute w-[440px] h-[437px] top-0 left-[-130px] opacity-100 bg-contain bg-no-repeat bg-left-bottom pointer-events-none"
 		     style={{
-		       width: '440px',
-		       height: '437px',
-		       top: '0px',
-		       left: '-130px',
-		       opacity: 1,
-		       backgroundImage: "url('/Images/rockFooter.png')",
-		       backgroundRepeat: 'no-repeat',
-		       backgroundPosition: 'left bottom',
-		       backgroundSize: 'contain',
-		       pointerEvents: 'none'
+		       backgroundImage: "url('/Images/rockFooter.png')"
 		     }}
 		   />
 
 		   {/* Info Card */}
 		   <div
-		     className="absolute rounded-[30px] bg-white flex items-center mt-22"
-		     style={{
-		       width: '1011px',
-		       height: '138px',
-		       top: '110px',
-		       left: '395px',
-		       opacity: 1,
-		       backgroundSize: 'cover',
-		       backgroundPosition: 'center'
-		     }}
+		     className="absolute rounded-[30px] bg-white flex items-center mt-22 w-[1011px] h-[138px] top-[110px] left-[395px] opacity-100 bg-cover bg-center"
 		   >
 		     <div className="w-full grid grid-cols-3 gap-8 px-10">
 		       <div className="text-left">
-		         <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
+		         <div className="text-black font-helvetica text-[18px] leading-[140%]">
 		           +966 53 867 4556
 		         </div>
-		         <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
+		         <div className="text-[#595959] font-helvetica text-[16px] leading-[140%]">
 		           contact us with phone
 		         </div>
 		       </div>
 		       <div className="text-left">
-		         <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
+		         <div className="text-black font-helvetica text-[18px] leading-[140%]">
 		           rita1yoga@hotmail.com
 		         </div>
-		         <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
+		         <div className="text-[#595959] font-helvetica text-[16px] leading-[140%]">
 		           contact us with mail
 		         </div>
 		       </div>
 		       <div className="text-left">
-		         <div className="text-black" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '18px', lineHeight: '140%' }}>
+		         <div className="text-black font-helvetica text-[18px] leading-[140%]">
 		           United States
 		         </div>
-		         <div className="text-[#595959]" style={{ fontFamily: 'Helvetica Light, Helvetica, Arial, sans-serif', fontSize: '16px', lineHeight: '140%' }}>
+		         <div className="text-[#595959] font-helvetica text-[16px] leading-[140%]">
 		           205 Middle Road, 2nd Floor, New York
 		         </div>
 		       </div>
 		     </div>
 		   </div>
 		 </div>
+		 
                 
 			</div>
 		</section>

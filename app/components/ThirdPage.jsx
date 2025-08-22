@@ -11,10 +11,7 @@ export default function ThirdPage() {
       <section className="relative min-h-screen w-full">
         {/* Main Background */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/Images/BGfor3-4Section.jpg')"
-          }}
+          className="absolute inset-0 bg-[url('/Images/BGfor3-4Section.jpg')] bg-cover bg-center bg-no-repeat"
         />
         
         {/* Content Container */}
@@ -23,33 +20,20 @@ export default function ThirdPage() {
           
           {/* Upper Background Overlay */}
           <div 
-            className="relative mx-auto w-full max-w-[1300px] h-auto min-h-[600px] md:h-[998px] rounded-[25px] md:rounded-[50px] opacity-100 bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
-            style={{
-              backgroundImage: "url('/Images/UpperBG.png')"
-            }}
+            className="relative mx-auto w-full max-w-[1300px] h-auto min-h-[600px] md:h-[998px] rounded-[25px] md:rounded-[50px] opacity-100 bg-[url('/Images/UpperBG.png')] bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
           >
             {/* Content Container within the overlay */}
             <div className="relative z-20 p-6 md:p-12 h-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0">
               {/* Left Column - Content Panel */}
               <div className="w-full lg:w-1/2 lg:pr-8">
                 <div 
-                  className="h-full rounded-[20px] md:rounded-[30px] p-6 md:p-8 flex flex-col justify-between"
-                  style={{
-                    backgroundImage: "url(/Images/CardBG.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center"
-                  }}
+                  className="h-full rounded-[20px] md:rounded-[30px] p-6 md:p-8 flex flex-col justify-between bg-[url('/Images/CardBG.png')] bg-cover bg-center"
                 >
                   {/* Top Content */}
                   <div>
                     {/* "Who we are?" Label */}
                     <div 
-                      className="inline-block px-3 md:px-4 py-2 text-white text-xs md:text-sm rounded-[6px] md:rounded-[8px] mb-4 md:mb-6"
-                      style={{
-                        backgroundImage: "url(/Images/default-bg.png)",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center"
-                      }}
+                      className="inline-block px-3 md:px-4 py-2 text-white text-xs md:text-sm rounded-[6px] md:rounded-[8px] mb-4 md:mb-6 bg-[url('/Images/default-bg.png')] bg-cover bg-center"
                     >
                       Who we are?
                     </div>
@@ -80,16 +64,7 @@ export default function ThirdPage() {
                 {/* Read More Button - Now below the card */}
                 <div className="mt-4 md:mt-6 flex justify-center lg:justify-end">
                   <button 
-                    className="text-white font-normal transition-colors btn-isenheim"
-                    style={{
-                      backgroundImage: "url(/Images/default-bg.png)",
-                      backgroundSize: "cover",
-                      backgroundPosition: "right",
-                      width: 'clamp(200px, 60vw, 272px)',
-                      height: 'clamp(60px, 15vw, 82px)',
-                      borderRadius: '20px',
-                      fontSize: 'clamp(14px, 3vw, 28px)'
-                    }}
+                    className="text-white font-normal transition-colors btn-isenheim bg-[url('/Images/default-bg.png')] bg-cover bg-right w-[clamp(200px,60vw,272px)] h-[clamp(60px,15vw,82px)] rounded-[20px] text-[clamp(14px,3vw,28px)]"
                   >
                     Read more
                   </button>
@@ -107,10 +82,7 @@ export default function ThirdPage() {
                 >
                   {/* Girl Card Image Background */}
                   <div 
-                    className="w-full h-full bg-cover bg-center bg-no-repeat rounded-[20px] md:rounded-[30px]"
-                    style={{
-                      backgroundImage: "url('/Images/GirlCardimg.png')"
-                    }}
+                    className="w-full h-full bg-[url('/Images/GirlCardimg.png')] bg-cover bg-center bg-no-repeat rounded-[20px] md:rounded-[30px]"
                   />
                   
                   {/* Overlay Card */}
@@ -125,10 +97,7 @@ export default function ThirdPage() {
                       {/* Profile Picture - Rounded Logo using MiniCardImg.png */}
                       <div className="w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden">
                         <div 
-                          className="w-full h-full bg-cover bg-center rounded-full"
-                          style={{
-                            backgroundImage: "url('/Images/MiniCardImg.png')"
-                          }}
+                          className="w-full h-full bg-[url('/Images/MiniCardImg.png')] bg-cover bg-center rounded-full"
                         />
                       </div>
                       

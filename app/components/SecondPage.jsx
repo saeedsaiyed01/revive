@@ -36,10 +36,7 @@ const valueCards = [
 export default function SecondPage() {
   return (
     <section 
-      className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('/Images/SecondPageBG.png')"
-      }}
+      className="relative min-h-screen w-full bg-[url('/Images/SecondPageBG.png')] bg-cover bg-center bg-no-repeat"
     >
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-24">
@@ -48,12 +45,7 @@ export default function SecondPage() {
           {/* Our Values Button */}
           <div className="mb-8">
             <div 
-              className="inline-block px-8 py-3 rounded-full text-white font-medium text-lg"
-              style={{
-                backgroundImage: "url(/Images/default-bg.png)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
+              className="inline-block px-8 py-3 rounded-full text-white font-medium text-lg bg-[url('/Images/default-bg.png')] bg-cover bg-center"
             >
               Our Values
             </div>

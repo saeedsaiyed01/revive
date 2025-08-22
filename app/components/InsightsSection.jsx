@@ -3,7 +3,7 @@ export default function InsightsSection({ size = "md" }) {
   const isLarge = size === "lg";
   const sectionLayout = {
     width: "100%",
-    maxWidth:  isLarge ? "3300px" : "1440px",
+    maxWidth:  isLarge ? "3300px" : "1740px",
     height: "auto",
     minHeight: isLarge ? "460px" : "378px",
     angle: "0deg",

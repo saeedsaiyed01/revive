@@ -50,10 +50,7 @@ export default function FourthPage() {
     <section className="relative min-h-screen w-full">
       {/* Main Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/Images/BGfor3-4Section.jpg')"
-        }}
+        className="absolute inset-0 bg-[url('/Images/BGfor3-4Section.jpg')] bg-cover bg-center bg-no-repeat"
       />
       
       {/* Content Container */}
@@ -61,21 +58,12 @@ export default function FourthPage() {
         
         {/* Upper Background Overlay */}
         <div 
-          className="relative mx-auto w-[1385px] h-[1364px] rounded-[50px] opacity-100 bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
-          style={{
-            backgroundImage: "url('/Images/UpperBG.png')"
-          }}
+          className="relative mx-auto w-[1385px] h-[1364px] rounded-[50px] opacity-100 bg-[url('/Images/UpperBG.png')] bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
         >
           {/* Section Title - Now positioned inside UpperBG.png */}
           <div className="text-center pt-2 md:pt-4">
             {/* Wellness Experiences Tag */}
-            <div className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
-              style={{
-                backgroundImage: "url(/Images/default-bg.png)",
-                backgroundSize: "cover",
-                backgroundPosition: "center"
-              }}
-            >
+            <div className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4 bg-[url('/Images/default-bg.png')] bg-cover bg-center">
               Wellness Experiences
             </div>
             
@@ -87,16 +75,11 @@ export default function FourthPage() {
                 height: '163px'
               }}
             >
-              <h2 className="text-black font-normal mb-4" style={{ 
-                fontFamily: 'Isenheim, Georgia, serif',
-                fontSize: '35px',
-                fontWeight: '400',
-                lineHeight: '115%'
-              }}>
+              <h2 className="text-black font-normal mb-4 font-isenheim text-[35px] leading-[115%]">
                 Our Featured Retreats
               </h2>
               
-              <p className="text-black max-w-3xl mx-auto text-center" style={{ fontSize: '17px' }}>
+              <p className="text-black max-w-3xl mx-auto text-center text-[17px]">
                 Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
               </p>
             </div>

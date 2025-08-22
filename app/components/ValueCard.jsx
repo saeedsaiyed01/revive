@@ -4,13 +4,10 @@ export default function ValueCard({ icon = null, title, description, showIcon = 
   return (
     <div 
       className={[
-        "w-[333px] h-[310px] rounded-[30px] opacity-100 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-6 ",
+        "w-[333px] h-[310px] rounded-[30px] opacity-100 bg-[url('/Images/CardBG.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-6 ",
         showIcon ? "pt-8" : "pt-10",
         className
       ].join(" ")}
-      style={{
-        backgroundImage: "url(/Images/CardBG.png)"
-      }}
     >
       {/* Icon */}
       {showIcon && (
