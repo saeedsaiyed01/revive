@@ -37,13 +37,14 @@ const cartPageData = {
 export default function CartPage() {
   const data = cartPageData;
 	return (
-		<section 
-			className="relative w-full min-h-screen mt-28"
+		<section  
+			className="relative w-full min-h-screen"
 			style={{
 				backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
 				backgroundSize: 'cover',
 				backgroundPosition: 'center',
-				backgroundRepeat: 'no-repeat'
+				backgroundRepeat: 'repeat-y',
+				paddingTop: '112px'
 			}}
 		>
 			{/* Mobile Layout */}
@@ -122,15 +123,12 @@ export default function CartPage() {
 			</div>
 
 			{/* Desktop Layout */}
-			<div className="hidden lg:block">
+			<div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12">
 				<div
-					className="absolute z-10 bg-no-repeat rounded-[50px]"
+					className="relative mx-auto bg-no-repeat rounded-[50px]"
 					style={{
 						width: '1385px',
-						height: '1047px',
-						top: '162px',
-						left: '50%',
-						transform: 'translateX(-50%)',
+						height: '1200px',
 						opacity: 1,
 						backgroundImage: "url('/Images/UpperBG.png')",
 						backgroundRepeat: 'repeat-y',
@@ -238,6 +236,9 @@ export default function CartPage() {
 					</button>
 				</div>
 			</div>
+			
+			{/* Bottom spacing to prevent black gap */}
+			<div className="h-20"></div>
 		</section>
 	);
 }
