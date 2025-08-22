@@ -2,7 +2,7 @@ import InsightsSection from "../components/InsightsSection";
 import RetreatCard from "../components/RetreatCard";
 
 // Programs Page Content Data
-export const programsPageData = {
+const programsPageData = {
   title: "Our Programs",
   subtitle: "Discover our wide range of transformative wellness classes designed to nurture your mind, body, and spirit. Each class is led by expert instructors dedicated to guiding you on your wellness journey.",
   buttonText: "Contact us",

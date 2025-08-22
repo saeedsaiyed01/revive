@@ -1,5 +1,5 @@
 // Cart Page Content Data
-export const cartPageData = {
+const cartPageData = {
   title: "Your items:",
   items: [
     {

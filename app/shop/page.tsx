@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 // Shop Page Content Data
-export const shopPageData = {
+const shopPageData = {
   bgImage: "/Images/BGfor3-4Section.jpg",
   stoneOverlay: {
     image: "/Images/UpperBG.png",

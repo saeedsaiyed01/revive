@@ -2,7 +2,7 @@ import InsightsSection from "../components/InsightsSection";
 import RetreatCard from "../components/RetreatCard";
 
 // Retreats Page Content Data
-export const retreatsPageData = {
+const retreatsPageData = {
   title: "Retreats",
   subtitle: [
     "Experience transformative wellness in the world&apos;s most",

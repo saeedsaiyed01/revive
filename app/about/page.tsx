@@ -3,7 +3,7 @@ import AboutPhotoCard from "../components/AboutPhotoCard";
 import ValueCard from "../components/ValueCard";
 
 // About Page Content Data
-export const aboutPageData = {
+const aboutPageData = {
   hero: {
     story: {
       badge: "Our Story",
