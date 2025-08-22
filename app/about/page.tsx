@@ -598,7 +598,7 @@ export default function AboutPage() {
             <p className="text-black/80 leading-relaxed mt-3">
               Her journey began in India, where she studied traditional practices before expanding
               her expertise through certifications from renowned institutions worldwide.
-                Rita's approach uniquely blends ancient wisdom with modern science, creating
+                Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating
               transformative experiences that address the whole person.
             </p>
           </div>

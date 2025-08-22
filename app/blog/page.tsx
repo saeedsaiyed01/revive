@@ -84,7 +84,7 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Nervous about your first retreat? Here's a guide to help you
+                    Nervous about your first retreat? Here&apos;s a guide to help you
                     prepare, relax, and enjoy every moment.
                   </p>
                 </div>
