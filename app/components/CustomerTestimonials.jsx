@@ -1,4 +1,10 @@
+"use client"
+
+import { useState } from 'react';
+
 export default function CustomerTestimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   // Content objects for better organization
   const testimonialData = {
     title: "What customer says?",
@@ -9,6 +15,41 @@ export default function CustomerTestimonials() {
       rating: 5,
       quote: "The retreat was transformative in every sense. Rita's expertise in combining ancient practices with modern science created an experience that was both deeply spiritual and practically beneficial. I left with tools I use daily."
     }
+  };
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sara Johnson",
+      title: "yoga expert",
+      rating: 5,
+      quote: "The retreat was transformative in every sense. Rita's expertise in combining ancient practices with modern science created an experience that was both deeply spiritual and practically beneficial. I left with tools I use daily.",
+      image: "/Images/Photo1.png"
+    },
+    {
+      id: 2,
+      name: "Emma Wilson",
+      title: "wellness coach",
+      rating: 5,
+      quote: "This experience changed my perspective on wellness completely. The combination of ancient wisdom and modern techniques is truly revolutionary.",
+      image: "/Images/Photo2.png"
+    },
+    {
+      id: 3,
+      name: "Maria Garcia",
+      title: "meditation teacher",
+      rating: 5,
+      quote: "I've been to many retreats, but this one stands out. The attention to detail and personalized approach made all the difference.",
+      image: "/Images/Photo3.png"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
   const photoLayout = {
@@ -59,7 +100,7 @@ export default function CustomerTestimonials() {
 
   return (
     <section className="relative w-full min-h-screen">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/Images/bgWCS.png')",
@@ -69,9 +110,88 @@ export default function CustomerTestimonials() {
           maxHeight: '1173px'
         }}
       />
-      
- 
-      <div className="relative z-10 container mx-auto px-4 py-8 md:py-16">
+
+      {/* Mobile Layout */}
+      <div className="lg:hidden relative z-10 container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-serif font-bold text-white mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
+            {testimonialData.title}
+          </h2>
+          <p className="text-base text-white/90 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+            {testimonialData.subtitle}
+          </p>
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="relative mb-8">
+          <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '500px' }}>
+            {/* Main Image with Golden Border */}
+            <div className="relative w-full h-2/3">
+              <div
+                className="w-full h-full rounded-[20px] border-4 border-[#f59e0b] overflow-hidden"
+                style={{
+                  backgroundImage: `url(${testimonials[currentIndex].image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              />
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Small Overlay Card */}
+              <div className="absolute bottom-4 right-4 bg-white rounded-lg p-3 shadow-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-yellow-400 text-sm">
+                    {'⭐'.repeat(testimonials[currentIndex].rating)}
+                  </span>
+                </div>
+                <p className="text-xs font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
+                <p className="text-xs text-gray-600">{testimonials[currentIndex].title}</p>
+              </div>
+            </div>
+
+            {/* Testimonial Text Card */}
+            <div 
+              className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+              style={{
+                backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <h3 className="text-black font-serif font-bold text-lg mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+                {testimonials[currentIndex].name}, {testimonials[currentIndex].title}
+              </h3>
+              <p className="text-black text-sm leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                "{testimonials[currentIndex].quote}"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative z-10 container mx-auto px-4 py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6" style={{ fontFamily: 'Isenheim, serif' }}>
@@ -81,13 +201,11 @@ export default function CustomerTestimonials() {
             {testimonialData.subtitle}
           </p>
         </div>
-        
-   
+
         <div className="relative flex justify-between items-start max-w-7xl mx-auto">
-      
           <div className="relative" style={{ width: '695.7830810546875px', height: '687.8585205078125px' }}>
             {/* Photo 1 - Main/Frontmost */}
-            <div 
+            <div
               className="absolute"
               style={{
                 width: photoLayout.photo1.width,
@@ -101,12 +219,12 @@ export default function CustomerTestimonials() {
                 zIndex: photoLayout.photo1.zIndex
               }}
             >
-              <img 
-                src={photoLayout.photo1.src} 
+              <img
+                src={photoLayout.photo1.src}
                 alt={photoLayout.photo1.alt}
                 className="w-full h-full object-cover rounded-[30px]"
               />
-     
+
               <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-yellow-400 text-lg">
@@ -117,9 +235,8 @@ export default function CustomerTestimonials() {
                 <p className="text-xs text-gray-600">{photoLayout.photo1.overlay.title}</p>
               </div>
             </div>
-            
- 
-            <div 
+
+            <div
               className="absolute"
               style={{
                 width: photoLayout.photo3.width,
@@ -133,14 +250,14 @@ export default function CustomerTestimonials() {
                 zIndex: photoLayout.photo3.zIndex
               }}
             >
-              <img 
-                src={photoLayout.photo3.src} 
+              <img
+                src={photoLayout.photo3.src}
                 alt={photoLayout.photo3.alt}
                 className="w-full h-full object-cover rounded-[30px]"
               />
             </div>
-   
-            <div 
+
+            <div
               className="absolute"
               style={{
                 width: photoLayout.photo2.width,
@@ -154,16 +271,15 @@ export default function CustomerTestimonials() {
                 zIndex: photoLayout.photo2.zIndex
               }}
             >
-              <img 
-                src={photoLayout.photo2.src} 
+              <img
+                src={photoLayout.photo2.src}
                 alt={photoLayout.photo2.alt}
                 className="w-full h-full object-cover rounded-[30px]"
               />
             </div>
           </div>
-          
-       
-          <div 
+
+          <div
             className="relative"
             style={{
               width: cardLayout.width,
@@ -176,7 +292,7 @@ export default function CustomerTestimonials() {
               zIndex: 4
             }}
           >
-            <div 
+            <div
               className="w-full h-full rounded-[30px] p-8 flex flex-col justify-center"
               style={{
                 backgroundImage: "url('/Images/CardBG.png')",
@@ -192,10 +308,9 @@ export default function CustomerTestimonials() {
                 "{testimonialData.customer.quote}"
               </p>
             </div>
-            
 
             <div className="flex justify-end gap-4 mt-6">
-              <button 
+              <button
                 className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
                 style={{
                   backgroundImage: "url('/Images/default-bg.png')",
@@ -206,7 +321,7 @@ export default function CustomerTestimonials() {
               >
                 <span className="text-white text-xl">←</span>
               </button>
-              <button 
+              <button
                 className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
                 style={{
                   backgroundImage: "url('/Images/default-bg.png')",

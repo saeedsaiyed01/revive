@@ -1,6 +1,49 @@
+"use client"
+
+import { useState } from 'react';
 import CustomerTestimonials from './CustomerTestimonials';
 
 export default function FifthPage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const classes = [
+    {
+      id: 1,
+      title: "Sunrise Yoga",
+      image: "/Images/yoga.png",
+      description: "Begin your day with clarity and calm. This guided outdoor yoga session helps you connect with nature, improve flexibility, and find inner peace through mindful movement and breathwork.",
+      time: "Daily at 6:30 AM",
+      place: "Cliffside Yoga Deck, overlooking the Savannah",
+      equipment: "Yoga mat (provided) - bring a water bottle and towel"
+    },
+    {
+      id: 2,
+      title: "Meditation Circle",
+      image: "/Images/yoga.png",
+      description: "Join our guided meditation sessions to find inner peace and mental clarity in a serene environment.",
+      time: "Daily at 7:00 AM",
+      place: "Zen Garden, near the waterfall",
+      equipment: "Cushion provided - wear comfortable clothing"
+    },
+    {
+      id: 3,
+      title: "Mindful Movement",
+      image: "/Images/yoga.png",
+      description: "Experience the perfect blend of yoga and meditation for complete mind-body wellness.",
+      time: "Daily at 8:00 AM",
+      place: "Sunrise Pavilion, mountain view",
+      equipment: "Yoga mat and props provided"
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % classes.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + classes.length) % classes.length);
+  };
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Main Background */}
@@ -41,9 +84,105 @@ export default function FifthPage() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+      {/* Mobile Layout */}
+      <div className="lg:hidden relative z-10 mx-auto px-4 py-8">
+        <div className="flex justify-start mb-6">
+          <button
+            className="text-white px-6 py-3 rounded-full text-lg font-medium transition-all shadow-lg"
+            style={{
+              backgroundImage: "url('/Images/default-bg.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            Our Classes
+          </button>
+        </div>
 
+        {/* Header Card */}
+        <div className="relative mb-8">
+          <div className="bg-white rounded-[30px] p-6 shadow-lg">
+            <h2 className="text-3xl font-serif font-bold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>Featured Classes</h2>
+            <p className="text-base text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              Discover our most popular wellness classes led by expert instructors. Transform your mind, body, and spirit with these life-changing sessions.
+            </p>
+          </div>
+        </div>
 
+        {/* Carousel Section */}
+        <div className="relative mb-8">
+          <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '600px' }}>
+            {/* Main Image */}
+            <div
+              className="w-full h-2/3"
+              style={{
+                backgroundImage: `url(${classes[currentIndex].image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
+            
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Text Overlay */}
+            <div 
+              className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+              style={{
+                backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <h3 className="text-black font-serif font-bold text-xl mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+                {classes[currentIndex].title}
+              </h3>
+              <p className="text-gray-800 text-sm leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                {classes[currentIndex].description}
+              </p>
+              
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-amber-600 text-sm">🕐</span>
+                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Time: {classes[currentIndex].time}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-amber-600 text-sm">📍</span>
+                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Place: {classes[currentIndex].place}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-amber-600 text-sm">🧘‍♀️</span>
+                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Equipment: {classes[currentIndex].equipment}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+   
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         <div className="flex justify-start mb-6" style={{ marginLeft: '95px' }}>
           <button
             className="text-white px-6 py-3 rounded-full text-lg font-medium transition-all shadow-lg"
@@ -77,9 +216,7 @@ export default function FifthPage() {
           </div>
         </div>
 
-
         <div className="flex gap-8 justify-center items-start mb-8">
-
           <div
             className="relative"
             style={{
@@ -95,7 +232,6 @@ export default function FifthPage() {
               className="w-full h-full object-cover rounded-[50px]"
             />
           </div>
-
 
           <div
             className="relative"
@@ -189,7 +325,6 @@ export default function FifthPage() {
           </button>
         </div>
       </div>
-
 
       <CustomerTestimonials />
     </section>

@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -64,7 +63,7 @@ export default function AboutNavbar() {
             {/* Desktop Icons - placed next to center nav */}
             <div className="hidden lg:flex items-center gap-4 pr-1">
               {icons.map((icon) => (
-                <Image key={icon.alt} src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
+                <img key={icon.alt} src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
               ))}
             </div>
           </div>
@@ -111,7 +110,7 @@ export default function AboutNavbar() {
               {/* Mobile Icons */}
               <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/20">
                 {icons.map((icon) => (
-                  <Image key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
+                  <img key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
                 ))}
               </div>
             </div>

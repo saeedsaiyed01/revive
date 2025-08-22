@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from 'react';
 import InsightsSection from "../components/InsightsSection";
 import RetreatCard from "../components/RetreatCard";
 
@@ -71,26 +74,187 @@ const retreatsPageData = {
 
 export default function FourthPage() {
   const data = retreatsPageData;
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.retreats.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.retreats.length) % data.retreats.length);
+  };
 
   return (
-    <section className="relative min-h-screen w-full mt-28">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/Images/BGfor3-4Section.jpg')"
-        }}
-      />
-      
-      <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
-        
+    <section 
+      className="relative min-h-screen w-full mt-28"
+      style={{
+        backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Mobile Layout */}
+      <div className="lg:hidden relative z-10 mx-auto px-4 py-8 min-h-screen">
+        {/* Main Content Area */}
         <div 
-          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100 bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
+          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100"
           style={{
-            backgroundImage: "url('/Images/UpperBG.png')"
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Retreats Header Card */}
+          <div className="text-center pt-8">
+            <div className="bg-white rounded-[40px] mx-4 p-6 shadow-lg">
+              <h2 className="text-black font-normal mb-4" style={{ 
+                fontFamily: 'Isenheim, Georgia, serif',
+                fontSize: '35px',
+                fontWeight: '400',
+                lineHeight: '115%'
+              }}>
+               {data.title}
+              </h2>
+              
+              <p className="text-[#595959] text-center" style={{ fontSize: '17px' }}>
+              {data.subtitle[0]}
+              </p>
+              <p className="text-[#595959] text-center" style={{ fontSize: '17px'}}>
+              {data.subtitle[1]}
+              </p>
+            </div>
+          </div>
+
+          {/* Retreat Carousel */}
+          <div className="mt-8 px-4">
+            <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '400px' }}>
+              {/* Main Image */}
+              <div
+                className="w-full h-2/3"
+                style={{
+                  backgroundImage: `url(${data.retreats[currentIndex].image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              />
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Text Overlay */}
+              <div 
+                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+                style={{
+                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                <h3 className="text-black font-isenheim text-lg mb-2">
+                  Retreat
+                </h3>
+                <p className="text-black font-helvetica text-sm leading-relaxed">
+                  {data.retreats[currentIndex].description}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Us Button */}
+          <div className="text-center mt-8">
+            <button 
+              className="text-white transition-colors shadow-lg py-3 px-8 rounded-[20px] font-helvetica"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              {data.buttonText}
+            </button>
+          </div>
+
+          {/* Footer Contact Section */}
+          <div className="relative mt-8 pb-8">
+            {/* Central Contact Card */}
+            <div className="relative z-30 flex justify-center px-4">
+              <div className="bg-white rounded-[30px] shadow-lg p-6 w-full max-w-sm">
+                <div className="text-center space-y-6">
+                  {/* Phone */}
+                  <div>
+                    <p className="text-black font-helvetica text-[18px] leading-[140%]">{data.footer.phone.value}</p>
+                    <p className="text-[#595959] font-helvetica text-[16px] leading-[140%]">{data.footer.phone.label}</p>
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <p className="text-black font-helvetica text-[18px] leading-[140%]">{data.footer.email.value}</p>
+                    <p className="text-[#595959] font-helvetica text-[16px] leading-[140%]">{data.footer.email.label}</p>
+                  </div>
+
+                  {/* Address */}
+                  <div>
+                    <p className="text-black font-helvetica text-[18px] leading-[140%]">{data.footer.address.heading}</p>
+                    <p className="text-[#595959] font-helvetica text-[16px] leading-[140%]">{data.footer.address.details}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Left Stone Stack */}
+            <div className="absolute left-0 bottom-0 z-20">
+              <img
+                src="/Images/rockFooter.png"
+                alt="Rock Footer Left"
+                className="w-32 h-32 object-contain"
+              />
+            </div>
+
+            {/* Right Stone Stack */}
+            <div className="absolute right-0 bottom-0 z-20">
+              <img
+                src="/Images/rockFooter.png"
+                alt="Rock Footer Right"
+                className="w-32 h-32 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+        <div 
+          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          style={{
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="text-center pt-2 md:pt-4">
-            
             <div 
               className="bg-white rounded-[40px] mx-auto flex flex-col justify-center items-center"
               style={{

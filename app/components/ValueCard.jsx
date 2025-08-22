@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function ValueCard({ icon = null, title, description, showIcon = true, className = "", titleClassName = "", descriptionClassName = "" }) {
   return (
     <div 
@@ -12,7 +10,7 @@ export default function ValueCard({ icon = null, title, description, showIcon = 
       {/* Icon */}
       {showIcon && (
         <div className="mb-6">
-          <Image 
+          <img 
             src={icon} 
             alt={title}
             width={64}

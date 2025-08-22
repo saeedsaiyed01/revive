@@ -48,7 +48,6 @@ export const data = {
   ],
 };
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -77,17 +76,17 @@ export default function Navbar(props) {
       }}
     >
       <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-4">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between w-full">
           <div className="flex-shrink-0">
             <Link href="/" aria-label="Home">
               {isHome ? (
-                <Image src={content.logo.src} alt={content.logo.alt} width={86} height={70} priority />
+                <img src={content.logo.src} alt={content.logo.alt} width={86} height={70} />
               ) : (
                 <div
                   className="rounded-[20px] bg-white flex items-center justify-center"
                   style={{ width: "121px", height: "88px", opacity: 1 }}
                 >
-                  <Image src={content.logo.src} alt={content.logo.alt} width={86} height={70} priority />
+                  <img src={content.logo.src} alt={content.logo.alt} width={86} height={70} />
                 </div>
               )}
             </Link>
@@ -130,11 +129,11 @@ export default function Navbar(props) {
                     onClick={() => setIsAccountPopupOpen(!isAccountPopupOpen)}
                     className="shrink-0"
                   >
-                    <Image src={icon.src} alt={icon.alt} width={24} height={24} />
+                    <img src={icon.src} alt={icon.alt} width={24} height={24} />
                   </button>
                 ) : (
                   <Link key={icon.alt} href={icon.href || '#'}>
-                    <Image src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
+                    <img src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0" />
                   </Link>
                 )
               ))}
@@ -192,10 +191,10 @@ export default function Navbar(props) {
                         }}
                       className="shrink-0"
                     >
-                      <Image src={icon.src} alt={icon.alt} width={28} height={28} />
+                      <img src={icon.src} alt={icon.alt} width={28} height={28} />
                     </button>
                   ) : (
-                    <Image key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
+                    <img key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
                   )
                 ))}
               </div>
@@ -219,9 +218,9 @@ export default function Navbar(props) {
                 borderRadius: '40px'
               }}
             >
-              <div className="p-4 text-center border-b border-gray-100">
+                 <div className="p-4 text-center border-b border-gray-100">
                 <div className="w-[80px] h-[80px] mx-auto mb-3 rounded-full overflow-hidden">
-                  <Image 
+                  <img 
                     src={popupContent.profile.image} 
                     alt="Profile" 
                     width={80} 
@@ -233,7 +232,7 @@ export default function Navbar(props) {
                 <div className="flex items-center justify-center gap-2">
                   <h3 className="text-base font-semibold text-gray-800">{popupContent.profile.name}</h3>
                   <button className="text-[#FFA600] hover:text-[#FFA600]">
-                    <Image 
+                    <img 
                       src={popupContent.profile.editIcon} 
                       alt="Edit" 
                       width={14} 
@@ -250,7 +249,7 @@ export default function Navbar(props) {
                     <div key={index}>
                       <button className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                         <div className="w-[26px] h-[26px] text-[#FFA600]">
-                          <Image 
+                          <img 
                             src={item.icon} 
                             alt={item.alt} 
                             width={26} 

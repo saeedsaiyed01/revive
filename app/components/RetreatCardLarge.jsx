@@ -29,7 +29,7 @@ export default function RetreatCardLarge({ retreat, href }) {
 				</div>
 
 				<div
-					className="h-full p-6 flex flex-col justify-center"
+					className="h-full p-6 flex flex-col justify-start"
 					style={{
 						height: '37%',
 						backgroundImage: 'url(/Images/CardBG.png)',
@@ -37,8 +37,17 @@ export default function RetreatCardLarge({ retreat, href }) {
 						backgroundPosition: 'center'
 					}}
 				>
-					<h3 className="card-title-isenheim text-black text-xl font-normal mb-3">{retreat.title}</h3>
-					<p className="text-black text-sm leading-relaxed text-left">{retreat.description}</p>
+					<h3 className="card-title-isenheim text-black text-xl font-normal mb-2">{retreat.title}</h3>
+					<p className="text-black text-sm leading-relaxed text-left line-clamp-3" style={{ 
+						display: '-webkit-box',
+						WebkitLineClamp: 3,
+						WebkitBoxOrient: 'vertical',
+						overflow: 'hidden',
+						textOverflow: 'ellipsis',
+						minHeight: '3.6rem'
+					}}>
+						{retreat.description}
+					</p>
 				</div>
 			</div>
 		</Link>

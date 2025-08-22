@@ -22,10 +22,17 @@ export default function RetreatCard({ retreat, href }) {
       
 
       <div 
-        className="h-1/3 p-6 flex flex-col justify-center bg-[url('/Images/CardBG.png')] bg-cover bg-center"
+        className="h-1/3 p-6 flex flex-col justify-start bg-[url('/Images/CardBG.png')] bg-cover bg-center"
       >
-        <h3 className="card-title-isenheim text-black text-xl font-normal mb-3">{retreat.title}</h3>
-        <p className="text-black text-sm leading-relaxed text-left">
+        <h3 className="card-title-isenheim text-black text-xl font-normal mb-2">{retreat.title}</h3>
+        <p className="text-black text-sm leading-relaxed text-left line-clamp-3" style={{ 
+          display: '-webkit-box',
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          minHeight: '3.6rem'
+        }}>
           {retreat.description}
         </p>
       </div>

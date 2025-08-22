@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client"
+
+import { useState } from 'react';
 import AboutPhotoCard from "../components/AboutPhotoCard";
 import ValueCard from "../components/ValueCard";
 
@@ -34,7 +36,7 @@ const aboutPageData = {
     badge: "Our Leadership",
     title: "Meet Our Founder",
     name: "Rita",
-    description1: "With over 15 years of experience in wellness, Rita brings a wealth of knowledge spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.",
+    description1: "With over 10 years of experience in wellness, Rita brings a wealth of knowledge spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.",
     description2: "Her journey began in India, where she studied traditional practices before expanding her expertise through certifications from renowned institutions worldwide. Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating transformative experiences that address the whole person."
   },
   photoCards: [
@@ -108,14 +110,334 @@ const aboutPageData = {
 
 export default function AboutPage() {
   const data = aboutPageData;
-  return (
-    <main className="min-h-dvh text-white">
-      <section className="relative min-h-[1400px] w-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/Images/BGfor3-4Section.jpg')" }}
-        />
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.photoCards.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.photoCards.length) % data.photoCards.length);
+  };
+
+  return (
+    <main className="min-h-screen text-white">
+      {/* Mobile Layout */}
+      <div className="lg:hidden min-h-screen">
+        {/* Section 1: About Revive */}
+        <section 
+          className="relative w-full px-4 py-8"
+          style={{
+            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Our Story Badge */}
+          <div className="mb-6 text-center">
+            <div 
+              className="inline-block px-6 py-3 rounded-full text-white text-base font-medium shadow-lg"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              {data.hero.story.badge}
+            </div>
+          </div>
+
+          {/* About Revive Card */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-8">
+            <h1 className="text-2xl font-serif font-bold text-black mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
+              {data.hero.story.title}
+            </h1>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              {data.hero.story.description1}
+            </p>
+            <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              {data.hero.story.description2}
+            </p>
+          </div>
+
+          {/* Main Desert Image */}
+          <div className="rounded-[25px] overflow-hidden shadow-lg mb-8">
+            <img
+              src={data.hero.image}
+              alt="About visual"
+              className="w-full h-80 object-cover"
+            />
+          </div>
+        </section>
+
+        {/* Section 2: Our Philosophy */}
+        <section 
+          className="relative w-full px-4 py-8"
+          style={{
+            backgroundImage: "url('/Images/SecondPageBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-serif font-bold text-white mb-6" style={{ fontFamily: 'Isenheim, serif' }}>
+              {data.philosophy.title}
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {data.philosophy.cards.map((card, idx) => (
+              <div
+                key={idx}
+                className="rounded-[25px] shadow-lg p-6"
+                style={{
+                  backgroundImage: "url('/Images/CardBG.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                <h3 className="text-xl font-serif font-bold text-black mb-3 text-center" style={{ fontFamily: 'Isenheim, serif' }}>
+                  {card.title}
+                </h3>
+                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 3: Meet Our Founder */}
+        <section 
+          className="relative w-full px-4 py-8"
+          style={{
+            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Founder's Image */}
+          <div className="rounded-full overflow-hidden shadow-lg mb-6 mx-auto" style={{ width: '300px', height: '300px' }}>
+            <img
+              src="/Images/roundLogo.png"
+              alt="Founder visual"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Founder Info Card */}
+          <div 
+            className="rounded-[25px] shadow-lg p-6"
+            style={{
+              backgroundImage: "url('/Images/CardBG.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            <div 
+              className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4 text-sm"
+              style={{ fontFamily: 'Helvetica, sans-serif' }}
+            >
+              {data.founder.badge}
+            </div>
+            <h2 className="text-2xl font-serif font-bold text-black mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+              {data.founder.title}
+            </h2>
+            <h3 className="text-lg font-semibold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>
+              {data.founder.name}
+            </h3>
+            <p className="text-sm text-black leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              {data.founder.description1}
+            </p>
+            <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              {data.founder.description2}
+            </p>
+          </div>
+
+          {/* Photo Cards Carousel */}
+          <div className="mt-8">
+            <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '400px' }}>
+              {/* Main Image */}
+              <div
+                className="w-full h-2/3"
+                style={{
+                  backgroundImage: `url(${data.photoCards[currentIndex].image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              />
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Text Overlay */}
+              <div 
+                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+                style={{
+                  backgroundImage: "url('/Images/CardBG.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                <h3 className="text-black font-serif font-bold text-lg mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+                  {data.photoCards[currentIndex].title}
+                </h3>
+                <p className="text-black text-sm leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  {data.photoCards[currentIndex].description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: CTA Section */}
+        <section 
+          className="relative w-full px-4 py-8 flex flex-col justify-start"
+          style={{
+            backgroundImage: "url('/Images/bgWCS.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Golden Banner */}
+          <div 
+            className="rounded-[25px] shadow-lg p-6 mb-6"
+            style={{
+              backgroundImage: "url('/Images/CardBG.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            <h2 className="text-2xl font-serif font-bold text-black mb-3 text-center" style={{ fontFamily: 'Isenheim, serif' }}>
+              Begin Your Transformative Journey
+            </h2>
+            <p className="text-sm text-black leading-relaxed text-center" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              {data.cta.bannerCard.body}
+            </p>
+          </div>
+
+          {/* Contact Button */}
+          <div className="text-center mb-8">
+            <button
+              className="text-white py-3 px-6 rounded-[20px] font-medium shadow-lg transition-all text-sm"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                fontFamily: 'Helvetica, sans-serif'
+              }}
+            >
+              {data.cta.bannerCard.buttonText}
+            </button>
+          </div>
+
+          {/* Contact Info with Stone Stacks */}
+          <div className="relative flex-1">
+            {/* Left Stone Stack */}
+            <div 
+              className="absolute left-4 top-8 z-50"
+              style={{
+                width: "252.72311401367188px",
+                height: "251px",
+                top: "6086px",
+                left: "-84px",
+                transform: "rotate(0deg)",
+                opacity: 1
+              }}
+            >
+              <img
+                src="/Images/rockFooter.png"
+                alt="Rock Footer Left"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Right Stone Stack */}
+            <div 
+              className="absolute right-4 top-8 z-50"
+              style={{
+                width: "252.72311401367188px",
+                height: "251px",
+                top: "6086px",
+                right: "-84px",
+                transform: "rotate(0deg)",
+                opacity: 1
+              }}
+            >
+              <img
+                src="/Images/rockFooter.png"
+                alt="Rock Footer Right"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Central Contact Card */}
+            <div className="relative z-30 flex justify-center pt-16">
+              <div className="bg-white rounded-[25px] shadow-lg p-6 w-full max-w-sm">
+                <div className="text-center space-y-6">
+                  {/* Phone */}
+                  <div>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.phoneValue}</p>
+                    <p className="text-gray-600 text-sm">{data.cta.contacts.phoneLabel}</p>
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.emailValue}</p>
+                    <p className="text-gray-600 text-sm">{data.cta.contacts.emailLabel}</p>
+                  </div>
+
+                  {/* Address */}
+                  <div>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.addressHeading}</p>
+                    <p className="text-gray-600 text-sm">{data.cta.contacts.addressLine1}</p>
+                    <p className="text-gray-600 text-sm">{data.cta.contacts.addressLine2}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        <section 
+          className="relative min-h-[1400px] w-full"
+          style={{
+            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
         <div
           className="absolute left-1/2 -translate-x-1/2"
           style={{ width: "1385px", height: "1047px", top: "162px" }}
@@ -161,7 +483,7 @@ export default function AboutPage() {
               left: "707px",
             }}
           >
-            <Image
+              <img
               src={data.hero.image}
               alt="About visual"
               width={664}
@@ -173,8 +495,14 @@ export default function AboutPage() {
       </section>
 
       <section
-        className="relative w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Images/SecondPageBG.png')", height: '769px' }}
+          className="relative w-full"
+          style={{ 
+            backgroundImage: "url('/Images/SecondPageBG.png')", 
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: '769px' 
+          }}
       >
         <div className="relative z-10 mx-auto px-[clamp(16px,4vw,32px)]" style={{ width: '1440px' }}>
           <div className="text-center pt-16">
@@ -198,21 +526,29 @@ export default function AboutPage() {
       </section>
       
       <section
-        className="relative w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Images/BGfor3-4Section.jpg')" }}
+          className="relative w-full"
+          style={{ 
+            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
       >
         <div
           className="relative z-10 mx-auto"
           style={{ width: '1440px', minHeight: '1250px' }}
         >
           <div
-            className="absolute bg-cover bg-center bg-no-repeat"
+              className="absolute"
             style={{
               width: '646px',
               height: '698px',
-              top: '370px', // relative within this section (derived from provided layout)
+                top: '370px',
               left: '-130px',
               backgroundImage: "url('/Images/BackgrounStone.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }}
           />
 
@@ -226,7 +562,7 @@ export default function AboutPage() {
               left: '191px',
             }}
           >
-            <Image
+              <img
               src="/Images/roundLogo.png"
               alt="Founder visual"
               width={432}
@@ -237,13 +573,16 @@ export default function AboutPage() {
 
           {/* Right gold card */}
           <div  
-            className="absolute rounded-[30px] text-black p-8 bg-cover bg-center bg-no-repeat mt-10"
+              className="absolute rounded-[30px] text-black p-8 mt-10"
             style={{
               width: '640px',
               height: '484px',
               top: '0px',
               left: '720px',
               backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }}
           >
             <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
@@ -259,7 +598,7 @@ export default function AboutPage() {
             <p className="text-black/80 leading-relaxed mt-3">
               Her journey began in India, where she studied traditional practices before expanding
               her expertise through certifications from renowned institutions worldwide.
-              Rita’s approach uniquely blends ancient wisdom with modern science, creating
+                Rita's approach uniquely blends ancient wisdom with modern science, creating
               transformative experiences that address the whole person.
             </p>
           </div>
@@ -294,25 +633,31 @@ export default function AboutPage() {
          <div className="relative mx-auto" style={{ width: '1440px', height: `${data.cta.background.height}px` }}>
            {/* Background dunes */}
            <div
-             className="absolute bg-cover bg-center"
+               className="absolute"
              style={{
                width: `${data.cta.background.width}px`,
                height: `${data.cta.background.height}px`,
                top: `${data.cta.background.top}px`,
                left: `${data.cta.background.left}px`,
                backgroundImage: `url('${data.cta.background.image}')`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 backgroundRepeat: 'no-repeat'
              }}
            />
  
            {/* Gold banner card */}
            <div
-             className="absolute bg-cover bg-center text-black text-center rounded-[30px]"
+               className="absolute text-black text-center rounded-[30px]"
              style={{
                width: `${data.cta.bannerCard.width}px`,
                height: `${data.cta.bannerCard.height}px`,
                top: `${data.cta.bannerCard.top}px`,
                left: `${data.cta.bannerCard.left}px`,
                backgroundImage: `url('${data.cta.bannerCard.image}')`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 backgroundRepeat: 'no-repeat',
                borderRadius: `${data.cta.bannerCard.borderRadius}px`,
                paddingTop: '40px',
              }}
@@ -335,13 +680,14 @@ export default function AboutPage() {
               backgroundImage: `url('${data.cta.button.background}')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }}
           >
             {data.cta.bannerCard.buttonText}
           </button>
 
           {/* Rock stack image */}
-          <Image
+            <img
             src={data.cta.rock.image}
             alt="Rock stack"
             width={data.cta.rock.width}
@@ -381,6 +727,7 @@ export default function AboutPage() {
            </div>
          </div>
        </section>
+      </div>
     </main>
   );
 }

@@ -1,5 +1,11 @@
+"use client"
+
+import { useState } from 'react';
 import RetreatCard from './RetreatCard';
+
 export default function FourthPage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   // Retreat data objects
   const retreats = [
     {
@@ -46,26 +52,134 @@ export default function FourthPage() {
     }
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % retreats.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + retreats.length) % retreats.length);
+  };
+
   return (
-    <section className="relative min-h-screen w-full">
-      <div
-        className="absolute inset-0 bg-[url('/Images/BGfor3-4Section.jpg')] bg-cover bg-center bg-no-repeat"
-      />
-
-
-      <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
-
-
+    <section 
+      className="relative min-h-screen w-full"
+      style={{
+        backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Mobile Layout */}
+      <div className="lg:hidden relative z-10 mx-auto px-4 py-8">
         <div
-          className="relative mx-auto w-[1385px] h-[1364px] rounded-[50px] opacity-100 bg-[url('/Images/UpperBG.png')] bg-cover bg-center bg-no-repeat -mt-10 md:-mt-20"
+          className="relative mx-auto w-full rounded-[30px] opacity-100"
+          style={{
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
         >
-
-          <div className="text-center pt-2 md:pt-4">
-
-            <div className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4 bg-[url('/Images/default-bg.png')] bg-cover bg-center">
+          <div className="text-center pt-6 pb-4">
+            <div 
+              className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
               Wellness Experiences
             </div>
 
+            <div className="bg-white rounded-[30px] mx-4 p-6 shadow-lg">
+              <h2 className="text-black font-normal mb-3 font-isenheim text-2xl leading-tight text-left">
+                Our Featured Retreats
+              </h2>
+              <p className="text-black text-sm leading-relaxed text-left">
+                Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
+              </p>
+            </div>
+          </div>
+
+          {/* Carousel Section */}
+          <div className="relative px-4 pb-8">
+            <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '500px' }}>
+              {/* Main Image */}
+              <div
+                className="w-full h-2/3"
+                style={{
+                  backgroundImage: `url(${retreats[currentIndex].image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              />
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* Text Overlay */}
+              <div 
+                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+                style={{
+                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                <h3 className="text-black font-isenheim text-xl font-normal mb-2">
+                  {retreats[currentIndex].title}
+                </h3>
+                <p className="text-black text-sm leading-relaxed">
+                  {retreats[currentIndex].description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+        <div
+          className="relative mx-auto w-[1385px] h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          style={{
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="text-center pt-2 md:pt-4">
+            <div 
+              className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              Wellness Experiences
+            </div>
 
             <div
               className="bg-white rounded-[40px] mx-auto flex flex-col justify-center items-center"

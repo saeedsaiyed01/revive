@@ -62,7 +62,6 @@ export default function ConnectSection() {
   return (
     <>
       <div className="relative w-full overflow-hidden" style={{ minHeight: '120vh' }}>
-
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -72,9 +71,139 @@ export default function ConnectSection() {
           }}
         />
 
+        {/* Mobile Layout */}
+        <div className="lg:hidden relative z-10 w-full h-full px-4 py-8">
+          {/* Connect with us Header Card */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-6">
+            <h2 className="text-2xl font-serif font-bold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>
+              Connect With Us
+            </h2>
+            <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+              Begin your transformative journey. Reach out to us for retreat inquiries, partnership opportunities, or personalized guidance.
+            </p>
+          </div>
 
-        <div className="relative z-10 w-full h-full">
+          {/* Call us Card */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-6">
+            <div className="flex items-center">
+              <div className="rounded-full flex items-center justify-center mr-4" style={{ width: "60px", height: "50px" }}>
+                <img src="/Images/Callicon1.png" alt="Phone Icon" className="w-full h-full" />
+              </div>
+              <div>
+                <h3 className="text-lg font-serif font-bold text-black mb-1" style={{ fontFamily: 'Isenheim, serif' }}>
+                  Call us
+                </h3>
+                <p className="text-sm text-gray-600 mb-1" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Quick inquiries and support
+                </p>
+                <p className="text-sm font-medium text-gray-600" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  +966-53-867-4556
+                </p>
+              </div>
+            </div>
+          </div>
 
+          {/* WhatsApp Support Card */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-6">
+            <div className="flex items-start mb-4">
+              <div className="rounded-full flex items-center justify-center mr-4 mt-2" style={{ width: "60px", height: "40px" }}>
+                <img src="/Images/Messageicon.png" alt="Message Icon" className="w-full h-full" />
+              </div>
+              <div>
+                <h3 className="text-lg font-serif font-bold text-black mb-1" style={{ fontFamily: 'Isenheim, serif' }}>
+                  WhatsApp Support
+                </h3>
+                <p className="text-sm text-gray-600" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Chat with us anytime
+                </p>
+              </div>
+            </div>
+            <button
+              className="w-full text-white py-3 px-4 rounded-[20px] font-medium shadow-lg transition-all text-sm"
+              style={{
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                fontFamily: 'Helvetica, sans-serif'
+              }}
+            >
+              Chat with us on WhatsApp
+            </button>
+          </div>
+
+          {/* Send us a message Card */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-6">
+            <h3 className="text-xl font-serif font-bold text-black mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
+              Send us a message
+            </h3>
+
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Your name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your name..."
+                  className="w-full px-4 py-3 bg-white border-2 border-orange-400 rounded-lg focus:outline-none focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Your email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter your email..."
+                  className="w-full px-4 py-3 bg-white border-2 border-orange-400 rounded-lg focus:outline-none focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Subject <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter subject..."
+                  className="w-full px-4 py-3 bg-white border-2 border-orange-400 rounded-lg focus:outline-none focus:border-orange-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                  Your message <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  placeholder="Enter your message"
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white border-2 border-orange-400 rounded-lg focus:outline-none focus:border-orange-500 resize-none"
+                />
+              </div>
+
+              <button
+                className="w-full text-white py-3 px-6 rounded-[20px] font-medium shadow-lg transition-all text-sm"
+                style={{
+                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  fontFamily: 'Helvetica, sans-serif'
+                }}
+              >
+                Send Message →
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:block relative z-10 w-full h-full">
           <div className="text-center text-black pt-16 pb-8">
             <h2 className="text-4xl font-serif font-bold mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
               Connect With Us
@@ -83,8 +212,6 @@ export default function ConnectSection() {
               Begin your transformative journey. Reach out to us for retreat inquiries, partnership opportunities, or personalized guidance.
             </p>
           </div>
-
-
 
           <div
             className="absolute bg-white shadow-lg"
@@ -99,7 +226,6 @@ export default function ConnectSection() {
             }}
           >
             <div className="flex items-center p-6 h-full">
-
               <div
                 className="rounded-full flex items-center justify-center mr-6"
                 style={{
@@ -113,7 +239,6 @@ export default function ConnectSection() {
               >
                 <img src="/Images/Callicon1.png" alt="Phone Icon" className="w-full h-full" />
               </div>
-
 
               <div
                 style={{
@@ -178,7 +303,6 @@ export default function ConnectSection() {
             }}
           >
             <div className="flex items-start p-6 h-full">
-
               <div
                 className="rounded-full flex items-center justify-center mr-6 mt-10"
                 style={{
@@ -192,7 +316,6 @@ export default function ConnectSection() {
               >
                 <img src="/Images/Messageicon.png" alt="Message Icon" className="w-full h-full " />
               </div>
-
 
               <div className="flex-1">
                 <h3
@@ -210,10 +333,7 @@ export default function ConnectSection() {
                   WhatsApp Support
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 ml-10 mt-8" style={{ fontFamily: 'Helvetica, sans-serif' }}>Chat with us anytime</p>
-
-
               </div>
-
             </div>
 
             <div className="flex justify-center   mt-[-70px]">
@@ -316,20 +436,94 @@ export default function ConnectSection() {
                 </div>
               </form>
             </div>
+          </div>
+        </div>
 
+        {/* Mobile Footer */}
+        <div className="lg:hidden relative w-full overflow-visible z-20 mt-8">
+          {/* Background */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/Images/UpperBG.png')",
+              width: '100%',
+              height: '400px'
+            }}
+          />
+
+          {/* Left Stone Stack */}
+          <div 
+            className="absolute z-50"
+            style={{
+              width: "252.72311401367188px",
+              height: "251px",
+              top: "6086px",
+              left: "-84px",
+              transform: "rotate(0deg)",
+              opacity: 1
+            }}
+          >
+            <img
+              src="/Images/rockFooter.png"
+              alt="Rock Footer Left"
+              className="w-full h-full object-contain"
+            />
           </div>
 
+          {/* Right Stone Stack */}
+          <div 
+            className="absolute z-50"
+            style={{
+              width: "252.72311401367188px",
+              height: "251px",
+              top: "6086px",
+              right: "-84px",
+              transform: "rotate(0deg)",
+              opacity: 1
+            }}
+          >
+            <img
+              src="/Images/rockFooter.png"
+              alt="Rock Footer Right"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Central Contact Card */}
+          <div className="relative z-30 flex justify-center pt-16 pb-8">
+            <div className="bg-white rounded-[25px] shadow-lg p-6 w-full max-w-sm">
+              <div className="text-center space-y-6">
+                {/* Phone */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">+966 53 867 4556</p>
+                  <p className="text-gray-600 text-sm">contact us with phone</p>
+                </div>
+
+                {/* Email */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">rita1yoga@hotmail.com</p>
+                  <p className="text-gray-600 text-sm">contact us with mail</p>
+                </div>
+
+                {/* Address */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">United States</p>
+                  <p className="text-gray-600 text-sm">205 Middle Road, 2nd Floor,</p>
+                  <p className="text-gray-600 text-sm">New York</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="relative w-full overflow-visible z-20" style={{ marginTop: "800px", height: "258px" }}>
+
+        {/* Desktop Footer */}
+        <div className="hidden lg:block relative w-full overflow-visible z-20" style={{ marginTop: "800px", height: "258px" }}>
           {/* Background */}
-
-
           <img
             src="/Images/UpperBG.png"
             alt="Upper Background"
             className="   inset-0 w-full h-[338px] object-cover"
           />
-
 
           <div
             className="absolute ml-[-70px] top-[-180px] z-50"
@@ -377,12 +571,7 @@ export default function ConnectSection() {
             </div>
           </div>
         </div>
-
-
       </div>
-
-
-
     </>
   );
 }

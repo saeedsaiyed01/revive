@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function ThirdPageCard({ title, description, icon }) {
   return (
     <div 
@@ -10,7 +8,7 @@ export default function ThirdPageCard({ title, description, icon }) {
     >
       {/* Icon */}
       <div className="mb-8">
-        <Image 
+        <img 
           src={icon} 
           alt={title}
           width={80}

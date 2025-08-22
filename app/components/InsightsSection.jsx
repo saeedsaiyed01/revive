@@ -64,11 +64,64 @@ export default function InsightsSection({ size = "md" }) {
         }}
       />
 
+      {/* Mobile Layout */}
+      <div className="lg:hidden relative z-10 w-full h-full flex flex-col items-center justify-center px-4 py-8">
+        {/* Top Button */}
+        <div className="mb-6">
+          <button
+            className="w-40 h-10 rounded-full text-center transition-all shadow-lg text-white"
+            style={{
+              backgroundImage: "url('/Images/default-bg.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              fontFamily: 'Inter Tight, sans-serif',
+              fontWeight: 400,
+              fontStyle: 'normal',
+              fontSize: '15px',
+              lineHeight: '30px',
+              letterSpacing: '0%'
+            }}
+          >
+            Our Blog
+          </button>
+        </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
+        {/* Center - Header Card */}
+        <div className="bg-white rounded-[30px] p-6 shadow-lg mb-6 w-full max-w-md">
+          <h2 className="text-2xl font-serif font-bold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>
+            Insights & Wisdom
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+            Explore our collection of articles on wellness practices, mindfulness techniques, and transformative experiences to support your journey.
+          </p>
+        </div>
 
+        {/* Bottom Button */}
+        <div>
+          <button
+            className="w-64 h-16 text-center transition-all shadow-lg rounded-3xl text-white"
+            style={{
+              backgroundImage: "url('/Images/default-bg.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              fontFamily: 'Isenheim, serif',
+              fontWeight: 400,
+              fontStyle: 'normal',
+              fontSize: '18px',
+              lineHeight: '22px',
+              letterSpacing: '0%'
+            }}
+          >
+            View all blog post →
+          </button>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block relative z-10 w-full h-full flex flex-col items-center justify-center">
         <div className="flex items-center justify-between w-full max-w-4xl mb-6">
-
           <div
             className="absolute"
             style={{
@@ -146,7 +199,6 @@ export default function InsightsSection({ size = "md" }) {
             borderRadius: headerLayout.borderRadius
           }}
         >
-
           <div className="bg-white rounded-[50px] p-8 h-full flex flex-col justify-center">
             <h2 className="text-4xl font-serif font-bold text-black mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
               Insights & Wisdom
