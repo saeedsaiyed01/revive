@@ -15,7 +15,6 @@ export default function HeroCard(props) {
 
   return (
     <section className="relative isolate min-h-screen">
-      {/* Full background image covering entire hero section */}
       <Image
         src={content.background}
         alt="Desert dunes at sunset with meditating figure"

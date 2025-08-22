@@ -59,7 +59,6 @@ export default function CustomerTestimonials() {
 
   return (
     <section className="relative w-full min-h-screen">
-      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -71,7 +70,7 @@ export default function CustomerTestimonials() {
         }}
       />
       
-      {/* Content Container */}
+ 
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
@@ -83,9 +82,9 @@ export default function CustomerTestimonials() {
           </p>
         </div>
         
-        {/* Photos and Card Container */}
+   
         <div className="relative flex justify-between items-start max-w-7xl mx-auto">
-          {/* Left Side - Stacked Photos */}
+      
           <div className="relative" style={{ width: '695.7830810546875px', height: '687.8585205078125px' }}>
             {/* Photo 1 - Main/Frontmost */}
             <div 
@@ -107,7 +106,7 @@ export default function CustomerTestimonials() {
                 alt={photoLayout.photo1.alt}
                 className="w-full h-full object-cover rounded-[30px]"
               />
-              {/* Rating Overlay */}
+     
               <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-yellow-400 text-lg">
@@ -119,7 +118,7 @@ export default function CustomerTestimonials() {
               </div>
             </div>
             
-            {/* Photo 3 - Behind Photo 1, to the right and below */}
+ 
             <div 
               className="absolute"
               style={{
@@ -140,8 +139,7 @@ export default function CustomerTestimonials() {
                 className="w-full h-full object-cover rounded-[30px]"
               />
             </div>
-            
-            {/* Photo 2 - Behind Photo 1, to the left and below */}
+   
             <div 
               className="absolute"
               style={{
@@ -164,7 +162,7 @@ export default function CustomerTestimonials() {
             </div>
           </div>
           
-          {/* Right Side - Review Card */}
+       
           <div 
             className="relative"
             style={{
@@ -195,7 +193,7 @@ export default function CustomerTestimonials() {
               </p>
             </div>
             
-            {/* Navigation Arrows - Below the card content */}
+
             <div className="flex justify-end gap-4 mt-6">
               <button 
                 className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"

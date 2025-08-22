@@ -37,7 +37,7 @@ export default function HeroCard(props) {
           <div className="mt-8 flex items-center gap-4">
             <Link
               href={content.button.href}
-              className="group inline-flex min-h-[44px] items-center gap-3 rounded-[16px] px-6 py-3 text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="group inline-flex min-h-[44px] items-center gap-3 rounded-[16px] px-6 py-3 text-black focus-visible:outline  focus-visible:outline-offset-2"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg,#f7d37a 0%, #c79a2f 55%, #8f6b1f 100%), var(--gold-texture)",

@@ -38,11 +38,11 @@ export default function SecondPage() {
     <section 
       className="relative min-h-screen w-full bg-[url('/Images/SecondPageBG.png')] bg-cover bg-center bg-no-repeat"
     >
-      {/* Content Container */}
+
       <div className="relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-24">
-        {/* Section Title */}
+     
         <div className="text-center mb-20">
-          {/* Our Values Button */}
+        
           <div className="mb-8">
             <div 
               className="inline-block px-8 py-3 rounded-full text-white font-medium text-lg bg-[url('/Images/default-bg.png')] bg-cover bg-center"
@@ -57,7 +57,7 @@ export default function SecondPage() {
           </h2>
         </div>
         
-        {/* Cards Grid */}
+     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto">
           {valueCards.map((card, index) => (
             <ValueCard

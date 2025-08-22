@@ -3,7 +3,7 @@ export default function InsightsSection({ size = "md" }) {
   const isLarge = size === "lg";
   const sectionLayout = {
     width: "100%",
-    maxWidth:  isLarge ? "3300px" : "1740px",
+    maxWidth: isLarge ? "3300px" : "1740px",
     height: "auto",
     minHeight: isLarge ? "460px" : "378px",
     angle: "0deg",
@@ -41,7 +41,7 @@ export default function InsightsSection({ size = "md" }) {
   };
 
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden py-16"
       style={{
         width: sectionLayout.width,
@@ -53,7 +53,7 @@ export default function InsightsSection({ size = "md" }) {
       }}
     >
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-no-repeat"
         style={{
           backgroundImage: "url('/Images/UpperBG.png')",
@@ -63,13 +63,13 @@ export default function InsightsSection({ size = "md" }) {
           backgroundPosition: '30% center'
         }}
       />
-      
-      {/* Content Container */}
+
+
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
-        {/* Top Row - Small Button and Main Button */}
+
         <div className="flex items-center justify-between w-full max-w-4xl mb-6">
-          {/* Left Side - Small Button */}
-          <div 
+
+          <div
             className="absolute"
             style={{
               width: smallButtonLayout.width,
@@ -81,7 +81,7 @@ export default function InsightsSection({ size = "md" }) {
               borderRadius: smallButtonLayout.borderRadius
             }}
           >
-            <button 
+            <button
               className="w-full h-full rounded-full text-center transition-all shadow-lg"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
@@ -99,22 +99,22 @@ export default function InsightsSection({ size = "md" }) {
               Our Blog
             </button>
           </div>
-          
+
           {/* Right Side - Main Button */}
-                           <div
-                   className="absolute"
-                   style={{
-                     width: buttonLayout.width,
-                     height: buttonLayout.height,
-                     top: buttonLayout.top,
-                     left: buttonLayout.left,
-                     transform: `rotate(${buttonLayout.angle})`,
-                     opacity: buttonLayout.opacity,
-                     borderRadius: buttonLayout.borderRadius
-                   }}
-                 >
-                   <button
-                     className="w-full h-full text-center transition-all shadow-lg rounded-3xl"
+          <div
+            className="absolute"
+            style={{
+              width: buttonLayout.width,
+              height: buttonLayout.height,
+              top: buttonLayout.top,
+              left: buttonLayout.left,
+              transform: `rotate(${buttonLayout.angle})`,
+              opacity: buttonLayout.opacity,
+              borderRadius: buttonLayout.borderRadius
+            }}
+          >
+            <button
+              className="w-full h-full text-center transition-all shadow-lg rounded-3xl"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
                 backgroundSize: 'cover',
@@ -132,9 +132,9 @@ export default function InsightsSection({ size = "md" }) {
             </button>
           </div>
         </div>
-        
+
         {/* Center - Header Card */}
-        <div 
+        <div
           className="absolute"
           style={{
             width: headerLayout.width,
@@ -146,7 +146,7 @@ export default function InsightsSection({ size = "md" }) {
             borderRadius: headerLayout.borderRadius
           }}
         >
-           
+
           <div className="bg-white rounded-[50px] p-8 h-full flex flex-col justify-center">
             <h2 className="text-4xl font-serif font-bold text-black mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
               Insights & Wisdom
