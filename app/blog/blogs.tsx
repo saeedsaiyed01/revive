@@ -13,7 +13,7 @@ export const blogContentData = {
 	blog1: {
 		slug: "what-to-expect-first-yoga-retreat",
 		title: "What to Expect on Your First Yoga Retreat",
-		subtitle: "A beginner's guide to your first wellness journey",
+		subtitle: "A beginner&apos;s guide to your first wellness journey",
 		intro: "Going on your first yoga retreat? Here's a simple guide to what you can expect - so you feel confident, calm, and ready.",
 		sections: [
 			{
@@ -188,17 +188,17 @@ export const blogContentData = {
 export const BLOG_1: BlogDetail = {
 	slug: "what-to-expect-first-yoga-retreat",
 	title: "What to Expect on Your First Yoga Retreat",
-	subtitle: "A beginner's guide to your first wellness journey",
+	subtitle: "A beginner&apos;s guide to your first wellness journey",
 	content: (
 		<div className="font-isenheim text-white p-16">
 			<p className="mb-10 text-[20px] leading-[100%] font-normal">
-				Going on your first yoga retreat? Here's a simple guide to what you can expect - so you feel confident, calm, and ready.
+				Going on your first yoga retreat? Here&apos;s a simple guide to what you can expect - so you feel confident, calm, and ready.
 			</p>
 			<div className="space-y-8">
 				<div>
 					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">1. Warm Welcome</h3>
 					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
-						You'll be gently introduced to the space, schedule, and fellow guests. The vibe is relaxed, kind, and inclusive.
+						You&apos;ll be gently introduced to the space, schedule, and fellow guests. The vibe is relaxed, kind, and inclusive.
 					</p>
 				</div>
 				<div>
@@ -222,7 +222,7 @@ export const BLOG_1: BlogDetail = {
 				<div>
 					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">5. Like-Minded Community</h3>
 					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
-						Even solo travelers quickly feel at home. It's a space to connect, share, and grow.
+						Even solo travelers quickly feel at home. It&apos;s a space to connect, share, and grow.
 					</p>
 				</div>
 			</div>
@@ -238,7 +238,7 @@ export const BLOG_2: BlogDetail = {
 	content: (
 		<div className="font-isenheim text-white p-16">
 			<p className="mb-10 text-[20px] leading-[100%] font-normal">
-				Mindfulness meditation isn't just a trend—it's a powerful tool for transforming your mental and physical well-being. Here's what science tells us about its benefits.
+				Mindfulness meditation isn&apos;t just a trend—it&apos;s a powerful tool for transforming your mental and physical well-being. Here&apos;s what science tells us about its benefits.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>
@@ -276,7 +276,7 @@ export const BLOG_3: BlogDetail = {
 	content: (
 		<div className="btn-isenheim text-white p-16">
 			<p className="mb-10 text-[20px] leading-[100%] font-normal">
-				True wellness goes beyond physical health. It's about creating harmony between your mind, body, and spirit. Here's how to embrace a holistic approach.
+				True wellness goes beyond physical health. It&apos;s about creating harmony between your mind, body, and spirit. Here&apos;s how to embrace a holistic approach.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>
@@ -289,7 +289,7 @@ export const BLOG_3: BlogDetail = {
 				<div>
 					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Body</h3>
 					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
-						Nourish your physical vessel with movement, wholesome nutrition, and adequate rest. Honor your body's needs.
+						Nourish your physical vessel with movement, wholesome nutrition, and adequate rest. Honor your body&apos;s needs.
 					</p>
 				</div>
 				
@@ -315,7 +315,7 @@ export const BLOG_4: BlogDetail = {
 	content: (
 		<div className="font-isenheim text-white p-16">
 			<p className="mb-10 text-[20px] leading-[100%] font-normal">
-				New to yoga? Don't worry! Everyone starts somewhere. Here are the fundamental poses and principles to begin your practice.
+				New to yoga? Don&apos;t worry! Everyone starts somewhere. Here are the fundamental poses and principles to begin your practice.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>
@@ -326,7 +326,7 @@ export const BLOG_4: BlogDetail = {
 							<p className="btn-isenheim text-[18px] leading-[100%] font-normal">Foundation for all standing poses</p>
 						</div>
 						<div>
-							<h4 className="btn-isenheim text-[20px] leading-[100%] font-normal mb-2">2. Child's Pose (Balasana)</h4>
+							<h4 className="btn-isenheim text-[20px] leading-[100%] font-normal mb-2">2. Child&apos;s Pose (Balasana)</h4>
 							<p className="btn-isenheim text-[18px] leading-[100%] font-normal">Gentle resting pose</p>
 						</div>
 						<div>
@@ -343,10 +343,10 @@ export const BLOG_4: BlogDetail = {
 				<div>
 					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Beginner Tips</h3>
 					<ul className="list-disc pl-10 space-y-2">
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Listen to your body - don't push beyond your limits</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Focus on breath - it's the foundation of yoga</li>
+						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Listen to your body - don&apos;t push beyond your limits</li>
+						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Focus on breath - it&apos;s the foundation of yoga</li>
 						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Be consistent - even 10 minutes daily makes a difference</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Don't compare yourself to others</li>
+						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Don&apos;t compare yourself to others</li>
 					</ul>
 				</div>
 			</div>
@@ -386,7 +386,7 @@ export const BLOG_5: BlogDetail = {
 				<div>
 					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Eating Mindfully</h3>
 					<p className="btn-isenheim text-[30px] leading-[100%] font-normal">
-						Slow down, savor each bite, and listen to your body's hunger and fullness cues. Mindful eating enhances digestion and satisfaction.
+						Slow down, savor each bite, and listen to your body&apos;s hunger and fullness cues. Mindful eating enhances digestion and satisfaction.
 					</p>
 				</div>
 			</div>
@@ -402,7 +402,7 @@ export const BLOG_6: BlogDetail = {
 	content: (
 		<div className="font-isenheim text-white p-16">
 			<p className="mb-10 text-[30px] leading-[100%] font-normal">
-				In today's fast-paced world, stress management is essential for maintaining our health and happiness. Here are proven techniques to help you find balance.
+				In today&apos;s fast-paced world, stress management is essential for maintaining our health and happiness. Here are proven techniques to help you find balance.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AboutPhotoCard from "../components/AboutPhotoCard";
 import ValueCard from "../components/ValueCard";
 
@@ -25,7 +26,7 @@ export const aboutPageData = {
       },
       {
         title: "Personalized Experience",
-        description: "No two individuals are alike, and neither are their wellness journeys. We take time to understand each client's needs, crafting personalized programs that address specific goals and challenges."
+        description: "No two individuals are alike, and neither are their wellness journeys. We take time to understand each client&apos;s needs, crafting personalized programs that address specific goals and challenges."
       }
     ]
   },
@@ -34,7 +35,7 @@ export const aboutPageData = {
     title: "Meet Our Founder",
     name: "Rita",
     description1: "With over 15 years of experience in wellness, Rita brings a wealth of knowledge spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.",
-    description2: "Her journey began in India, where she studied traditional practices before expanding her expertise through certifications from renowned institutions worldwide. Rita's approach uniquely blends ancient wisdom with modern science, creating transformative experiences that address the whole person."
+    description2: "Her journey began in India, where she studied traditional practices before expanding her expertise through certifications from renowned institutions worldwide. Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating transformative experiences that address the whole person."
   },
   photoCards: [
     {
@@ -69,7 +70,7 @@ export const aboutPageData = {
       left: 230,
       borderRadius: 30,
       title: "Begin Your\nTransformative Journey",
-      body: "Whether you're seeking stress reduction, spiritual growth, or a complete wellness reset, we invite you to experience the transformative power of our programs and retreats.",
+      body: "Whether you&apos;re seeking stress reduction, spiritual growth, or a complete wellness reset, we invite you to experience the transformative power of our programs and retreats.",
       buttonText: "contact us today"
     },
     button: {
@@ -160,9 +161,11 @@ export default function AboutPage() {
               left: "707px",
             }}
           >
-            <img
+            <Image
               src={data.hero.image}
               alt="About visual"
+              width={664}
+              height={885}
               className="w-full h-full object-cover"
             />
           </div>
@@ -223,9 +226,11 @@ export default function AboutPage() {
               left: '191px',
             }}
           >
-            <img
+            <Image
               src="/Images/roundLogo.png"
               alt="Founder visual"
+              width={432}
+              height={432}
               className="w-full h-full object-cover"
             />
           </div>
@@ -336,13 +341,13 @@ export default function AboutPage() {
           </button>
 
           {/* Rock stack image */}
-          <img
+          <Image
             src={data.cta.rock.image}
             alt="Rock stack"
+            width={data.cta.rock.width}
+            height={data.cta.rock.height}
             className="absolute"
             style={{
-              width: `${data.cta.rock.width}px`,
-              height: `${data.cta.rock.height}px`,
               top: `${data.cta.rock.top}px`,
               left: `${data.cta.rock.left}px`,
             }}

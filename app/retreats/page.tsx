@@ -5,7 +5,7 @@ import RetreatCard from "../components/RetreatCard";
 export const retreatsPageData = {
   title: "Retreats",
   subtitle: [
-    "Experience transformative wellness in the world's most",
+    "Experience transformative wellness in the world&apos;s most",
     "exclusive and serene locations"
   ],
   buttonText: "Contact us",

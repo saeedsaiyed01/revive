@@ -60,7 +60,7 @@ export default function BlogPage() {
 								image: '/Images/yoga.png',
 								location: 'Canyon',
 								title: 'What to Expect on Your First Yoga Retreat',
-								description: 'A beginner\'s guide to your first wellness journey.'
+								    description: 'A beginner&apos;s guide to your first wellness journey.'
 							}}
 							href={'/blog/what-to-expect-first-yoga-retreat'}
 						/>

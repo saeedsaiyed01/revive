@@ -18,12 +18,11 @@ export const blogDetailLayoutData = {
 
 type BlogDetailLayoutProps = {
 	title: string;
-	subtitle?: string;
 	contentBackgroundUrl?: string;
 	children: ReactNode;
 };
 
-export default function BlogDetailLayout({ title, subtitle, contentBackgroundUrl, children }: BlogDetailLayoutProps) {
+	export default function BlogDetailLayout({ title, contentBackgroundUrl, children }: BlogDetailLayoutProps) {
 	const data = blogDetailLayoutData;
 	return (
 		<section
