@@ -4,6 +4,7 @@ export const data = {
   description:
     "Where transformative wellness, ancient wisdom, and modern science converge to create meaningful transformation through our exclusive retreats and personalized experiences.",
   background: "/Images/HomeBG.png",
+  backgroundMobile: "/Images/bghomemobile.png",
   button: { text: "Get started", href: "/get-started", icon: "/logos/Callicon.png" },
 };
 
@@ -13,7 +14,7 @@ export default function HeroCard(props) {
   const content = { ...data, ...(props?.data || {}) };
 
   return (
-    <section 
+    <section
       className="relative isolate min-h-screen"
       style={{
         backgroundImage: `url(${content.background})`,
@@ -23,8 +24,15 @@ export default function HeroCard(props) {
       }}
     >
       {/* Mobile Layout */}
-      <div className="lg:hidden relative z-10">
-        <div 
+      <div className="lg:hidden relative z-10 min-h-screen"
+        style={{
+          backgroundImage: `url(${content.backgroundMobile})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div
           className="absolute px-6"
           style={{
             width: '100%',
@@ -34,10 +42,10 @@ export default function HeroCard(props) {
             zIndex: 20
           }}
         >
-          <h1 className="font-isenheim text-white text-4xl leading-tight mb-6 font-normal">
-            Transformativ<br/>Wellness<br/>Experiences
+          <h1 className="hero-title-isenheim text-white text-4xl leading-tight mb-6 font-normal">
+            Transformative<br />Wellness<br />Experiences
           </h1>
-          <p className="text-white text-base leading-relaxed mb-8 max-w-[280px] opacity-90">
+          <p className="text-white  card-title-description text-base leading-relaxed mb-8 max-w-[280px] opacity-90">
             Where transformative wellness, ancient wisdom, and modern science converge to create meaningful transformation through our exclusive retreats and personalized experiences.
           </p>
           <Link
@@ -53,7 +61,7 @@ export default function HeroCard(props) {
       <div className="hidden lg:block mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)]">
         <div className="max-w-lg pt-[clamp(140px,25vw,220px)] pb-[clamp(24px,6vw,64px)]">
           <h1 className="font-isenheim text-white pr-[clamp(8px,4vw,48px)] mt-[clamp(24px,5vw,56px)]">
-            <span className="hidden lg:block">Transformative<br/>Wellness<br/>Experiences</span>
+            <span className="hidden lg:block">Transformative<br />Wellness<br />Experiences</span>
             <span className="lg:hidden">{content.title}</span>
           </h1>
           <p className="mt-[clamp(12px,3vw,32px)] pr-[clamp(8px,4vw,48px)] text-[18px]">

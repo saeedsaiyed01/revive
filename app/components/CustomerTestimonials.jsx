@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function CustomerTestimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   // Content objects for better organization
   const testimonialData = {
     title: "What customer says?",
@@ -112,7 +112,7 @@ export default function CustomerTestimonials() {
       />
 
       {/* Mobile Layout */}
-      <div className="lg:hidden relative z-10 container mx-auto px-4 py-8">
+      <div className="lg:hidden relative z-10 container mx-auto px-4 py-8  mt-82" >
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl font-serif font-bold text-white mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
@@ -137,7 +137,7 @@ export default function CustomerTestimonials() {
                   backgroundRepeat: 'no-repeat'
                 }}
               />
-              
+
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
@@ -147,7 +147,7 @@ export default function CustomerTestimonials() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               <button
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
@@ -170,7 +170,7 @@ export default function CustomerTestimonials() {
             </div>
 
             {/* Testimonial Text Card */}
-            <div 
+            <div
               className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
               style={{
                 backgroundImage: "url('/Images/CardBG.png')",

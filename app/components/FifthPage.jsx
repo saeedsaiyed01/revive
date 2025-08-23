@@ -5,7 +5,7 @@ import CustomerTestimonials from './CustomerTestimonials';
 
 export default function FifthPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const classes = [
     {
       id: 1,
@@ -56,39 +56,80 @@ export default function FifthPage() {
         }}
       />
 
+      {/* Background Stone Image - Increased Height */}
       <div
         className="absolute"
         style={{
           width: '500px',
-          height: '900px',
-          backgroundImage: "url('/Images/rockleft1.png')",
+          height: '1120px',
           top: '100px',
           left: '-10px',
-          zIndex: 5
+          backgroundImage: "url('/Images/backgrounstone.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 3
         }}
       />
 
+      {/* Your existing rockright image */}
       <div
         className="absolute"
         style={{
-          width: '600px',
-          height: '900px',
+          width: '1120px',
+          height: '1115px',
           top: '100px',
-          right: '0px',
+          right: '-110px',
           opacity: 0.8,
           backgroundImage: "url('/Images/rockright.png')",
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          zIndex: 2
+          zIndex: 3
+        }}
+      />
+
+      {/* Left Image - Retreat4.png */}
+      <div
+        className="absolute"
+        style={{
+          width: '475px',
+          height: '475px',
+          top: '450px',
+          left: '-410px',
+          borderRadius: '50px',
+          opacity: 0.7,
+          backgroundImage: "url('/Images/Retreat4.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 3
+        }}
+      />
+
+      {/* Right Image - Retreat3.png */}
+      <div
+        className="absolute"
+        style={{
+          width: '475px',
+          height: '475px',
+          top: '450px',
+          left: '1574px',
+          borderRadius: '50px',
+          opacity: 1,
+          backgroundImage: "url('/Images/Retreat3.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          zIndex: 3
         }}
       />
 
       {/* Mobile Layout */}
       <div className="lg:hidden relative z-10 mx-auto px-4 py-8">
-        <div className="flex justify-start mb-6">
+        <div className="flex justify-start mb-4">
           <button
-            className="text-white px-6 py-3 rounded-full text-lg font-medium transition-all shadow-lg"
+            className="text-white px-6 py-3 rounded-full  white-card-isenheim text-sm ml-5 font-medium transition-all shadow-lg"
             style={{
               backgroundImage: "url('/Images/default-bg.png')",
               backgroundSize: 'cover',
@@ -102,11 +143,21 @@ export default function FifthPage() {
 
         {/* Header Card */}
         <div className="relative mb-8">
-          <div className="bg-white rounded-[30px] p-6 shadow-lg">
-            <h2 className="text-3xl font-serif font-bold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>Featured Classes</h2>
-            <p className="text-base text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
-              Discover our most popular wellness classes led by expert instructors. Transform your mind, body, and spirit with these life-changing sessions.
-            </p>
+
+          <div className="bg-white rounded-[30px] mx-3 p-7 shadow-lg">
+            <div className="flex flex-row gap-4">
+              <div className="flex-1">
+                <h2 className="text-black font-serif btn-isenheim leading-tight font-normal">
+                  <div className="text-left whitespace-nowrap">Our Featured</div>
+                  <div className="text-left">Retreats</div>
+                </h2>
+              </div>
+              <div className="flex-1">
+                <p className="text-gray-600 text-sm leading-relaxed text-left white-card-isenheim ">
+                  Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -123,7 +174,7 @@ export default function FifthPage() {
                 backgroundRepeat: 'no-repeat'
               }}
             />
-            
+
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
@@ -133,7 +184,7 @@ export default function FifthPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
+
             <button
               onClick={nextSlide}
               className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
@@ -144,7 +195,7 @@ export default function FifthPage() {
             </button>
 
             {/* Text Overlay */}
-            <div 
+            <div
               className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
               style={{
                 backgroundImage: "url('/Images/CardBG.png')",
@@ -159,7 +210,7 @@ export default function FifthPage() {
               <p className="text-gray-800 text-sm leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>
                 {classes[currentIndex].description}
               </p>
-              
+
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="text-amber-600 text-sm">🕐</span>
@@ -178,7 +229,7 @@ export default function FifthPage() {
           </div>
         </div>
 
-   
+
       </div>
 
       {/* Desktop Layout */}

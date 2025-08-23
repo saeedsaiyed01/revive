@@ -4,7 +4,11 @@ export default function RetreatCard({ retreat, href }) {
   return (
     <Link href={href || '#'} className="block focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-[30px]">
     <div 
-      className="rounded-[30px] overflow-hidden w-[400px] h-[420px]"
+      className="rounded-[30px] overflow-hidden"
+      style={{
+        width: '420px',
+        height: '492px'
+      }}
     >
   
       <div className="relative h-2/3">

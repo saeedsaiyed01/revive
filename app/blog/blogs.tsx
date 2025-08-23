@@ -190,38 +190,38 @@ export const BLOG_1: BlogDetail = {
 	title: "What to Expect on Your First Yoga Retreat",
 	subtitle: "A beginner&apos;s guide to your first wellness journey",
 	content: (
-		<div className="font-isenheim text-white p-16">
-			<p className="mb-10 text-[20px] leading-[100%] font-normal">
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
 				Going on your first yoga retreat? Here&apos;s a simple guide to what you can expect - so you feel confident, calm, and ready.
 			</p>
 			<div className="space-y-8">
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">1. Warm Welcome</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">1. Warm Welcome</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						You&apos;ll be gently introduced to the space, schedule, and fellow guests. The vibe is relaxed, kind, and inclusive.
 					</p>
 				</div>
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">2. Peaceful Setting</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">2. Peaceful Setting</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Most retreats take place in nature - mountains, forest, or beach - ideal for disconnecting and recharging.
 					</p>
 				</div>
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">3. Daily Routine</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">3. Daily Routine</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Typically includes two yoga sessions per day, meditation, healthy meals, and some free time for rest or reflection.
 					</p>
 				</div>
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">4. Nourishing Food</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">4. Nourishing Food</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Expect fresh, mostly plant-based meals designed to support your energy and digestion.
 					</p>
 				</div>
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">5. Like-Minded Community</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">5. Like-Minded Community</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Even solo travelers quickly feel at home. It&apos;s a space to connect, share, and grow.
 					</p>
 				</div>
@@ -236,32 +236,32 @@ export const BLOG_2: BlogDetail = {
 	title: "The Transformative Benefits of Mindfulness Meditation",
 	subtitle: "Discover how daily meditation can change your life",
 	content: (
-		<div className="font-isenheim text-white p-16">
-			<p className="mb-10 text-[20px] leading-[100%] font-normal">
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
 				Mindfulness meditation isn&apos;t just a trend—it&apos;s a powerful tool for transforming your mental and physical well-being. Here&apos;s what science tells us about its benefits.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Mental Health Benefits</h3>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mental Health Benefits</h3>
 					<ul className="list-disc pl-10 space-y-2">
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Reduces stress and anxiety levels</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Improves focus and concentration</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Enhances emotional regulation</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Promotes better sleep quality</li>
+						<li className="text-[15px] leading-[140%] font-normal">Reduces stress and anxiety levels</li>
+						<li className="text-[15px] leading-[140%] font-normal">Improves focus and concentration</li>
+						<li className="text-[15px] leading-[140%] font-normal">Enhances emotional regulation</li>
+						<li className="text-[15px] leading-[140%] font-normal">Promotes better sleep quality</li>
 					</ul>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Physical Health Benefits</h3>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Physical Health Benefits</h3>
 					<ul className="list-disc pl-10 space-y-2">
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Lowers blood pressure</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Strengthens immune system</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Reduces chronic pain</li>
-						<li className="btn-isenheim text-[18px] leading-[100%] font-normal">Improves cardiovascular health</li>
+						<li className="text-[15px] leading-[140%] font-normal">Lowers blood pressure</li>
+						<li className="text-[15px] leading-[140%] font-normal">Strengthens immune system</li>
+						<li className="text-[15px] leading-[140%] font-normal">Reduces chronic pain</li>
+						<li className="text-[15px] leading-[140%] font-normal">Improves cardiovascular health</li>
 					</ul>
 				</div>
 			</div>
-			<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+			<p className="text-[15px] leading-[140%] font-normal">
 				Start with just 5-10 minutes daily and gradually increase. The key is consistency, not duration.
 			</p>
 		</div>
@@ -274,33 +274,33 @@ export const BLOG_3: BlogDetail = {
 	title: "A Holistic Approach to Wellness",
 	subtitle: "Balancing mind, body, and spirit for complete well-being",
 	content: (
-		<div className="btn-isenheim text-white p-16">
-			<p className="mb-10 text-[20px] leading-[100%] font-normal">
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
 				True wellness goes beyond physical health. It&apos;s about creating harmony between your mind, body, and spirit. Here&apos;s how to embrace a holistic approach.
 			</p>
 			<div className="mb-10 space-y-8">
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Mind</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mind</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Cultivate mental clarity through meditation, journaling, and mindful practices. Your thoughts shape your reality.
 					</p>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Body</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Body</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Nourish your physical vessel with movement, wholesome nutrition, and adequate rest. Honor your body&apos;s needs.
 					</p>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[24px] leading-[100%] font-normal mb-3">Spirit</h3>
-					<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Spirit</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Connect with your deeper purpose through nature, creativity, and meaningful relationships. Feed your soul.
 					</p>
 				</div>
 			</div>
-			<p className="btn-isenheim text-[18px] leading-[100%] font-normal">
+			<p className="text-[15px] leading-[140%] font-normal">
 				Remember: wellness is a journey, not a destination. Be patient and kind with yourself along the way.
 			</p>
 		</div>
@@ -360,32 +360,32 @@ export const BLOG_5: BlogDetail = {
 	title: "Nutrition for Wellness: Fuel Your Body Right",
 	subtitle: "How food choices impact your overall well-being",
 	content: (
-		<div className="btn-isenheim text-white p-16">
-			<p className="mb-10 text-[30px] leading-[100%] font-normal">
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
 				What you eat directly affects how you feel, think, and function. Discover the connection between nutrition and wellness.
 			</p>
-			<div className="mb-10 space-y-8">
+			<div className="space-y-8">
 				<div>
-					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Mind-Body Connection</h3>
-					<p className="btn-isenheim text-[30px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mind-Body Connection</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Your gut health influences your mood, energy levels, and even your immune system. Choose foods that nourish both body and mind.
 					</p>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Wellness-Focused Nutrition</h3>
-					<ul className="list-disc pl-10 space-y-4">
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Prioritize whole, unprocessed foods</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Include plenty of colorful fruits and vegetables</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Choose healthy fats and lean proteins</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Stay hydrated with water and herbal teas</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Limit refined sugars and processed foods</li>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Wellness-Focused Nutrition</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Prioritize whole, unprocessed foods</li>
+						<li className="text-[15px] leading-[140%] font-normal">Include plenty of colorful fruits and vegetables</li>
+						<li className="text-[15px] leading-[140%] font-normal">Choose healthy fats and lean proteins</li>
+						<li className="text-[15px] leading-[140%] font-normal">Stay hydrated with water and herbal teas</li>
+						<li className="text-[15px] leading-[140%] font-normal">Limit refined sugars and processed foods</li>
 					</ul>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Eating Mindfully</h3>
-					<p className="btn-isenheim text-[30px] leading-[100%] font-normal">
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Eating Mindfully</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
 						Slow down, savor each bite, and listen to your body&apos;s hunger and fullness cues. Mindful eating enhances digestion and satisfaction.
 					</p>
 				</div>
@@ -400,31 +400,31 @@ export const BLOG_6: BlogDetail = {
 	title: "Effective Stress Management Techniques",
 	subtitle: "Practical strategies for finding peace in a busy world",
 	content: (
-		<div className="font-isenheim text-white p-16">
-			<p className="mb-10 text-[30px] leading-[100%] font-normal">
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
 				In today&apos;s fast-paced world, stress management is essential for maintaining our health and happiness. Here are proven techniques to help you find balance.
 			</p>
-			<div className="mb-10 space-y-8">
+			<div className="space-y-8">
 				<div>
-					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Breathing Techniques</h3>
-					<ul className="list-disc pl-10 space-y-4">
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Deep belly breathing - 4-7-8 technique</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Box breathing for immediate calm</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Progressive muscle relaxation</li>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Breathing Techniques</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Deep belly breathing - 4-7-8 technique</li>
+						<li className="text-[15px] leading-[140%] font-normal">Box breathing for immediate calm</li>
+						<li className="text-[15px] leading-[140%] font-normal">Progressive muscle relaxation</li>
 					</ul>
 				</div>
 				
 				<div>
-					<h3 className="btn-isenheim text-[35px] leading-[100%] font-normal mb-5">Lifestyle Changes</h3>
-					<ul className="list-disc pl-10 space-y-4">
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Regular exercise and movement</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Quality sleep and rest</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Time in nature</li>
-						<li className="btn-isenheim text-[30px] leading-[100%] font-normal">Setting healthy boundaries</li>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Lifestyle Changes</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Regular exercise and movement</li>
+						<li className="text-[15px] leading-[140%] font-normal">Quality sleep and rest</li>
+						<li className="text-[15px] leading-[140%] font-normal">Time in nature</li>
+						<li className="text-[15px] leading-[140%] font-normal">Setting healthy boundaries</li>
 					</ul>
 				</div>
 			</div>
-			<p className="btn-isenheim text-[30px] leading-[100%] font-normal">
+			<p className="text-[15px] leading-[140%] font-normal">
 				Remember: stress is a natural response, but how we manage it makes all the difference.
 			</p>
 		</div>
@@ -432,6 +432,123 @@ export const BLOG_6: BlogDetail = {
 };
 
 
+
+// Blog 7: The Power of Daily Practice
+export const BLOG_7: BlogDetail = {
+	slug: "power-of-daily-practice",
+	title: "The Power of Daily Practice",
+	subtitle: "Discover how even 10 minutes of yoga a day can transform your body, mind, and spirit",
+	content: (
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
+				Consistency is the key to transformation. Even just 10 minutes of daily practice can create profound changes in your life.
+			</p>
+			<div className="space-y-8">
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Why Daily Practice Matters</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Small, consistent actions compound over time to create lasting change. Your daily practice builds strength, flexibility, and inner peace.
+					</p>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Building Your Practice</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Start with just 5-10 minutes each day</li>
+						<li className="text-[15px] leading-[140%] font-normal">Choose a consistent time and place</li>
+						<li className="text-[15px] leading-[140%] font-normal">Focus on breath and presence</li>
+						<li className="text-[15px] leading-[140%] font-normal">Be patient with your progress</li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">The Transformative Effects</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Regular practice improves flexibility, reduces stress, enhances focus, and cultivates inner peace. The benefits extend far beyond the mat.
+					</p>
+				</div>
+			</div>
+		</div>
+	)
+};
+
+// Blog 8: Mindful Living Off the Mat
+export const BLOG_8: BlogDetail = {
+	slug: "mindful-living-off-the-mat",
+	title: "Mindful Living Off the Mat",
+	subtitle: "Take the lessons of yoga into your everyday life with simple practices for mindfulness and balance",
+	content: (
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
+				Yoga is more than just poses—it&apos;s a way of living. Here&apos;s how to bring mindfulness into every aspect of your daily life.
+			</p>
+			<div className="space-y-8">
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mindful Movement</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Bring awareness to everyday movements—walking, sitting, standing. Notice your posture and breathe consciously throughout the day.
+					</p>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mindful Communication</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Listen with full attention</li>
+						<li className="text-[15px] leading-[140%] font-normal">Speak with kindness and truth</li>
+						<li className="text-[15px] leading-[140%] font-normal">Pause before responding</li>
+						<li className="text-[15px] leading-[140%] font-normal">Practice non-judgment</li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Mindful Living Practices</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Create mindful moments throughout your day—while eating, driving, or doing household tasks. Every activity becomes an opportunity for presence.
+					</p>
+				</div>
+			</div>
+		</div>
+	)
+};
+
+// Blog 9: Breathwork - The Heart of Yoga
+export const BLOG_9: BlogDetail = {
+	slug: "breathwork-heart-of-yoga",
+	title: "Breathwork: The Heart of Yoga",
+	subtitle: "Learn how conscious breathing can reduce stress, boost energy, and deepen your practice",
+	content: (
+		<div className="blog-content p-8 w-full">
+			<p className="mb-10 text-[18px] leading-[140%] font-normal">
+				Breath is the bridge between body and mind. Mastering conscious breathing techniques can transform your yoga practice and daily life.
+			</p>
+			<div className="space-y-8">
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">The Power of Breath</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Your breath directly influences your nervous system, energy levels, and emotional state. Conscious breathing is a powerful tool for self-regulation.
+					</p>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Essential Breathing Techniques</h3>
+					<ul className="list-disc pl-10 space-y-2">
+						<li className="text-[15px] leading-[140%] font-normal">Ujjayi breath - the ocean sound</li>
+						<li className="text-[15px] leading-[140%] font-normal">Nadi Shodhana - alternate nostril breathing</li>
+						<li className="text-[15px] leading-[140%] font-normal">Kapalabhati - skull shining breath</li>
+						<li className="text-[15px] leading-[140%] font-normal">Bhramari - bee breath for calm</li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 className="text-[20px] leading-[120%] font-medium mb-3">Integrating Breath into Practice</h3>
+					<p className="text-[15px] leading-[140%] font-normal">
+						Let your breath guide your movement. Inhale to expand, exhale to release. This simple principle deepens every pose and meditation.
+					</p>
+				</div>
+			</div>
+		</div>
+	)
+};
 
 // Main BLOGS object that maps slugs to individual blog objects
 export const BLOGS: Record<string, BlogDetail> = {
@@ -441,6 +558,9 @@ export const BLOGS: Record<string, BlogDetail> = {
 	"yoga-for-beginners": BLOG_4,
 	"nutrition-for-wellness": BLOG_5,
 	"stress-management-techniques": BLOG_6,
+	"power-of-daily-practice": BLOG_7,
+	"mindful-living-off-the-mat": BLOG_8,
+	"breathwork-heart-of-yoga": BLOG_9,
 };
 
 

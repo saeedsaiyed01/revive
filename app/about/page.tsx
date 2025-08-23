@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from 'react';
 import AboutPhotoCard from "../components/AboutPhotoCard";
@@ -10,51 +10,58 @@ const aboutPageData = {
     story: {
       badge: "Our Story",
       title: "About Revive",
-      description1: "At Revive, we believe in the profound connection between mind, body, and spirit. Our journey began with a simple vision: to create transformative wellness experiences that blend ancient wisdom with modern science.",
-      description2: "Founded by Rita, an internationally certified wellness expert with over 15 years of experience, Revive has grown into a sanctuary for those seeking genuine transformation and holistic wellbeing."
+      description1:
+        "At Revive, we believe in the profound connection between mind, body, and spirit. Our journey began with a simple vision: to create transformative wellness experiences that blend ancient wisdom with modern science.",
+      description2:
+        "Founded by Rita, an internationally certified wellness expert with over 15 years of experience, Revive has grown into a sanctuary for those seeking genuine transformation and holistic wellbeing.",
     },
-    image: "/Images/GirlCardimg.png"
+    image: "/Images/GirlCardimg.png",
   },
   philosophy: {
     title: "Our Philosophy:",
     cards: [
       {
         title: "Holistic Approach",
-        description: "We believe in treating the whole person—mind, body, and spirit—recognizing that each aspect contributes to overall wellbeing. Our programs are designed to create harmony across all dimensions of health."
+        description:
+          "We believe in treating the whole person—mind, body, and spirit—recognizing that each aspect contributes to overall wellbeing. Our programs are designed to create harmony across all dimensions of health.",
       },
       {
         title: "Evidence-Based Practices",
-        description: "While honoring traditional wisdom, we integrate modern scientific research into our methods. This balanced approach ensures our clients receive the most effective and comprehensive care possible."
+        description:
+          "While honoring traditional wisdom, we integrate modern scientific research into our methods. This balanced approach ensures our clients receive the most effective and comprehensive care possible.",
       },
       {
         title: "Personalized Experience",
-        description: "No two individuals are alike, and neither are their wellness journeys. We take time to understand each client&apos;s needs, crafting personalized programs that address specific goals and challenges."
-      }
-    ]
+        description:
+          "No two individuals are alike, and neither are their wellness journeys. We take time to understand each client&apos;s needs, crafting personalized programs that address specific goals and challenges.",
+      },
+    ],
   },
   founder: {
     badge: "Our Leadership",
     title: "Meet Our Founder",
     name: "Rita",
-    description1: "With over 10 years of experience in wellness, Rita brings a wealth of knowledge spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.",
-    description2: "Her journey began in India, where she studied traditional practices before expanding her expertise through certifications from renowned institutions worldwide. Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating transformative experiences that address the whole person."
+    description1:
+      "With over 10 years of experience in wellness, Rita brings a wealth of knowledge spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.",
+    description2:
+      "Her journey began in India, where she studied traditional practices before expanding her expertise through certifications from renowned institutions worldwide. Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating transformative experiences that address the whole person.",
   },
   photoCards: [
     {
       image: "/Images/aboutPhoto1.png",
       title: "Sound Bowl Meditation",
-      description: "Ancient healing technique for deep relaxation"
+      description: "Ancient healing technique for deep relaxation",
     },
     {
       image: "/Images/aboutPhoto2.png",
       title: "Desert Yoga Practice",
-      description: "Connecting with nature through mindful movement"
+      description: "Connecting with nature through mindful movement",
     },
     {
       image: "/Images/aboutPhoto3.png",
       title: "Spiritual Connection",
-      description: "Embracing the healing energy of natural surroundings"
-    }
+      description: "Embracing the healing energy of natural surroundings",
+    },
   ],
   cta: {
     background: {
@@ -62,7 +69,7 @@ const aboutPageData = {
       width: 1781,
       height: 1020,
       top: 0,
-      left: -142
+      left: -142,
     },
     bannerCard: {
       image: "/Images/CardBG.png",
@@ -73,28 +80,28 @@ const aboutPageData = {
       borderRadius: 30,
       title: "Begin Your\nTransformative Journey",
       body: "Whether you&apos;re seeking stress reduction, spiritual growth, or a complete wellness reset, we invite you to experience the transformative power of our programs and retreats.",
-      buttonText: "contact us today"
+      buttonText: "contact us today",
     },
     button: {
       width: 280,
       height: 64,
       top: 500,
       borderRadius: 20,
-      background: "/Images/default-bg.png"
+      background: "/Images/default-bg.png",
     },
     infoBox: {
       width: 1011,
       height: 138,
       top: 860,
       left: 415,
-      borderRadius: 30
+      borderRadius: 30,
     },
     rock: {
       image: "/Images/rockFooter.png",
       width: 440,
       height: 437,
       top: 600,
-      left: -157
+      left: -157,
     },
     contacts: {
       phoneLabel: "contact us with phone",
@@ -103,9 +110,9 @@ const aboutPageData = {
       emailValue: "ritayoga@hotmail.com",
       addressHeading: "United States",
       addressLine1: "205 Middle Road, 2nd",
-      addressLine2: "Floor, New York"
-    }
-  }
+      addressLine2: "Floor, New York",
+    },
+  },
 };
 
 export default function AboutPage() {
@@ -117,7 +124,10 @@ export default function AboutPage() {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.photoCards.length) % data.photoCards.length);
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + data.photoCards.length) % data.photoCards.length
+    );
   };
 
   return (
@@ -125,65 +135,97 @@ export default function AboutPage() {
       {/* Mobile Layout */}
       <div className="lg:hidden min-h-screen">
         {/* Section 1: About Revive */}
-        <section 
+        <section
           className="relative w-full px-4 py-8"
           style={{
-            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Our Story Badge */}
           <div className="mb-6 text-center">
-            <div 
-              className="inline-block px-6 py-3 rounded-full text-white text-base font-medium shadow-lg mt-10"
+            <div
+              className="inline-block px-6 py-3 rounded-full text-white text-base font-medium shadow-lg"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               {data.hero.story.badge}
             </div>
           </div>
 
-          {/* About Revive Card */}
-          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-8">
-            <h1 className="text-2xl font-serif font-bold text-black mb-4" style={{ fontFamily: 'Isenheim, serif' }}>
+          {/* About Revive Title Card - White Background */}
+          <div className="bg-white rounded-[25px] shadow-lg p-6 mb-12 mt-12">
+            <h1
+              className="text-2xl font-serif font-bold text-black text-center"
+              style={{ fontFamily: "Isenheim, serif" }}
+            >
               {data.hero.story.title}
             </h1>
-            <p className="text-sm text-gray-700 leading-relaxed mb-4" style={{ fontFamily: 'Helvetica, sans-serif' }}>
-              {data.hero.story.description1}
-            </p>
-            <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
-              {data.hero.story.description2}
-            </p>
           </div>
 
           {/* Main Desert Image */}
-          <div className="rounded-[25px] overflow-hidden shadow-lg mb-8">
+          <div
+            className="overflow-hidden shadow-lg mb-8"
+            style={{
+              width: "318px",
+              height: "424px",
+              borderRadius: "20px",
+              margin: "0 auto",
+            }}
+          >
             <img
               src={data.hero.image}
               alt="About visual"
-              className="w-full h-80 object-cover"
+              className="w-full h-full object-cover"
             />
+          </div>
+
+          {/* Description Card - CardBG.png Background */}
+          <div
+            className="rounded-[25px] shadow-lg p-10 mt-10"
+            style={{
+              backgroundImage: "url('/Images/CardBG.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <p
+              className="text-md about-card-desc-2  text-black leading-relaxed mb-4"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
+              {data.hero.story.description1}
+            </p>
+            <p
+              className="text-md about-card-desc-2  text-black leading-relaxed"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
+              {data.hero.story.description2}
+            </p>
           </div>
         </section>
 
         {/* Section 2: Our Philosophy */}
-        <section 
+        <section
           className="relative w-full px-4 py-8"
           style={{
             backgroundImage: "url('/Images/SecondPageBG.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-serif font-bold text-white mb-6" style={{ fontFamily: 'Isenheim, serif' }}>
+            <h2
+              className="text-3xl font-serif font-bold text-white mb-6"
+              style={{ fontFamily: "Isenheim, serif" }}
+            >
               {data.philosophy.title}
             </h2>
           </div>
@@ -195,15 +237,21 @@ export default function AboutPage() {
                 className="rounded-[25px] shadow-lg p-6"
                 style={{
                   backgroundImage: "url('/Images/CardBG.png')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
-                <h3 className="text-xl font-serif font-bold text-black mb-3 text-center" style={{ fontFamily: 'Isenheim, serif' }}>
+                <h3
+                  className="text-xl font-serif font-bold text-black mb-3 text-center"
+                  style={{ fontFamily: "Isenheim, serif" }}
+                >
                   {card.title}
                 </h3>
-                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                <p
+                  className="text-sm about-card-desc-2  text-black leading-relaxed"
+                  style={{ fontFamily: "Helvetica, sans-serif" }}
+                >
                   {card.description}
                 </p>
               </div>
@@ -212,17 +260,20 @@ export default function AboutPage() {
         </section>
 
         {/* Section 3: Meet Our Founder */}
-        <section 
+        <section
           className="relative w-full px-4 py-8"
           style={{
             backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Founder's Image */}
-          <div className="rounded-full overflow-hidden shadow-lg mb-6 mx-auto" style={{ width: '300px', height: '300px' }}>
+          <div
+            className="rounded-full overflow-hidden shadow-lg mb-6 mx-auto"
+            style={{ width: "300px", height: "300px" }}
+          >
             <img
               src="/Images/roundLogo.png"
               alt="Founder visual"
@@ -231,82 +282,123 @@ export default function AboutPage() {
           </div>
 
           {/* Founder Info Card */}
-          <div 
+          <div
             className="rounded-[25px] shadow-lg p-6"
             style={{
               backgroundImage: "url('/Images/CardBG.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           >
-            <div 
+            <div
               className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4 text-sm"
-              style={{ fontFamily: 'Helvetica, sans-serif' }}
+              style={{ fontFamily: "Helvetica, sans-serif" }}
             >
               {data.founder.badge}
             </div>
-            <h2 className="text-2xl font-serif font-bold text-black mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+            <h2
+              className="text-2xl font-serif font-bold text-black mb-2"
+              style={{ fontFamily: "Isenheim, serif" }}
+            >
               {data.founder.title}
             </h2>
-            <h3 className="text-lg font-semibold text-black mb-3" style={{ fontFamily: 'Isenheim, serif' }}>
+            <h3
+              className="text-lg font-semibold text-black mb-3"
+              style={{ fontFamily: "Isenheim, serif" }}
+            >
               {data.founder.name}
             </h3>
-            <p className="text-sm text-black leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+            <p
+              className="text-sm text-black leading-relaxed mb-3"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
               {data.founder.description1}
             </p>
-            <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+            <p
+              className="text-sm text-black leading-relaxed"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
               {data.founder.description2}
             </p>
           </div>
 
           {/* Photo Cards Carousel */}
           <div className="mt-8">
-            <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '400px' }}>
+            <div
+              className="relative rounded-[25px] overflow-hidden shadow-lg"
+              style={{ height: "400px" }}
+            >
               {/* Main Image */}
               <div
                 className="w-full h-2/3"
                 style={{
                   backgroundImage: `url(${data.photoCards[currentIndex].image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               />
-              
+
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
-              
+
               <button
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
 
               {/* Text Overlay */}
-              <div 
+              <div
                 className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
                 style={{
                   backgroundImage: "url('/Images/CardBG.png')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
-                <h3 className="text-black font-serif font-bold text-lg mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
+                <h3
+                  className="text-black font-serif font-bold text-lg mb-2"
+                  style={{ fontFamily: "Isenheim, serif" }}
+                >
                   {data.photoCards[currentIndex].title}
                 </h3>
-                <p className="text-black text-sm leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+                <p
+                  className="text-black text-sm leading-relaxed"
+                  style={{ fontFamily: "Helvetica, sans-serif" }}
+                >
                   {data.photoCards[currentIndex].description}
                 </p>
               </div>
@@ -315,29 +407,35 @@ export default function AboutPage() {
         </section>
 
         {/* Section 4: CTA Section */}
-        <section 
+        <section
           className="relative w-full px-4 py-8 flex flex-col justify-start"
           style={{
             backgroundImage: "url('/Images/bgWCS.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Golden Banner */}
-          <div 
+          <div
             className="rounded-[25px] shadow-lg p-6 mb-6"
             style={{
               backgroundImage: "url('/Images/CardBG.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-2xl font-serif font-bold text-black mb-3 text-center" style={{ fontFamily: 'Isenheim, serif' }}>
+            <h2
+              className="text-2xl font-serif font-bold text-black mb-3 text-center"
+              style={{ fontFamily: "Isenheim, serif" }}
+            >
               Begin Your Transformative Journey
             </h2>
-            <p className="text-sm text-black leading-relaxed text-center" style={{ fontFamily: 'Helvetica, sans-serif' }}>
+            <p
+              className="text-sm text-black leading-relaxed text-center"
+              style={{ fontFamily: "Helvetica, sans-serif" }}
+            >
               {data.cta.bannerCard.body}
             </p>
           </div>
@@ -348,10 +446,10 @@ export default function AboutPage() {
               className="text-white py-3 px-6 rounded-[20px] font-medium shadow-lg transition-all text-sm"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                fontFamily: 'Helvetica, sans-serif'
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                fontFamily: "Helvetica, sans-serif",
               }}
             >
               {data.cta.bannerCard.buttonText}
@@ -361,15 +459,15 @@ export default function AboutPage() {
           {/* Contact Info with Stone Stacks */}
           <div className="relative flex-1">
             {/* Left Stone Stack */}
-            <div 
-              className="absolute left-4 top-8 z-50"
+            <div
+              className="absolute left-4 z-50"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "6086px",
+                top: "120px",
                 left: "-84px",
                 transform: "rotate(0deg)",
-                opacity: 1
+                opacity: 1,
               }}
             >
               <img
@@ -380,19 +478,19 @@ export default function AboutPage() {
             </div>
 
             {/* Right Stone Stack */}
-            <div 
-              className="absolute right-4 top-8 z-50"
+            <div
+              className="absolute right-4 z-50"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "6086px",
+                top: "120px",
                 right: "-84px",
                 transform: "rotate(0deg)",
-                opacity: 1
+                opacity: 1,
               }}
             >
               <img
-                src="/Images/rockFooter.png"
+                src="/Images/rockfooterrigth.png"
                 alt="Rock Footer Right"
                 className="w-full h-full object-contain"
               />
@@ -400,25 +498,39 @@ export default function AboutPage() {
 
             {/* Central Contact Card */}
             <div className="relative z-30 flex justify-center pt-16">
-              <div className="bg-white rounded-[25px] shadow-lg p-6 w-full max-w-sm">
+              <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
                 <div className="text-center space-y-6">
                   {/* Phone */}
                   <div>
-                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.phoneValue}</p>
-                    <p className="text-gray-600 text-sm">{data.cta.contacts.phoneLabel}</p>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">
+                      {data.cta.contacts.phoneValue}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {data.cta.contacts.phoneLabel}
+                    </p>
                   </div>
 
                   {/* Email */}
                   <div>
-                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.emailValue}</p>
-                    <p className="text-gray-600 text-sm">{data.cta.contacts.emailLabel}</p>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">
+                      {data.cta.contacts.emailValue}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {data.cta.contacts.emailLabel}
+                    </p>
                   </div>
 
                   {/* Address */}
                   <div>
-                    <p className="font-medium mb-1 text-gray-900 text-lg">{data.cta.contacts.addressHeading}</p>
-                    <p className="text-gray-600 text-sm">{data.cta.contacts.addressLine1}</p>
-                    <p className="text-gray-600 text-sm">{data.cta.contacts.addressLine2}</p>
+                    <p className="font-medium mb-1 text-gray-900 text-lg">
+                      {data.cta.contacts.addressHeading}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {data.cta.contacts.addressLine1}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {data.cta.contacts.addressLine2}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -429,304 +541,353 @@ export default function AboutPage() {
 
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        <section 
+        <section
           className="relative min-h-[1400px] w-full"
           style={{
             backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
-        <div
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{ width: "1385px", height: "1047px", top: "162px" }}
-        >
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-[50px]"
-            style={{
-              backgroundImage: "url('/Images/UpperBG.png')",
-              opacity: 1,
-            }}
-          />
-
-          <div
-            className="absolute rounded-[30px] text-black p-8"
-            style={{
-              width: "506px",
-              height: "484px",
-              top: "226px",
-              left: "158px",
-              backgroundImage: "url('/Images/default-bg.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{ width: "1385px", height: "1047px", top: "162px" }}
           >
-            <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
-              {data.hero.story.badge}
-            </div>
-            <h1 className="font-isenheim text-black mb-4">{data.hero.story.title}</h1>
-            <p className="text-black/80 leading-relaxed">
-              {data.hero.story.description1}
-            </p> 
-            <p className="mt-10">
-              {data.hero.story.description2}
-            </p>
-          </div>
-
-          <div
-            className="absolute rounded-[30px] overflow-hidden"
-            style={{
-              width: "663.75px",
-              height: "885px",
-              top: "50px",
-              left: "707px",
-            }}
-          >
-              <img
-              src={data.hero.image}
-              alt="About visual"
-              width={664}
-              height={885}
-              className="w-full h-full object-cover"
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-[50px]"
+              style={{
+                backgroundImage: "url('/Images/UpperBG.png')",
+                opacity: 1,
+              }}
             />
-          </div>
-        </div>
-      </section>
 
-      <section
-          className="relative w-full"
-          style={{ 
-            backgroundImage: "url('/Images/SecondPageBG.png')", 
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            height: '769px' 
-          }}
-      >
-        <div className="relative z-10 mx-auto px-[clamp(16px,4vw,32px)]" style={{ width: '1440px' }}>
-          <div className="text-center pt-16">
-            <h2 className="font-isenheim text-white text-5xl font-normal">{data.philosophy.title}</h2>
-          </div>
+            <div
+              className="absolute rounded-[30px] text-black p-8"
+              style={{
+                width: "506px",
+                height: "484px",
+                top: "226px",
+                left: "158px",
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
+                {data.hero.story.badge}
+              </div>
+              <h1 className="font-isenheim text-black mb-4">
+                {data.hero.story.title}
+              </h1>
+              <p className="text-black/80 leading-relaxed">
+                {data.hero.story.description1}
+              </p>
+              <p className="mt-10">{data.hero.story.description2}</p>
+            </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-            {data.philosophy.cards.map((c, idx) => (
-              <ValueCard
-                key={idx}
-                title={c.title}
-                description={c.description}
-                showIcon={false}
-                titleClassName="text-black about-card-title"
-                descriptionClassName="text-black about-card-desc"
-                className="backdrop-blur-[1px]"
+            <div
+              className="absolute rounded-[30px] overflow-hidden"
+              style={{
+                width: "663.75px",
+                height: "885px",
+                top: "50px",
+                left: "707px",
+              }}
+            >
+              <img
+                src={data.hero.image}
+                alt="About visual"
+                width={664}
+                height={885}
+                className="w-full h-full object-cover"
               />
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
-      
-      <section
+        </section>
+
+        <section
           className="relative w-full"
-          style={{ 
-            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+          style={{
+            backgroundImage: "url('/Images/SecondPageBG.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "769px",
           }}
-      >
-        <div
-          className="relative z-10 mx-auto"
-          style={{ width: '1440px', minHeight: '1250px' }}
         >
           <div
-              className="absolute"
-            style={{
-              width: '646px',
-              height: '698px',
-                top: '370px',
-              left: '-130px',
-              backgroundImage: "url('/Images/BackgrounStone.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
-          />
-
-          {/* Left round logo/image */}
-          <div
-            className="absolute overflow-hidden rounded-full mt-10"
-            style={{
-              width: '432px',
-              height: '432px',
-              top: '17px',
-              left: '191px',
-            }}
+            className="relative z-10 mx-auto px-[clamp(16px,4vw,32px)]"
+            style={{ width: "1440px" }}
           >
-              <img
-              src="/Images/roundLogo.png"
-              alt="Founder visual"
-              width={432}
-              height={432}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Right gold card */}
-          <div  
-              className="absolute rounded-[30px] text-black p-8 mt-10"
-            style={{
-              width: '640px',
-              height: '484px',
-              top: '0px',
-              left: '720px',
-              backgroundImage: "url('/Images/CardBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
-              Our Leadership
+            <div className="text-center pt-16">
+              <h2 className="font-isenheim text-white text-5xl font-normal">
+                {data.philosophy.title}
+              </h2>
             </div>
-            <h2 className="font-isenheim text-black text-5xl mb-2">Meet Our Founder</h2>
-            <h3 className="text-xl font-semibold mb-3">Rita</h3>
-            <p className="text-black/80 leading-relaxed">
-              With over 15 years of experience in wellness, Rita brings a wealth of knowledge
-              spanning Yoga, Meditation, Sound Healing, Ayurveda, Neuroscience Coaching,
-              Hypnotherapy and Breath Work.
-            </p>
-            <p className="text-black/80 leading-relaxed mt-3">
-              Her journey began in India, where she studied traditional practices before expanding
-              her expertise through certifications from renowned institutions worldwide.
-                Rita&apos;s approach uniquely blends ancient wisdom with modern science, creating
-              transformative experiences that address the whole person.
-            </p>
-          </div>
 
-          {/* Three photo cards below */}
-          <div className="absolute z-20" style={{ top: '596px', left: '63px' }}>
-            <AboutPhotoCard
-              image={data.photoCards[0].image}
-              title={data.photoCards[0].title}
-              description={data.photoCards[0].description}
-            />
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+              {data.philosophy.cards.map((c, idx) => (
+                <ValueCard
+                  key={idx}
+                  title={c.title}
+                  description={c.description}
+                  showIcon={false}
+                  titleClassName="text-black about-card-title"
+                  descriptionClassName="text-black about-card-desc"
+                  className="backdrop-blur-[1px]"
+                />
+              ))}
+            </div>
           </div>
-          <div className="absolute z-20" style={{ top: '596px', left: '523px' }}>
-            <AboutPhotoCard
-              image={data.photoCards[1].image}
-              title={data.photoCards[1].title}
-              description={data.photoCards[1].description}
-            />
-          </div>
-          <div className="absolute z-20" style={{ top: '596px', left: '983px' }}>
-            <AboutPhotoCard
-              image={data.photoCards[2].image}
-              title={data.photoCards[2].title}
-              description={data.photoCards[2].description}
-            />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Final CTA section */}
-       <section className="relative w-full overflow-hidden">
-         <div className="relative mx-auto" style={{ width: '1440px', height: `${data.cta.background.height}px` }}>
-           {/* Background dunes */}
-           <div
-               className="absolute"
-             style={{
-               width: `${data.cta.background.width}px`,
-               height: `${data.cta.background.height}px`,
-               top: `${data.cta.background.top}px`,
-               left: `${data.cta.background.left}px`,
-               backgroundImage: `url('${data.cta.background.image}')`,
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center',
-                 backgroundRepeat: 'no-repeat'
-             }}
-           />
- 
-           {/* Gold banner card */}
-           <div
-               className="absolute text-black text-center rounded-[30px]"
-             style={{
-               width: `${data.cta.bannerCard.width}px`,
-               height: `${data.cta.bannerCard.height}px`,
-               top: `${data.cta.bannerCard.top}px`,
-               left: `${data.cta.bannerCard.left}px`,
-               backgroundImage: `url('${data.cta.bannerCard.image}')`,
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center',
-                 backgroundRepeat: 'no-repeat',
-               borderRadius: `${data.cta.bannerCard.borderRadius}px`,
-               paddingTop: '40px',
-             }}
-           >
-            <h2 className="font-isenheim whitespace-pre-line" style={{ fontSize: '56px', lineHeight: '1.15' }}>{data.cta.bannerCard.title}</h2>
-            <p className="mx-auto" style={{ marginTop: '16px', maxWidth: '740px', fontSize: '15px', lineHeight: '1.4' }}>
-              {data.cta.bannerCard.body}
-            </p>
-           </div>
- 
-          {/* CTA Button below the banner */}
-          <button
-            className="absolute text-white btn-isenheim"
+        <section
+          className="relative w-full"
+          style={{
+            backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div
+            className="relative z-10 mx-auto"
+            style={{ width: "1440px", minHeight: "1250px" }}
+          >
+            <div
+              className="absolute"
+              style={{
+                width: "646px",
+                height: "698px",
+                top: "370px",
+                left: "-130px",
+                backgroundImage: "url('/Images/BackgrounStone.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            />
+
+            {/* Left round logo/image */}
+            <div
+              className="absolute overflow-hidden rounded-full mt-10"
+              style={{
+                width: "432px",
+                height: "432px",
+                top: "17px",
+                left: "191px",
+              }}
+            >
+              <img
+                src="/Images/roundLogo.png"
+                alt="Founder visual"
+                width={432}
+                height={432}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right gold card */}
+            <div
+              className="absolute rounded-[30px] text-black p-8 mt-10"
+              style={{
+                width: "640px",
+                height: "484px",
+                top: "0px",
+                left: "720px",
+                backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
+                Our Leadership
+              </div>
+              <h2 className="font-isenheim text-black text-5xl mb-2">
+                Meet Our Founder
+              </h2>
+              <h3 className="text-xl font-semibold mb-3">Rita</h3>
+              <p className="text-black/80 leading-relaxed">
+                With over 15 years of experience in wellness, Rita brings a
+                wealth of knowledge spanning Yoga, Meditation, Sound Healing,
+                Ayurveda, Neuroscience Coaching, Hypnotherapy and Breath Work.
+              </p>
+              <p className="text-black/80 leading-relaxed mt-3">
+                Her journey began in India, where she studied traditional
+                practices before expanding her expertise through certifications
+                from renowned institutions worldwide. Rita&apos;s approach
+                uniquely blends ancient wisdom with modern science, creating
+                transformative experiences that address the whole person.
+              </p>
+            </div>
+
+            {/* Three photo cards below */}
+            <div
+              className="absolute z-20"
+              style={{ top: "596px", left: "63px" }}
+            >
+              <AboutPhotoCard
+                image={data.photoCards[0].image}
+                title={data.photoCards[0].title}
+                description={data.photoCards[0].description}
+              />
+            </div>
+            <div
+              className="absolute z-20"
+              style={{ top: "596px", left: "523px" }}
+            >
+              <AboutPhotoCard
+                image={data.photoCards[1].image}
+                title={data.photoCards[1].title}
+                description={data.photoCards[1].description}
+              />
+            </div>
+            <div
+              className="absolute z-20"
+              style={{ top: "596px", left: "983px" }}
+            >
+              <AboutPhotoCard
+                image={data.photoCards[2].image}
+                title={data.photoCards[2].title}
+                description={data.photoCards[2].description}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA section */}
+        <section className="relative w-full overflow-hidden">
+          <div
+            className="relative mx-auto"
             style={{
-              width: `${data.cta.button.width}px`,
-              height: `${data.cta.button.height}px`,
-              top: `${data.cta.button.top}px`,
-              left: `${data.cta.bannerCard.left + (data.cta.bannerCard.width - data.cta.button.width) / 2}px`,
-              borderRadius: `${data.cta.button.borderRadius}px`,
-              backgroundImage: `url('${data.cta.button.background}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
+              width: "1440px",
+              height: `${data.cta.background.height}px`,
             }}
           >
-            {data.cta.bannerCard.buttonText}
-          </button>
+            {/* Background dunes */}
+            <div
+              className="absolute"
+              style={{
+                width: `${data.cta.background.width}px`,
+                height: `${data.cta.background.height}px`,
+                top: `${data.cta.background.top}px`,
+                left: `${data.cta.background.left}px`,
+                backgroundImage: `url('${data.cta.background.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            />
 
-          {/* Rock stack image */}
+            {/* Gold banner card */}
+            <div
+              className="absolute text-black text-center rounded-[30px]"
+              style={{
+                width: `${data.cta.bannerCard.width}px`,
+                height: `${data.cta.bannerCard.height}px`,
+                top: `${data.cta.bannerCard.top}px`,
+                left: `${data.cta.bannerCard.left}px`,
+                backgroundImage: `url('${data.cta.bannerCard.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                borderRadius: `${data.cta.bannerCard.borderRadius}px`,
+                paddingTop: "40px",
+              }}
+            >
+              <h2
+                className="font-isenheim whitespace-pre-line"
+                style={{ fontSize: "56px", lineHeight: "1.15" }}
+              >
+                {data.cta.bannerCard.title}
+              </h2>
+              <p
+                className="mx-auto"
+                style={{
+                  marginTop: "16px",
+                  maxWidth: "740px",
+                  fontSize: "15px",
+                  lineHeight: "1.4",
+                }}
+              >
+                {data.cta.bannerCard.body}
+              </p>
+            </div>
+
+            {/* CTA Button below the banner */}
+            <button
+              className="absolute text-white btn-isenheim"
+              style={{
+                width: `${data.cta.button.width}px`,
+                height: `${data.cta.button.height}px`,
+                top: `${data.cta.button.top}px`,
+                left: `${
+                  data.cta.bannerCard.left +
+                  (data.cta.bannerCard.width - data.cta.button.width) / 2
+                }px`,
+                borderRadius: `${data.cta.button.borderRadius}px`,
+                backgroundImage: `url('${data.cta.button.background}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              {data.cta.bannerCard.buttonText}
+            </button>
+
+            {/* Rock stack image */}
             <img
-            src={data.cta.rock.image}
-            alt="Rock stack"
-            width={data.cta.rock.width}
-            height={data.cta.rock.height}
-            className="absolute"
-            style={{
-              top: `${data.cta.rock.top}px`,
-              left: `${data.cta.rock.left}px`,
-            }}
-          />
- 
-           {/* White info box */}
-           <div
-             className="absolute bg-white text-black grid grid-cols-3 items-center px-10"
-             style={{
-               width: `${data.cta.infoBox.width}px`,
-               height: `${data.cta.infoBox.height}px`,
-               top: `${data.cta.infoBox.top}px`,
-               left: `${data.cta.infoBox.left}px`,
-               borderRadius: `${data.cta.infoBox.borderRadius}px`,
-               boxShadow: '0 10px 30px rgba(0,0,0,0.15)'
-             }}
-           >
-             <div>
-               <div className="text-sm text-black/60">{data.cta.contacts.phoneLabel}</div>
-               <div className="text-lg font-medium">{data.cta.contacts.phoneValue}</div>
-             </div>
-             <div className="text-center">
-               <div className="text-sm text-black/60">{data.cta.contacts.emailLabel}</div>
-               <div className="text-lg font-medium">{data.cta.contacts.emailValue}</div>
-             </div>
-             <div className="text-right">
-               <div className="text-lg font-medium">{data.cta.contacts.addressHeading}</div>
-               <div className="text-sm">{data.cta.contacts.addressLine1}</div>
-               <div className="text-sm">{data.cta.contacts.addressLine2}</div>
-             </div>
-           </div>
-         </div>
-       </section>
+              src={data.cta.rock.image}
+              alt="Rock stack"
+              width={data.cta.rock.width}
+              height={data.cta.rock.height}
+              className="absolute"
+              style={{
+                top: `${data.cta.rock.top}px`,
+                left: `${data.cta.rock.left}px`,
+              }}
+            />
+
+            {/* White info box */}
+            <div
+              className="absolute bg-white text-black grid grid-cols-3 items-center px-10"
+              style={{
+                width: `${data.cta.infoBox.width}px`,
+                height: `${data.cta.infoBox.height}px`,
+                top: `${data.cta.infoBox.top}px`,
+                left: `${data.cta.infoBox.left}px`,
+                borderRadius: `${data.cta.infoBox.borderRadius}px`,
+                boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+              }}
+            >
+              <div>
+                <div className="text-sm text-black/60">
+                  {data.cta.contacts.phoneLabel}
+                </div>
+                <div className="text-lg font-medium">
+                  {data.cta.contacts.phoneValue}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm text-black/60">
+                  {data.cta.contacts.emailLabel}
+                </div>
+                <div className="text-lg font-medium">
+                  {data.cta.contacts.emailValue}
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-lg font-medium">
+                  {data.cta.contacts.addressHeading}
+                </div>
+                <div className="text-sm">{data.cta.contacts.addressLine1}</div>
+                <div className="text-sm">{data.cta.contacts.addressLine2}</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

@@ -18,131 +18,113 @@ export default function ThirdPage() {
         }}
       >
         {/* Mobile Layout */}
-        <div className="lg:hidden relative z-10 mx-auto px-[clamp(16px,4vw,32px)] py-12">
+        <div className="lg:hidden relative z-10 min-h-screen"
+          style={{
+            backgroundImage: "url('/Images/UpperBG.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+            <div className="ml-34">
+            <div
+              className="inline-block px-6 py-2 rounded-full text-white about-card-desc font-medium text-base bg-[url('/Images/default-bg.png')] bg-cover bg-center"
+            >
+              Our Values
+            </div>
+          </div>
+          {/* 1st: Rita: A Legacy of Expertise - White box */}
           <div
-            className="relative mx-auto w-full max-w-[1300px] h-auto min-h-[600px] rounded-[25px] opacity-100"
+            className="absolute"
             style={{
-              backgroundImage: "url('/Images/UpperBG.png')",
+              width: '363px',
+              height: '99px',
+              top: '40px',
+              left: '29px',
+              borderRadius: '20px',
+              opacity: 1,
+              backgroundColor: 'white'
+            }}
+          >
+            
+            <div className="p-4 flex flex-col justify-between h-full ">
+              <h2 className="text-black text-xl card-title-isenheim leading-tight ml-12">
+                Rita: A Legacy of 
+              </h2>
+              <h2 className="text-black text-xl card-title-isenheim leading-tight ml-22">Expertise</h2>
+              {/* <p className="text-black text-sm leading-tight">
+                We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
+              </p> */}
+            </div>
+          </div>
+
+          {/* 2nd: Image */}
+          <div
+            className="absolute"
+            style={{
+              width: '318px',
+              height: '424px',
+              top: '150px',
+              left: '61px',
+              borderRadius: '20px',
+              opacity: 1,
+              backgroundImage: "url('/Images/GirlCardimg.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+
+          {/* 3rd: Card with content */}
+          <div
+            className="absolute"
+            style={{
+              width: '395px',
+              height: '319px',
+              top: '580px',
+              left: '13px',
+              borderRadius: '20px',
+              opacity: 1,
+              backgroundImage: "url('/Images/CardBG.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
             }}
           >
-            <div className="relative z-20 p-6 h-full flex flex-col items-center justify-center gap-6">
-              <div className="w-full">
-                <div
-                  className="h-full rounded-[20px] p-6 flex flex-col justify-between"
-                  style={{
-                    backgroundImage: "url('/Images/CardBG.png')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                  }}
-                >
-                  <div>
-                    <div
-                      className="inline-block px-3 py-2 text-white text-xs rounded-[6px] mb-4"
-                      style={{
-                        backgroundImage: "url('/Images/default-bg.png')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
-                      }}
-                    >
-                      Who we are?
-                    </div>
+            <div className="p-6 h-full flex flex-col justify-between ">
+              <div>
+              
+                {/* Main Title */}
+                {/* <h2 className="text-black text-2xl font-normal  leading-tight mb-4">
+                  Rita: A Legacy of Expertise
+                </h2> */}
 
-                    {/* Main Title */}
-                    <h2 className="font-isenheim text-black text-2xl font-normal mb-3 leading-tight text-left">
-                      Rita: A Legacy of Expertise
-                    </h2>
-
-                    {/* Subtitle */}
-                    <h3 className="subtitle-isenheim text-black mb-4 leading-tight text-left" style={{ fontSize: '18px' }}>
-                      Unveiling Rita's Approach
-                    </h3>
-                    {/* Body Text - Exact content from image */}
-                    <div className="space-y-3 text-black text-sm leading-relaxed text-left">
-                      <p>
-                        We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
-                      </p>
-                      <p>
-                        Rita, the founder and wellness expert, brings over a decade of experience in the field of wellness to each retreat. Her expertise spans a variety of disciplines, including Yoga & Meditation, Sound Healing, Ayurveda Practices, Neuroscience Coaching, Hypnotherapy and Breath Work. Our retreats are not just a temporary escape; they are journeys of self-discovery and empowerment that create lasting positive change in your life and well-being.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Read More Button - Now below the card */}
-                <div className="mt-4 flex justify-center">
-                  <button
-                    className="text-white font-normal transition-colors btn-isenheim w-[200px] h-[60px] rounded-[20px] text-[14px]"
-                    style={{
-                      backgroundImage: "url('/Images/default-bg.png')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'right',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  >
-                    Read more
-                  </button>
+                {/* Subtitle */}
+                <h3 className="text-black card-title-isenheim  mb-4 leading-tight" style={{ fontSize: '15px' }}>                  Unveiling Rita's Approach
+                </h3>
+                
+                {/* Body Text - Font size 15px */}
+                <div className="space-y-3 about-card-desc text-black leading-relaxed" style={{ fontSize: '15px' }}>
+                  <p>
+                    We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
+                  </p>
+                 
                 </div>
               </div>
 
-              <div className="w-full relative">
-                <div
-                  className="rounded-[30px] overflow-hidden"
+              {/* Read More Button */}
+              <div className="flex justify-end">
+                <button
+                  className="text-white font-normal transition-colors w-[120px] h-[40px] rounded-[20px] text-[14px]"
                   style={{
-                    width: '100%',
-                    height: '400px'
+                    backgroundImage: "url('/Images/default-bg.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'right',
+                    backgroundRepeat: 'no-repeat'
                   }}
                 >
-                  <div
-                    className="w-full h-full rounded-[20px]"
-                    style={{
-                      backgroundImage: "url('/Images/GirlCardimg.png')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  />
-
-                  <div
-                    className="absolute bottom-3 right-3 rounded-[15px] p-3 shadow-lg bg-white"
-                    style={{
-                      width: '200px',
-                      height: '80px'
-                    }}
-                  >
-                    <div className="flex items-center gap-2 h-full">
-                      <div className="w-8 h-8 rounded-full overflow-hidden">
-                        <div
-                          className="w-full h-full rounded-full"
-                          style={{
-                            backgroundImage: "url('/Images/MiniCardImg.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat'
-                          }}
-                        />
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-1">
-                        {/* Star Rating */}
-                        <div className="flex items-center gap-1 mb-1">
-                          <img
-                            src="/logos/Start.png"
-                            alt="star"
-                            className="w-3 h-3"
-                          />
-                        </div>
-                        <p className="font-semibold text-gray-600 text-xs">Rita - Founder</p>
-                        <p className="text-gray-600 text-xs">Wellness expert with over 15 years of experience</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  Read more
+                </button>
               </div>
             </div>
           </div>

@@ -13,9 +13,9 @@ export default function Home() {
       <SecondPage />
       <ThirdPage />
       <FourthPage />
-                   <FifthPage />
-             <InsightsSection />
-             <ConnectSection />
-           </main>
+      <FifthPage />
+      <InsightsSection />
+      <ConnectSection />
+    </main>
   );
 }

@@ -140,19 +140,39 @@ export default function Navbar(props) {
             </div>
           </div>
 
-          <button
-            className="lg:hidden p-2 text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <div className="lg:hidden flex items-center gap-4">
+            {/* User and Cart Icons */}
+            {content.icons.map((icon) => (
+              icon.alt === "Account" ? (
+                <button
+                  key={icon.alt}
+                  onClick={() => setIsAccountPopupOpen(!isAccountPopupOpen)}
+                  className="shrink-0"
+                >
+                  <img src={icon.src} alt={icon.alt} width={24} height={24} className="brightness-0 invert" />
+                </button>
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+                <Link key={icon.alt} href={icon.href || '#'}>
+                  <img src={icon.src} alt={icon.alt} width={24} height={24} className="shrink-0 brightness-0 invert" />
+                </Link>
+              )
+            ))}
+            
+            {/* Hamburger Menu Button */}
+            <button
+              className="p-2 text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {isMobileMenuOpen && (
@@ -179,25 +199,6 @@ export default function Navbar(props) {
                   </li>
                 ))}
               </ul>
-              
-              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/20">
-                {content.icons.map((icon) => (
-                  icon.alt === "Account" ? (
-                    <button
-                      key={icon.alt}
-                      onClick={() => {
-                        setIsAccountPopupOpen(!isAccountPopupOpen);
-                        setIsMobileMenuOpen(false);
-                        }}
-                      className="shrink-0"
-                    >
-                      <img src={icon.src} alt={icon.alt} width={28} height={28} />
-                    </button>
-                  ) : (
-                    <img key={icon.alt} src={icon.src} alt={icon.alt} width={28} height={28} className="shrink-0" />
-                  )
-                ))}
-              </div>
             </div>
           </div>
         )}

@@ -5,7 +5,7 @@ import RetreatCard from './RetreatCard';
 
 export default function FourthPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   // Retreat data objects
   const retreats = [
     {
@@ -13,7 +13,7 @@ export default function FourthPage() {
       title: "Retreat 1",
       image: "/Images/Retreat1.png",
       location: "Arizona",
-      description: "Drawing from ancient wisdomand modern techniques to support deep inner healing."
+      description: "Drawing from ancient modern techniques to support deep inner healing."
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function FourthPage() {
       title: "Retreat 4",
       image: "/Images/Retreat4.png",
       location: "Arizona",
-      description: "Drawing from ancient w d  nd modern techniques to supportdeep inner healing."
+      description: "Drawing from ancient modern techniques to supportdeep inner healing."
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ export default function FourthPage() {
   };
 
   return (
-    <section 
+    <section
       className="relative min-h-screen w-full"
       style={{
         backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
@@ -82,7 +82,7 @@ export default function FourthPage() {
           }}
         >
           <div className="text-center pt-6 pb-4">
-            <div 
+            <div
               className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",
@@ -93,20 +93,34 @@ export default function FourthPage() {
               Wellness Experiences
             </div>
 
-            <div className="bg-white rounded-[30px] mx-4 p-6 shadow-lg">
-              <h2 className="text-black font-normal mb-3 font-isenheim text-2xl leading-tight text-left">
-                Our Featured Retreats
-              </h2>
-              <p className="text-black text-sm leading-relaxed text-left">
-                Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
-              </p>
+            <div className="bg-white rounded-[30px] mx-3 p-7 shadow-lg">
+              <div className="flex flex-row gap-4">
+                <div className="flex-1">
+                  <h2 className="text-black font-serif btn-isenheim leading-tight font-normal">
+                    <div className="text-left whitespace-nowrap">Our Featured</div>
+                    <div className="text-left">Retreats</div>
+                  </h2>
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-600 text-sm leading-relaxed text-left white-card-isenheim ">
+                    Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Carousel Section */}
           <div className="relative px-4 pb-8">
-            <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '500px' }}>
-              {/* Main Image */}
+            <div
+              className="relative rounded-[25px] overflow-hidden shadow-lg"
+              style={{
+                height: '500px',
+                backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+        
               <div
                 className="w-full h-2/3"
                 style={{
@@ -116,8 +130,7 @@ export default function FourthPage() {
                   backgroundRepeat: 'no-repeat'
                 }}
               />
-              
-              {/* Navigation Arrows */}
+
               <button
                 onClick={prevSlide}
                 className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
@@ -126,7 +139,7 @@ export default function FourthPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
+
               <button
                 onClick={nextSlide}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
@@ -137,19 +150,19 @@ export default function FourthPage() {
               </button>
 
               {/* Text Overlay */}
-              <div 
-                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+              <div
+                className="absolute bottom-0 left-0 right-0 h-1/3 p-4 flex flex-col justify-center items-center"
                 style={{
-                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundImage: "url('/Images/CardBG.png')",
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  backgroundPosition: 'left-63',
                   backgroundRepeat: 'no-repeat'
                 }}
               >
-                <h3 className="text-black font-isenheim text-xl font-normal mb-2">
+                <h3 className="text-black card-title-isenheim text-xl font-normal mb-2">
                   {retreats[currentIndex].title}
                 </h3>
-                <p className="text-black text-sm leading-relaxed">
+                <p className="text-black card-description text-sm leading-relaxed ml-8  ">
                   {retreats[currentIndex].description}
                 </p>
               </div>
@@ -170,7 +183,7 @@ export default function FourthPage() {
           }}
         >
           <div className="text-center pt-2 md:pt-4">
-            <div 
+            <div
               className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
               style={{
                 backgroundImage: "url('/Images/default-bg.png')",

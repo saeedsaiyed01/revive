@@ -137,6 +137,18 @@ html {
   letter-spacing: 0% !important;
 }
 
+
+.blog-isenheim {
+  font-family: Isenheim;
+  font-weight: 400;
+  font-style: Régulier;
+  font-size: 15px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  
+}
+
 /* Card title typography */
 .card-title-isenheim {
   font-family: "Isenheim", Georgia, serif !important;
@@ -150,6 +162,49 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.white-card-isenheim{
+  font-family: Helvetica Light;
+font-weight: 400;
+font-style: Regular;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.blog-desc{
+  font-family: Helvetica Light;
+font-weight: 400;
+font-style: Regular;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+
+
+}
+.hero-title-isenheim {
+  font-family: "Isenheim", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 35px !important;
+  line-height: 120% !important;
+  letter-spacing: 0% !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.blog-content{
+  font-family: Helvetica Light;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
 /* Subtitle typography */
 .subtitle-isenheim {
   font-family: "Isenheim", Georgia, serif !important;
@@ -185,6 +240,18 @@ html {
   line-height: 100% !important;
   letter-spacing: 0% !important;
   text-align: center !important;
+}
+
+.about-card-desc-2 {
+  font-family: Helvetica Light;
+font-weight: 400;
+font-style: Regular;
+font-size: 10px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
 }
 
 /* Force single-line titles for philosophy cards */
