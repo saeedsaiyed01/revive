@@ -236,10 +236,10 @@ export default function CartPage() {
 					</button>
 				</div>
 				{/* Footer Section with rock image and info card */}
-				<div className="relative mx-auto max-w-[1440px] h-[360px]" style={{ marginTop: '80px' }}>
+				<div className="relative mx-auto max-w-[1440px] h-[360px]" style={{ marginTop: '10px' }}>
 					{/* Left Rock Image */}
 					<div
-						className="absolute w-[440px] h-[437px] top-0 left-[-130px] opacity-100 bg-contain bg-no-repeat bg-left-bottom pointer-events-none"
+						className="absolute w-[440px] h-[437px] top-[-30px] left-[-130px] opacity-100 bg-contain bg-no-repeat bg-left-bottom pointer-events-none"
 						style={{
 							backgroundImage: "url('/Images/rockFooter.png')"
 						}}
@@ -279,8 +279,7 @@ export default function CartPage() {
 				</div>
 			</div>
 			
-			{/* Bottom spacing to prevent black gap */}
-			<div className="h-20"></div>
+		
 		</section>
 	);
 }
