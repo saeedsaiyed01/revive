@@ -79,7 +79,7 @@ export default function ProgramsPage() {
 
   return (
     <section
-      className="relative min-h-screen w-full mt-28"
+      className="relative min-h-screen w-full mt-28 overflow-x-hidden"
       style={{
         backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
         backgroundSize: "cover",
@@ -88,9 +88,9 @@ export default function ProgramsPage() {
       }}
     >
       {/* Mobile Layout */}
-      <div className="lg:hidden relative z-10 mx-auto px-4 py-8 min-h-screen">
+      <div className="lg:hidden relative z-10 mx-auto px-4 py-8 min-h-screen overflow-x-hidden">
         <div
-          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100"
+          className="relative mx-auto max-w-[1385px] w-full min-h-[1380px] rounded-[50px] opacity-100 overflow-hidden"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
@@ -111,78 +111,177 @@ export default function ProgramsPage() {
           </div>
 
           {/* Program Cards Carousel */}
-          <div className="mt-8 px-4">
-            <div
-              className="relative rounded-[25px] overflow-hidden shadow-lg"
-              style={{ height: "400px" }}
-            >
-              {/* Main Image */}
+          <div className="mt-8 relative overflow-hidden -mx-4">
+            <div className="relative overflow-x-hidden" style={{ width: "100vw", height: "400px", marginLeft: "calc(-50vw + 50%)" }}>
+              {/* Previous Card (peek on left edge) */}
               <div
-                className="w-full h-2/3"
-                style={{
-                  backgroundImage: `url(${data.programs[currentIndex].image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ 
+                  width: "180px", 
+                  height: "350px",
+                  left: "-140px",
+                  top: "25px",
+                  opacity: 0.7
                 }}
-              />
+              >
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.programs[(currentIndex - 1 + data.programs.length) % data.programs.length].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="h-1/3 p-3"
+                  style={{
+                    backgroundImage: "url('/Images/default-bg.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-xs mb-1"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.programs[(currentIndex - 1 + data.programs.length) % data.programs.length].title}
+                  </h3>
+                  <p
+                    className="text-black text-xs leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.programs[(currentIndex - 1 + data.programs.length) % data.programs.length].description}
+                  </p>
+                </div>
+              </div>
 
-              {/* Navigation Arrows */}
+              {/* Main Card */}
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 rounded-[25px] overflow-hidden shadow-lg"
+                style={{ width: "300px", height: "400px" }}
+              >
+                {/* Main Image */}
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.programs[currentIndex].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+
+                {/* Text Overlay */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+                  style={{
+                    backgroundImage: "url('/Images/default-bg.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-lg mb-2"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.programs[currentIndex].title}
+                  </h3>
+                  <p
+                    className="text-black text-sm leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.programs[currentIndex].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Next Card (peek on right edge) */}
+              <div
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ 
+                  width: "180px", 
+                  height: "350px",
+                  right: "-140px",
+                  top: "25px",
+                  opacity: 0.7
+                }}
+              >
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.programs[(currentIndex + 1) % data.programs.length].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="h-1/3 p-3"
+                  style={{
+                    backgroundImage: "url('/Images/default-bg.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-xs mb-1"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.programs[(currentIndex + 1) % data.programs.length].title}
+                  </h3>
+                  <p
+                    className="text-black text-xs leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.programs[(currentIndex + 1) % data.programs.length].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Navigation Arrows - Positioned outside the main card */}
               <button
                 onClick={prevSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-              >
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-              >
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-
-              {/* Text Overlay */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
-                style={{
+                className="absolute left-1/2 transform -translate-x-1/2 top-1/2  -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                style={{ 
+                  left: "calc(50% - 160px)",
                   backgroundImage: "url('/Images/default-bg.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <h3 className="text-[#000000] card-title-isenheim  ml-24 text-lg mb-2">
-                  Programs
-                </h3>
-                <p className="text-[#1E1E1E]  white-card-isenheim text-sm leading-relaxed font-helvetica">
-                  {data.programs[currentIndex].description}
-                </p>
-              </div>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="absolute left-1/2  -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                style={{ 
+                  left: "calc(50% + 160px)",
+                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 12H5M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -201,85 +300,84 @@ export default function ProgramsPage() {
             </button>
           </div>
 
-          <section>
-            <div className="relative flex-1 mt-82">
-              {/* Left Stone Stack */}
-              <div
-                className="absolute left-4 z-50"
-                style={{
-                  width: "252.72311401367188px",
-                  height: "251px",
-                  top: "120px",
-                  left: "-84px",
-                  transform: "rotate(0deg)",
-                  opacity: 1,
-                }}
-              >
-                <img
-                  src="/Images/rockFooter.png"
-                  alt="Rock Footer Left"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+          {/* Central Contact Card */}
+          <div className="relative z-30 flex justify-center pt-102">
+            <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
+              <div className="text-center space-y-6">
+                {/* Phone */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">
+                    +966 53 867 4556
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    contact us with phone
+                  </p>
+                </div>
 
-              {/* Right Stone Stack */}
-              <div
-                className="absolute right-4 z-50"
-                style={{
-                  width: "252.72311401367188px",
-                  height: "251px",
-                  top: "120px",
-                  right: "-84px",
-                  transform: "rotate(0deg)",
-                  opacity: 1,
-                }}
-              >
-                <img
-                  src="/Images/rockfooterrigth.png"
-                  alt="Rock Footer Right"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+                {/* Email */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">
+                    rita1yoga@hotmail.com
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    contact us with mail
+                  </p>
+                </div>
 
-              {/* Central Contact Card */}
-              <div className="relative z-30 flex justify-center pt-16">
-                <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
-                  <div className="text-center space-y-6">
-                    {/* Phone */}
-                    <div>
-                      <p className="font-medium mb-1 text-gray-900 text-lg">
-                        +966 53 867 4556
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        contact us with phone
-                      </p>
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <p className="font-medium mb-1 text-gray-900 text-lg">
-                        rita1yoga@hotmail.com
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        contact us with mail
-                      </p>
-                    </div>
-
-                    {/* Address */}
-                    <div>
-                      <p className="font-medium mb-1 text-gray-900 text-lg">
-                        United States
-                      </p>
-                      <p className="text-gray-600 text-sm">
-                        205 Middle Road, 2nd
-                      </p>
-                      <p className="text-gray-600 text-sm">Floor, New York</p>
-                    </div>
-                  </div>
+                {/* Address */}
+                <div>
+                  <p className="font-medium mb-1 text-gray-900 text-lg">
+                    United States
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    205 Middle Road, 2nd
+                  </p>
+                  <p className="text-gray-600 text-sm">Floor, New York</p>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </div>
+
+      {/* Stone Images - Positioned outside main container */}
+      <div className="lg:hidden relative">
+        {/* Left Stone Stack */}
+        <div
+          className="absolute z-50"
+          style={{
+            width: "252.72311401367188px",
+            height: "251px",
+            top: "calc(-260px)",
+            left: "-84px",
+            transform: "rotate(0deg)",
+            opacity: 1,
+          }}
+        >
+          <img
+            src="/Images/rockFooter.png"
+            alt="Rock Footer Left"
+            className="w-full h-full object-contain"
+          />
+        </div>
+
+        {/* Right Stone Stack */}
+        <div
+          className="absolute z-50"
+          style={{
+            width: "252.72311401367188px",
+            height: "251px",
+            top: "calc(-30vh)",
+            right: "-84px",
+            transform: "rotate(0deg)",
+            opacity: 1,
+          }}
+        >
+          <img
+            src="/Images/rockfooterrigth.png"
+            alt="Rock Footer Right"
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
 

@@ -131,12 +131,12 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen text-white">
+    <main className="text-white overflow-x-hidden">
       {/* Mobile Layout */}
-      <div className="lg:hidden min-h-screen">
+      <div className="lg:hidden overflow-x-hidden">
         {/* Section 1: About Revive */}
         <section
-          className="relative w-full px-4 py-8"
+          className="relative w-full px-4 py-8 pb-16"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
         {/* Section 2: Our Philosophy */}
         <section
-          className="relative w-full px-4 py-8"
+          className="relative w-full px-4 py-8 pb-16"
           style={{
             backgroundImage: "url('/Images/SecondPageBG.png')",
             backgroundSize: "cover",
@@ -261,7 +261,7 @@ export default function AboutPage() {
 
         {/* Section 3: Meet Our Founder */}
         <section
-          className="relative w-full px-4 py-8"
+          className="relative w-full px-4 py-8 pb-16"
           style={{
             backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
             backgroundSize: "cover",
@@ -292,8 +292,14 @@ export default function AboutPage() {
             }}
           >
             <div
-              className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4 text-sm"
-              style={{ fontFamily: "Helvetica, sans-serif" }}
+              className="inline-block px-4 py-2 rounded-full text-white mb-4 text-sm"
+              style={{ 
+                fontFamily: "Helvetica, sans-serif",
+                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
               {data.founder.badge}
             </div>
@@ -324,91 +330,184 @@ export default function AboutPage() {
           </div>
 
           {/* Photo Cards Carousel */}
-          <div className="mt-8">
-            <div
-              className="relative rounded-[25px] overflow-hidden shadow-lg"
-              style={{ height: "400px" }}
-            >
-              {/* Main Image */}
+          <div className="mt-8 relative overflow-hidden -mx-4">
+            <div className="relative" style={{ width: "100vw", height: "500px", marginLeft: "calc(-50vw + 50%)" }}>
+              {/* Previous Card (peek on left edge) */}
               <div
-                className="w-full h-2/3"
-                style={{
-                  backgroundImage: `url(${data.photoCards[currentIndex].image})`,
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ 
+                  width: "200px", 
+                  height: "450px",
+                  left: "-160px",
+                  top: "25px",
+                  opacity: 0.7
+                }}
+              >
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.photoCards[(currentIndex - 1 + data.photoCards.length) % data.photoCards.length].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="h-1/3 p-3"
+                  style={{
+                    backgroundImage: "url('/Images/CardBG.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-xs mb-1"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.photoCards[(currentIndex - 1 + data.photoCards.length) % data.photoCards.length].title}
+                  </h3>
+                  <p
+                    className="text-black text-xs leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.photoCards[(currentIndex - 1 + data.photoCards.length) % data.photoCards.length].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Main Card */}
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 rounded-[25px] overflow-hidden shadow-lg"
+                style={{ width: "300px", height: "500px" }}
+              >
+                {/* Main Image */}
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.photoCards[currentIndex].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+
+                {/* Text Overlay */}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
+                  style={{
+                    backgroundImage: "url('/Images/CardBG.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-lg mb-2"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.photoCards[currentIndex].title}
+                  </h3>
+                  <p
+                    className="text-black text-sm leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.photoCards[currentIndex].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Next Card (peek on right edge) */}
+              <div
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ 
+                  width: "200px", 
+                  height: "450px",
+                  right: "-160px",
+                  top: "25px",
+                  opacity: 0.7
+                }}
+              >
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${data.photoCards[(currentIndex + 1) % data.photoCards.length].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+                <div
+                  className="h-1/3 p-3"
+                  style={{
+                    backgroundImage: "url('/Images/CardBG.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <h3
+                    className="text-black font-serif font-bold text-xs mb-1"
+                    style={{ fontFamily: "Isenheim, serif" }}
+                  >
+                    {data.photoCards[(currentIndex + 1) % data.photoCards.length].title}
+                  </h3>
+                  <p
+                    className="text-black text-xs leading-relaxed"
+                    style={{ fontFamily: "Helvetica, sans-serif" }}
+                  >
+                    {data.photoCards[(currentIndex + 1) % data.photoCards.length].description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Navigation Arrows - Positioned outside the main card */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-1/2 transform -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                style={{ 
+                  left: "calc(50% - 160px)",
+                  backgroundImage: "url('/Images/default-bg.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
-              />
-
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
               >
                 <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
+                  <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-              >
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-
-              {/* Text Overlay */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
-                style={{
-                  backgroundImage: "url('/Images/CardBG.png')",
+                className="absolute left-1/2 transform -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                style={{ 
+                  left: "calc(50% + 160px)",
+                  backgroundImage: "url('/Images/default-bg.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <h3
-                  className="text-black font-serif font-bold text-lg mb-2"
-                  style={{ fontFamily: "Isenheim, serif" }}
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  {data.photoCards[currentIndex].title}
-                </h3>
-                <p
-                  className="text-black text-sm leading-relaxed"
-                  style={{ fontFamily: "Helvetica, sans-serif" }}
-                >
-                  {data.photoCards[currentIndex].description}
-                </p>
-              </div>
+                  <path d="M19 12H5M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
 
         {/* Section 4: CTA Section */}
         <section
-          className="relative w-full px-4 py-8 flex flex-col justify-start"
+          className="relative w-full px-4 py-8 pb-16"
           style={{
             backgroundImage: "url('/Images/bgWCS.png')",
             backgroundSize: "cover",
@@ -457,15 +556,15 @@ export default function AboutPage() {
           </div>
 
           {/* Contact Info with Stone Stacks */}
-          <div className="relative flex-1">
+          <div className="relative">
             {/* Left Stone Stack */}
             <div
-              className="absolute left-4 z-50"
+              className="absolute z-50"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "120px",
-                left: "-84px",
+                top: "145px",
+                left: "-80px",
                 transform: "rotate(0deg)",
                 opacity: 1,
               }}
@@ -479,12 +578,12 @@ export default function AboutPage() {
 
             {/* Right Stone Stack */}
             <div
-              className="absolute right-4 z-50"
+              className="absolute z-50"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "120px",
-                right: "-84px",
+                top: "145px",
+                right: "-80px",
                 transform: "rotate(0deg)",
                 opacity: 1,
               }}

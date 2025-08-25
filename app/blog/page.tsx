@@ -5,18 +5,19 @@ import RetreatCardLarge from "../components/RetreatCardLarge";
 export default function BlogPage() {
 	return (
 		<section
-			className="relative w-full min-h-screen"
+			className="relative w-full overflow-x-hidden"
 			style={{
 				backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-				backgroundSize: "100% auto",
+				backgroundSize: "cover",
 				backgroundPosition: "center",
-        backgroundRepeat: "repeat-y",
+        backgroundRepeat: "no-repeat",
+        touchAction: "pan-y",
 			}}
 		>
 			{/* Mobile Layout */}
       <div
-        className="block lg:hidden relative z-10 mx-auto px-4 py-8 min-h-screen"
-        style={{ paddingTop: "200px" }}
+        className="block lg:hidden relative z-10 mx-auto px-4 py-8 overflow-x-hidden pb-16"
+        style={{ paddingTop: "200px", touchAction: "pan-y" }}
       >
 				{/* Blog Header Card - Updated */}
         <div
@@ -51,7 +52,8 @@ export default function BlogPage() {
 					</p>
 				</div>
 
-				<div className="space-y-6">
+				<div className="space-y-6 flex flex-col items-center">
+					{/* Card 1: Mindfulness Meditation Benefits */}
 					<div 
 						className="rounded-[20px] shadow-lg overflow-hidden"
 						style={{
@@ -64,7 +66,7 @@ export default function BlogPage() {
 							<div 
 								className="w-2/5 h-full"
 								style={{
-									backgroundImage: "url('/Images/yoga.png')",
+									backgroundImage: "url('/Images/Retreat1.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -73,8 +75,8 @@ export default function BlogPage() {
 
 							<div className="w-3/5 p-4 flex flex-col justify-between h-full">
 								<div className="flex-1">
-									<h3 className="text-[#000000] card-title-isenheim text-sm leading-tight font-bold mb-2 mt-2 ">
-								First Yoga Retreat
+									<h3 className="text-[#000000] card-title-isenheim text-sm leading-tight font-bold mb-2 mt-2">
+										Mindfulness Meditation Benefits
 									</h3>
                   <p
                     className="text-black font-helvetica leading-tight"
@@ -84,12 +86,11 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Nervous about your first retreat? Here&apos;s a guide to help you
-                    prepare, relax, and enjoy every moment.
+                    Discover how daily meditation can change your life and improve your well-being.
 									</p>
 								</div>
 								<div className="flex justify-end mt-auto">
-                  <Link href={"/blog/what-to-expect-first-yoga-retreat"}>
+                  <Link href={"/blog/mindfulness-meditation-benefits"}>
 										<div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
                         width="12"
@@ -111,7 +112,7 @@ export default function BlogPage() {
 						</div>
 					</div>
 
-					{/* Card 2: The Power of Daily Practice */}
+					{/* Card 2: What to Expect on Your First Yoga Retreat */}
 					<div 
 						className="rounded-[20px] shadow-lg overflow-hidden"
 						style={{
@@ -125,7 +126,7 @@ export default function BlogPage() {
 							<div className="w-3/5 p-4 flex flex-col justify-between h-full">
 								<div className="flex-1">
 									<h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-										The Power of Daily Practice
+										What to Expect on Your First Yoga Retreat
 									</h3>
                   <p
                     className="text-black font-helvetica text-sm leading-tight"
@@ -135,12 +136,11 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Discover how even 10 minutes of yoga a day can transform
-                    your body, mind, and spirit.
+                    A beginner&apos;s guide to your first wellness journey.
 									</p>
 								</div>
 								<div className="flex justify-start mt-auto">
-                  <Link href={"/blog/power-of-daily-practice"}>
+                  <Link href={"/blog/what-to-expect-first-yoga-retreat"}>
 										<div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
                         width="12"
@@ -163,7 +163,7 @@ export default function BlogPage() {
 							<div 
 								className="w-2/5 h-full"
 								style={{
-									backgroundImage: "url('/Images/SecondPageBG.png')",
+									backgroundImage: "url('/Images/yoga.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -172,7 +172,7 @@ export default function BlogPage() {
 						</div>
 					</div>
 
-					{/* Card 3: Mindful Living Off the Mat */}
+					{/* Card 3: A Holistic Approach to Wellness */}
 					<div 
 						className="rounded-[20px] shadow-lg overflow-hidden"
 						style={{
@@ -186,7 +186,7 @@ export default function BlogPage() {
 							<div 
 								className="w-2/5 h-full"
 								style={{
-									backgroundImage: "url('/Images/Retreat4.png')",
+									backgroundImage: "url('/Images/SecondPageBG.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -196,7 +196,7 @@ export default function BlogPage() {
 							<div className="w-3/5 p-4 flex flex-col justify-between h-full">
 								<div className="flex-1">
 									<h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-										Mindful Living Off the Mat
+										A Holistic Approach to Wellness
 									</h3>
                   <p
                     className="text-black font-helvetica text-sm leading-tight"
@@ -206,12 +206,11 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Take the lessons of yoga into your everyday life with simple
-                    practices for mindfulness and balance.
+                    Balancing mind, body, and spirit for complete well-being and harmony.
 									</p>
 								</div>
 								<div className="flex justify-end mt-auto">
-                  <Link href={"/blog/mindful-living-off-the-mat"}>
+                  <Link href={"/blog/holistic-wellness-approach"}>
 										<div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
                         width="12"
@@ -233,7 +232,7 @@ export default function BlogPage() {
 						</div>
 					</div>
 
-					{/* Card 4: Breathwork: The Heart of Yoga */}
+					{/* Card 4: Yoga for Beginners: Start Your Journey */}
 					<div 
 						className="rounded-[20px] shadow-lg overflow-hidden"
 						style={{
@@ -247,7 +246,7 @@ export default function BlogPage() {
 							<div className="w-3/5 p-4 flex flex-col justify-between h-full">
 								<div className="flex-1">
 									<h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-										Breathwork: The Heart of Yoga
+										Yoga for Beginners: Start Your Journey
 									</h3>
                   <p
                     className="text-black font-helvetica text-sm leading-tight"
@@ -257,12 +256,11 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Learn how conscious breathing can reduce stress, boost
-                    energy, and deepen your practice.
+                    Essential poses and tips for new practitioners.
 									</p>
 								</div>
 								<div className="flex justify-start mt-auto">
-                  <Link href={"/blog/breathwork-heart-of-yoga"}>
+                  <Link href={"/blog/yoga-for-beginners"}>
 										<div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
                         width="12"
@@ -294,7 +292,7 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* Card 5: Mindfulness Meditation Benefits */}
+          {/* Card 5: Nutrition for Wellness: Fuel Your Body Right */}
           <div
             className="rounded-[20px] shadow-lg overflow-hidden"
             style={{
@@ -308,186 +306,13 @@ export default function BlogPage() {
               <div
                 className="w-2/5 h-full"
                 style={{
-                  backgroundImage: "url('/Images/Retreat1.png')",
+                  backgroundImage: "url('/Images/Retreat4.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
               />
               {/* Text Section - Right 3/5 */}
-              <div className="w-3/5 p-4 flex flex-col justify-between h-full">
-                <div className="flex-1">
-                  <h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-                    Mindfulness Meditation Benefits
-                  </h3>
-                  <p
-                    className="text-black font-helvetica text-sm leading-tight"
-                    style={{
-                      fontSize: "12px",
-                      lineHeight: "1.3",
-                      fontWeight: "500",
-                    }}
-                  >
-                    Discover how daily meditation can change your life and
-                    improve your well-being.
-                  </p>
-                </div>
-                <div className="flex justify-end mt-auto">
-                  <Link href={"/blog/mindfulness-meditation-benefits"}>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#C79A2F"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 6: A Holistic Approach to Wellness */}
-          <div
-            className="rounded-[20px] shadow-lg overflow-hidden"
-            style={{
-              width: "354px",
-              height: "280px",
-              background: "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
-            }}
-          >
-            <div className="flex h-full">
-              {/* Text Section - Left 3/5 */}
-              <div className="w-3/5 p-4 flex flex-col justify-between h-full">
-                <div className="flex-1">
-                  <h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-                    A Holistic Approach to Wellness
-                  </h3>
-                  <p
-                    className="text-black font-helvetica text-sm leading-tight"
-                    style={{
-                      fontSize: "12px",
-                      lineHeight: "1.3",
-                      fontWeight: "500",
-                    }}
-                  >
-                    Balancing mind, body, and spirit for complete well-being and
-                    harmony.
-                  </p>
-                </div>
-                <div className="flex justify-start mt-auto">
-                  <Link href={"/blog/holistic-wellness-approach"}>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#C79A2F"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              {/* Image Section - Right 2/5 */}
-              <div
-                className="w-2/5 h-full"
-                style={{
-                  backgroundImage: "url('/Images/SecondPageBG.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Card 7: Yoga for Beginners: Start Your Journey */}
-          <div
-            className="rounded-[20px] shadow-lg overflow-hidden"
-            style={{
-              width: "354px",
-              height: "280px",
-              background: "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
-            }}
-          >
-            <div className="flex h-full">
-              {/* Image Section - Left 2/5 */}
-              <div
-                className="w-2/5 h-full"
-                style={{
-                  backgroundImage: "url('/Images/Retreat6.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-              {/* Text Section - Right 3/5 */}
-              <div className="w-3/5 p-4 flex flex-col justify-between h-full">
-                <div className="flex-1">
-                  <h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
-                    Yoga for Beginners: Start Your Journey
-                  </h3>
-                  <p
-                    className="text-black font-helvetica text-sm leading-tight"
-                    style={{
-                      fontSize: "12px",
-                      lineHeight: "1.3",
-                      fontWeight: "500",
-                    }}
-                  >
-                    Essential poses and tips for new practitioners to begin
-                    their yoga journey.
-                  </p>
-                </div>
-                <div className="flex justify-end mt-auto">
-                  <Link href={"/blog/yoga-for-beginners"}>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#C79A2F"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 8: Nutrition for Wellness: Fuel Your Body Right */}
-          <div
-            className="rounded-[20px] shadow-lg overflow-hidden"
-            style={{
-              width: "354px",
-              height: "280px",
-              background: "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
-            }}
-          >
-            <div className="flex h-full">
-              {/* Text Section - Left 3/5 */}
               <div className="w-3/5 p-4 flex flex-col justify-between h-full">
                 <div className="flex-1">
                   <h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
@@ -501,11 +326,10 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    How food choices impact your overall well-being and energy
-                    levels.
+                    How food choices impact your overall well-being.
                   </p>
                 </div>
-                <div className="flex justify-start mt-auto">
+                <div className="flex justify-end mt-auto">
                   <Link href={"/blog/nutrition-for-wellness"}>
                     <div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
@@ -525,20 +349,10 @@ export default function BlogPage() {
                   </Link>
                 </div>
               </div>
-              {/* Image Section - Right 2/5 */}
-              <div
-                className="w-2/5 h-full"
-                style={{
-                  backgroundImage: "url('/Images/Retreat4.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-								}}
-							/>
-						</div>
-					</div>
+            </div>
+          </div>
 
-          {/* Card 9: Effective Stress Management Techniques */}
+          {/* Card 6: Effective Stress Management Techniques */}
           <div
             className="rounded-[20px] shadow-lg overflow-hidden"
             style={{
@@ -548,17 +362,7 @@ export default function BlogPage() {
             }}
           >
             <div className="flex h-full">
-              {/* Image Section - Left 2/5 */}
-              <div
-                className="w-2/5 h-full"
-                style={{
-                  backgroundImage: "url('/Images/HomeBG.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-              {/* Text Section - Right 3/5 */}
+              {/* Text Section - Left 3/5 */}
               <div className="w-3/5 p-4 flex flex-col justify-between h-full">
                 <div className="flex-1">
                   <h3 className="text-black card-title-isenheim text-sm mb-2 leading-tight font-bold">
@@ -572,11 +376,10 @@ export default function BlogPage() {
                       fontWeight: "500",
                     }}
                   >
-                    Practical strategies for finding peace and balance in a busy
-                    world.
+                    Practical strategies for finding peace in a busy world.
                   </p>
                 </div>
-                <div className="flex justify-end mt-auto">
+                <div className="flex justify-start mt-auto">
                   <Link href={"/blog/stress-management-techniques"}>
                     <div className="flex items-center justify-center w-6 h-6 rounded-full shadow-lg bg-white">
                       <svg
@@ -596,21 +399,33 @@ export default function BlogPage() {
                   </Link>
                 </div>
               </div>
-						</div>
-					</div>
+              {/* Image Section - Right 2/5 */}
+              <div
+                className="w-2/5 h-full"
+                style={{
+                  backgroundImage: "url('/Images/HomeBG.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+            </div>
+          </div>
+
+
 				</div>
 
         {/* Footer Contact Section */}
         <section>
-          <div className="relative flex-1 mt-12">
+          <div className="relative mt-12">
             {/* Left Stone Stack */}
             <div 
-              className="absolute left-4 z-50"
+              className="absolute z-50 pointer-events-none"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "120px",
-                left: "-84px",
+                top: "178px",
+                left: "-40px",
                 transform: "rotate(0deg)",
                 opacity: 1
               }}
@@ -624,12 +439,12 @@ export default function BlogPage() {
 
             {/* Right Stone Stack */}
             <div 
-              className="absolute right-4 z-50"
+              className="absolute z-50 pointer-events-none"
               style={{
                 width: "252.72311401367188px",
                 height: "251px",
-                top: "120px",
-                right: "-84px",
+                top: "178px",
+                right: "-50px",
                 transform: "rotate(0deg)",
                 opacity: 1
               }}
@@ -642,7 +457,7 @@ export default function BlogPage() {
             </div>
 
             {/* Central Contact Card */}
-            <div className="relative z-30 flex justify-center pt-16">
+            <div className="relative z-30 flex justify-center pt-16 pb-8">
               <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
                 <div className="text-center space-y-6">
                   {/* Phone */}

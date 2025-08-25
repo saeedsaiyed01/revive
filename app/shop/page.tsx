@@ -56,11 +56,11 @@ const shopPageData = {
 export default function ShopPage() {
   const data = shopPageData;
   return (
-    <main className="text-white">
+    <main className="text-white overflow-x-hidden">
       {/* Mobile Layout */}
-      <div className="lg:hidden">
+      <div className="lg:hidden overflow-x-hidden">
         <section
-          className="relative w-full min-h-screen"
+          className="relative w-full px-4 py-8 pb-16"
           style={{
             backgroundImage: `url('${data.bgImage}')`,
             backgroundSize: "cover",
@@ -124,17 +124,20 @@ export default function ShopPage() {
               </div>
             </div>
 
+            {/* Empty Space to Make Page Longer */}
+            <div className="h-[800px]"></div>
+
             {/* Footer Contact Section */}
             <section>
-              <div className="relative flex-1 mt-82">
+              <div className="relative mt-16">
                 {/* Left Stone Stack */}
                 <div
-                  className="absolute left-4 z-50"
+                  className="absolute z-50"
                   style={{
                     width: "252.72311401367188px",
                     height: "251px",
-                    top: "120px",
-                    left: "-84px",
+                    top: "180px",
+                    left: "-65px",
                     transform: "rotate(0deg)",
                     opacity: 1,
                   }}
@@ -148,12 +151,12 @@ export default function ShopPage() {
 
                 {/* Right Stone Stack */}
                 <div
-                  className="absolute right-4 z-50"
+                  className="absolute z-50"
                   style={{
                     width: "252.72311401367188px",
                     height: "251px",
-                    top: "120px",
-                    right: "-84px",
+                    top: "180px",
+                    right: "-65px",
                     transform: "rotate(0deg)",
                     opacity: 1,
                   }}
@@ -166,7 +169,7 @@ export default function ShopPage() {
                 </div>
 
                 {/* Central Contact Card */}
-                <div className="relative z-30 flex justify-center pt-16">
+                <div className="relative z-30 flex justify-center pt-16 mr-5">
                   <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
                     <div className="text-center space-y-6">
                       {/* Phone */}
