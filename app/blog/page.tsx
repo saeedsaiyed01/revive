@@ -532,24 +532,24 @@ export default function BlogPage() {
                 aria-label="Open blog: Mindfulness Meditation Benefits"
               >
                 <div
-                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[22px] bottom-[75px] rounded-[20px] shadow-lg"
+                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[22px] bottom-[15px] rounded-[20px] shadow-lg"
                   style={{
                     background:
                       "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>
@@ -579,17 +579,17 @@ export default function BlogPage() {
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>
@@ -621,17 +621,17 @@ export default function BlogPage() {
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>
@@ -654,24 +654,24 @@ export default function BlogPage() {
                 aria-label="Open blog: Yoga for Beginners"
               >
                 <div
-                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[74px] rounded-[20px] shadow-lg"
+                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[14px] rounded-[20px] shadow-lg"
                   style={{
                     background:
                       "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>
@@ -696,24 +696,24 @@ export default function BlogPage() {
                 aria-label="Open blog: Nutrition for Wellness"
               >
                 <div
-                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[74px] rounded-[20px] shadow-lg"
+                  className="absolute flex items-center justify-center cursor-pointer w-[67px] h-[67px] right-[24px] bottom-[14px] rounded-[20px] shadow-lg"
                   style={{
                     background:
                       "linear-gradient(180deg, #F2D282 0%, #C79A2F 100%)",
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>
@@ -743,17 +743,17 @@ export default function BlogPage() {
                   }}
                 >
                   <svg
-                    width="26"
-                    height="26"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="#fff"
-                    strokeWidth="2.2"
+                    strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <polyline points="15 5 21 12 15 19" />
                   </svg>
 								</div>
 							</Link>

@@ -442,7 +442,7 @@ export default function ProgramsPage() {
         >
           {/* Left Rock Image */}
           <div
-            className="absolute w-[440px] h-[437px] top-0 left-[-130px] opacity-100 bg-contain bg-no-repeat bg-left-bottom pointer-events-none"
+            className="absolute w-[440px] h-[455px] top-0 left-[-130px] opacity-100 bg-contain bg-no-repeat bg-left-bottom pointer-events-none"
             style={{
               backgroundImage: "url('/Images/rockFooter.png')",
             }}
