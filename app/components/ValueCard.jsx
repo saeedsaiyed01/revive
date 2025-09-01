@@ -22,7 +22,7 @@ export default function ValueCard({ icon = null, title, description, showIcon = 
       )}
       
       {/* Title */}
-      <h3 className={["card-title-isenheim text-black mb-4 text-center mt-2", titleClassName].join(" ")}>
+      <h3 className={["card-title-isenheim text-black mb-4 text-center mt-2 navbar-text", titleClassName].join(" ")}>
         {title}
       </h3>
       

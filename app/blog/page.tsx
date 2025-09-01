@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RetreatCard from "../components/RetreatCard";
+import BlogCard from "../components/BlogCard";
 import RetreatCardLarge from "../components/RetreatCardLarge";
 
 export default function BlogPage() {
@@ -509,16 +509,16 @@ export default function BlogPage() {
 
 							<div className="flex flex-col gap-2">
                 <p>Explore our articles on wellness, mindfulness, and</p>
-							<p>holistic living</p>
-							</div>
+								<p>holistic living</p>
+								</div>
 						</div>
 					</div>
 
 					{/* Cards positioned to spec */}
 					{/* Row 1 */}
 					<div className="absolute top-[545px] left-[161px]">
-						<div className="relative w-[420px] h-[492px]">
-							<RetreatCard
+						<div className="relative w-[420px] h-[489px]">
+							<BlogCard
 								retreat={{
                   image: "/Images/Retreat1.png",
                   location: "Oasis",
@@ -556,7 +556,7 @@ export default function BlogPage() {
 						</div>
 					</div>
 					<div className="absolute top-[545px] left-[620px]">
-						<div className="relative w-[420px] h-[492px]">
+						<div className="relative w-[420px] h-[489px]">
 							<RetreatCardLarge
 								retreat={{
                   image: "/Images/yoga.png",
@@ -598,7 +598,7 @@ export default function BlogPage() {
 
 					{/* Row 2 */}
 					<div className="absolute top-[1060px] left-[161px]">
-						<div className="relative w-[420px] h-[492px]">
+						<div className="relative w-[420px] h-[489px]">
 							<RetreatCardLarge
 								retreat={{
                   image: "/Images/SecondPageBG.png",
@@ -638,8 +638,8 @@ export default function BlogPage() {
 						</div>
 					</div>
 					<div className="absolute ml-72 top-[1060px] left-[620px]">
-						<div className="relative w-[420px] h-[492px]">
-							<RetreatCard
+						<div className="relative w-[420px] h-[489px]">
+							<BlogCard
 								retreat={{
                   image: "/Images/Retreat6.png",
                   location: "Garden",
@@ -680,8 +680,8 @@ export default function BlogPage() {
 
 					{/* Row 3 */}
 					<div className="absolute top-[1590px] left-[161px]">
-						<div className="relative w-[420px] h-[492px]">
-							<RetreatCard
+						<div className="relative w-[420px] h-[489px]">
+							<BlogCard
 								retreat={{
                   image: "/Images/Retreat4.png",
                   location: "Forest",

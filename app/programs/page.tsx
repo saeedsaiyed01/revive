@@ -79,7 +79,7 @@ export default function ProgramsPage() {
 
   return (
     <section
-      className="relative min-h-screen w-full mt-28 overflow-x-hidden"
+      className="relative min-h-screen w-full pt-28 overflow-x-hidden"
       style={{
         backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
         backgroundSize: "cover",

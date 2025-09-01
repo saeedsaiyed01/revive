@@ -45,24 +45,16 @@ export default function FifthPage() {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Main Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-          height: '100%',
-          width: '100%'
-        }}
-      />
+    <section className="relative min-h-screen w-full overflow-hidden -mt-16 md:-mt-24">
+      
 
       {/* Background Stone Image - Increased Height */}
       <div
         className="absolute"
         style={{
           width: '500px',
-          height: '1120px',
-          top: '100px',
+          height: '1090px',
+          top: '40px',
           left: '-10px',
           backgroundImage: "url('/Images/backgrounstone.png')",
           backgroundSize: 'cover',
@@ -77,8 +69,8 @@ export default function FifthPage() {
         className="absolute"
         style={{
           width: '1120px',
-          height: '1115px',
-          top: '100px',
+          height: '1090px',
+          top: '40px',
           right: '-110px',
           opacity: 0.8,
           backgroundImage: "url('/Images/rockright.png')",
@@ -95,7 +87,7 @@ export default function FifthPage() {
         style={{
           width: '475px',
           height: '475px',
-          top: '450px',
+          top: '390px',
           left: '-410px',
           borderRadius: '50px',
           opacity: 0.7,
@@ -113,7 +105,7 @@ export default function FifthPage() {
         style={{
           width: '475px',
           height: '475px',
-          top: '450px',
+          top: '390px',
           left: '1574px',
           borderRadius: '50px',
           opacity: 1,
@@ -126,7 +118,7 @@ export default function FifthPage() {
       />
 
       {/* Mobile Layout */}
-      <div className="lg:hidden relative z-10 mx-auto px-4 py-8">
+      <div className="lg:hidden relative z-10 mx-auto px-4 pt-2 pb-8">
         <div className="flex justify-start mb-4">
           <button
             className="text-white px-6 py-3 rounded-full  white-card-isenheim text-sm ml-5 font-medium transition-all shadow-lg"
@@ -233,11 +225,15 @@ export default function FifthPage() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] pt-6 md:pt-10 pb-12 md:pb-20">
         <div className="flex justify-start mb-6" style={{ marginLeft: '95px' }}>
           <button
-            className="text-white px-6 py-3 rounded-full text-lg font-medium transition-all shadow-lg"
+            className="text-white text-sm font-medium transition-all shadow-lg"
             style={{
+              width: '162px',
+              height: '38px',
+              borderRadius: '20px',
+              opacity: 1,
               backgroundImage: "url('/Images/default-bg.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',

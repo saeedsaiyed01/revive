@@ -68,12 +68,6 @@ export default function Navbar(props) {
   return (
     <header
       className="w-full z-50 absolute top-0 left-0 right-0"
-      style={isHome ? {} : {
-        backgroundImage: "url(/Images/BGfor3-4Section.jpg)",
-        backgroundSize: "100% auto",
-        backgroundRepeat: "repeat-y",
-        backgroundPosition: "center top",
-      }}
     >
       <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-4">
         <div className="flex items-center justify-between w-full">

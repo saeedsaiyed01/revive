@@ -103,8 +103,8 @@ export default function SecondPage() {
 
       {/* Desktop Layout */}
       <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-24">
-        <div className="text-center mb-20">
-          <div className="mb-8">
+        <div className="text-center mb-16">
+          <div className="mb-6">
             <div
               className="inline-block px-8 py-3 rounded-full text-white font-medium text-lg bg-[url('/Images/default-bg.png')] bg-cover bg-center"
             >
@@ -118,7 +118,7 @@ export default function SecondPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-20 justify-items-center max-w-7xl mx-auto mb-2">
           {valueCards.map((card, index) => (
             <ValueCard
               key={index}

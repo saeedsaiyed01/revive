@@ -63,12 +63,6 @@ export default function FourthPage() {
   return (
     <section
       className="relative min-h-screen w-full"
-      style={{
-        backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
       {/* Mobile Layout */}
       <div className="lg:hidden relative z-10 mx-auto px-4 py-8">
@@ -83,11 +77,16 @@ export default function FourthPage() {
         >
           <div className="text-center pt-6 pb-4">
             <div
-              className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
+              className="inline-flex items-center justify-center text-black text-sm mb-4"
               style={{
+                width: '162px',
+                height: '38px',
+                borderRadius: '20px',
+                opacity: 1,
                 backgroundImage: "url('/Images/default-bg.png')",
                 backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
               }}
             >
               Wellness Experiences
@@ -102,7 +101,7 @@ export default function FourthPage() {
                   </h2>
                 </div>
                 <div className="flex-1">
-                  <p className="text-gray-600 text-sm leading-relaxed text-left white-card-isenheim ">
+                  <p className="text-[#595959] text-left font-helvetica">
                     Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
                   </p>
                 </div>
@@ -174,7 +173,7 @@ export default function FourthPage() {
       {/* Desktop Layout */}
       <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         <div
-          className="relative mx-auto w-[1385px] h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          className="relative mx-auto w-[1520px] h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: 'cover',
@@ -184,11 +183,16 @@ export default function FourthPage() {
         >
           <div className="text-center pt-2 md:pt-4">
             <div
-              className="inline-block px-4 py-2 text-black text-sm rounded-[8px] mb-4"
+              className="inline-flex items-center justify-center text-white text-sm mb-4"
               style={{
+                width: '162px',
+                height: '38px',
+                borderRadius: '20px',
+                opacity: 1,
                 backgroundImage: "url('/Images/default-bg.png')",
                 backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
               }}
             >
               Wellness Experiences
@@ -205,7 +209,7 @@ export default function FourthPage() {
                 Our Featured Retreats
               </h2>
 
-              <p className="text-black max-w-3xl mx-auto text-center text-[17px]">
+              <p className="text-[#595959] max-w-3xl mx-auto text-center font-helvetica">
                 Discover transformative experiences in breathtaking locations designed to rejuvenate your mind, body, and spirit.
               </p>
             </div>
@@ -213,7 +217,7 @@ export default function FourthPage() {
 
           <div className="relative z-20 p-6 md:p-12 h-full">
             {/* Retreat Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-[1296px] mx-auto">
               {retreats.map((retreat) => (
                 <RetreatCard key={retreat.id} retreat={retreat} />
               ))}

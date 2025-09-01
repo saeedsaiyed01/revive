@@ -6,8 +6,8 @@ export default function RetreatCard({ retreat, href }) {
     <div 
       className="rounded-[30px] overflow-hidden"
       style={{
-        width: '420px',
-        height: '492px'
+        width: '400px',
+        height: '420px'
       }}
     >
   
@@ -19,7 +19,7 @@ export default function RetreatCard({ retreat, href }) {
           }}
         />
 
-        <div className="absolute bottom-3 left-3 px-3 py-1 rounded-[8px] text-white text-xs font-medium bg-[url('/Images/default-bg.png')] bg-cover bg-center">
+        <div className="absolute bottom-6 left-6 px-3 py-1 rounded-[8px] text-white text-xs font-medium bg-[url('/Images/default-bg.png')] bg-cover bg-center">
           {retreat.location}
         </div>
       </div>
@@ -29,13 +29,15 @@ export default function RetreatCard({ retreat, href }) {
         className="h-1/3 p-6 flex flex-col justify-start bg-[url('/Images/CardBG.png')] bg-cover bg-center"
       >
         <h3 className="card-title-isenheim text-black text-xl font-normal mb-2">{retreat.title}</h3>
-        <p className="text-black text-sm leading-relaxed text-left line-clamp-3" style={{ 
+        <p className="text-[#1E1E1E] font-helvetica text-left line-clamp-3" style={{ 
           display: '-webkit-box',
           WebkitLineClamp: 3,
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          minHeight: '3.6rem'
+          width: '260px',
+          minHeight: '4em',
+          maxHeight: '4em'
         }}>
           {retreat.description}
         </p>

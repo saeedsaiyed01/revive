@@ -11,9 +11,20 @@ export default function Home() {
     <main className="min-h-dvh bg-black text-white">
       <HeroCard />
       <SecondPage />
-      <ThirdPage />
-      <FourthPage />
-      <FifthPage />
+      {/* Shared background wrapper for sections 3, 4 and 5 */}
+      <section
+        className="relative w-full"
+        style={{
+          backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <ThirdPage />
+        <FourthPage />
+        <FifthPage />
+      </section>
       <InsightsSection />
       <ConnectSection />
     </main>

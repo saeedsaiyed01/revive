@@ -10,12 +10,6 @@ export default function ThirdPage() {
     <>
       <section 
         className="relative min-h-screen w-full"
-        style={{
-          backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
       >
         {/* Mobile Layout */}
         <div className="lg:hidden relative z-10 min-h-screen"

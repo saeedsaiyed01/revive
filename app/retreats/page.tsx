@@ -95,7 +95,7 @@ export default function FourthPage() {
 
   return (
     <section
-      className="relative min-h-screen w-full mt-28 overflow-x-hidden"
+      className="relative min-h-screen w-full pt-28 overflow-x-hidden"
       style={{
         backgroundImage: "url('/Images/BGfor3-4Section.jpg')",
         backgroundSize: "cover",
@@ -107,7 +107,7 @@ export default function FourthPage() {
       <div className="lg:hidden relative z-10 mx-auto px-4 py-8 min-h-screen overflow-x-hidden">
         {/* Main Content Area */}
         <div
-          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100"
+          className="relative mx-auto max-w-[1520px] w-full min-h-[1364px] rounded-[50px] opacity-100"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
@@ -121,10 +121,10 @@ export default function FourthPage() {
               <h2 className="text-black card-title-isenheim mb-4 font-isenheim text-[35px] leading-[115%]">
                 {data.title}
               </h2>
-              <p className="text-[#595959] white-card-isenheim text-[17px]">
+              <p className="text-[#595959] font-helvetica">
                 {data.subtitle[0]}
               </p>
-              <p className="text-[#595959] white-card-isenheim text-[17px]">
+              <p className="text-[#595959] font-helvetica">
                 {data.subtitle[1]}
               </p>
             </div>
@@ -405,7 +405,7 @@ export default function FourthPage() {
       {/* Desktop Layout */}
       <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         <div
-          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          className="relative mx-auto max-w-[1520px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
@@ -434,21 +434,19 @@ export default function FourthPage() {
               </h2>
 
               <p
-                className="text-[#595959] max-w-3xl mx-auto text-center"
-                style={{ fontSize: "17px" }}
+                className="text-[#595959] max-w-3xl mx-auto text-center font-helvetica"
               >
                 {data.subtitle[0]}
               </p>
               <p
-                className="text-[#595959] max-w-3xl mx-auto text-center"
-                style={{ fontSize: "17px" }}
+                className="text-[#595959] max-w-3xl mx-auto text-center font-helvetica"
               >
                 {data.subtitle[1]}
               </p>
             </div>
           </div>
           <div className="relative z-20 p-6 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-[1296px] mx-auto">
               {data.retreats.map((retreat) => (
                 <RetreatCard key={retreat.id} retreat={retreat} href="#" />
               ))}
