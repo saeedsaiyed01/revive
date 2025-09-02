@@ -125,9 +125,9 @@ export default function ThirdPage() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+        <div className="hidden lg:block relative z-10 mx-auto max-w-screen-3xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
           <div
-            className="relative mx-auto w-full max-w-[1300px] h-auto min-h-[600px] md:h-[998px] rounded-[25px] md:rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+            className="relative mx-auto w-full max-w-[1620px] h-auto min-h-[600px] md:h-[998px] rounded-[25px] md:rounded-[50px] opacity-100 -mt-10 md:-mt-20"
             style={{
               backgroundImage: "url('/Images/UpperBG.png')",
               backgroundSize: 'cover',
@@ -215,7 +215,7 @@ export default function ThirdPage() {
                   />
 
                   <div
-                    className="absolute bottom-3 md:bottom-6 right-3 md:right-6 rounded-[15px] md:rounded-[30px] p-3 md:p-4 shadow-lg bg-white"
+                    className="absolute bottom-3 md:bottom-6 right-3 md:right-6  mr-42 rounded-[15px] md:rounded-[30px] p-3 md:p-4 shadow-lg bg-white"
                     style={{
                       width: 'clamp(200px, 50vw, 258px)',
                       height: 'clamp(80px, 20vh, 118px)'
@@ -244,7 +244,7 @@ export default function ThirdPage() {
                             className=""
                           />
                         </div>
-                        <p className="font-semibold text-gray-600 text-xs md:text-sm">Rita - Founder</p>
+                        <p className="font-semibold text-gray-600 text-xs md:text-sm ">Rita - Founder</p>
                         <p className="text-gray-600 text-xs">Wellness expert with over 15 years of experience</p>
                       </div>
                     </div>

@@ -22,15 +22,15 @@ export default function AboutNavbar() {
 
   return (
     <header className="w-full z-50 absolute top-0 left-0 right-0">
-      <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-4">
+      <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] h-[112px] flex items-center">
         <div className="flex items-center gap-4">
           {/* Logo - Left aligned */}
           <div className="flex-shrink-0">
             <Link href="/" aria-label="Home">
-              <div className="bg-white rounded-[28px] px-6 py-3 flex items-center justify-center">
-                <div className="text-center">
+              <div className="bg-white rounded-[28px] flex items-center justify-center" style={{ width: "121px", height: "88px" }}>
+                <div className="text-center leading-none">
                   <div className="text-[#c79a2f] text-xs mb-1">✦</div>
-                  <div className="text-[#c79a2f] font-serif text-xl font-bold">REVIVE</div>
+                  <div className="text-[#c79a2f] font-serif text-xl font-bold">REVIVE </div>
                   <div className="text-[#c79a2f] text-xs mt-1">✦</div>
                 </div>
               </div>

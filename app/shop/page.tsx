@@ -7,7 +7,7 @@ const shopPageData = {
   bgImage: "/Images/BGfor3-4Section.jpg",
   stoneOverlay: {
     image: "/Images/UpperBG.png",
-    width: 1230,
+    width: 1610,
     height: 2050,
     top: 120,
     left: 105,

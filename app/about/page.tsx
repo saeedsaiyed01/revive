@@ -140,7 +140,7 @@ export default function AboutPage() {
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "80% center",
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -464,7 +464,7 @@ export default function AboutPage() {
               {/* Navigation Arrows - Positioned outside the main card */}
               <button
                 onClick={prevSlide}
-                className="absolute left-1/2 transform -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                className="absolute left-1/2  -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
                 style={{ 
                   left: "calc(50% - 160px)",
                   backgroundImage: "url('/Images/default-bg.png')",
@@ -484,7 +484,7 @@ export default function AboutPage() {
 
               <button
                 onClick={nextSlide}
-                className="absolute left-1/2 transform -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+                className="absolute left-1/2  -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
                 style={{ 
                   left: "calc(50% + 160px)",
                   backgroundImage: "url('/Images/default-bg.png')",
@@ -657,32 +657,69 @@ export default function AboutPage() {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-[50px]"
               style={{
                 backgroundImage: "url('/Images/UpperBG.png')",
+                backgroundSize: "cover",
+                width: "120%",
+                left: "-10%",
+                height: "100%",
+                backgroundPosition: "80% center",
                 opacity: 1,
               }}
             />
 
             <div
-              className="absolute rounded-[30px] text-black p-8"
+              className="absolute rounded-[30px] text-black p-8 text-center"
               style={{
                 width: "506px",
                 height: "484px",
                 top: "226px",
                 left: "158px",
-                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundImage: "url('/Images/CardBG.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              <div className="inline-block px-4 py-2 rounded-full bg-white/90 text-[#c79a2f] mb-4">
+              <div
+                className="inline-block px-8 py-2 rounded-full text-white mb-6 mx-auto"
+                style={{
+                  backgroundImage: "url('/Images/default-bg.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
                 {data.hero.story.badge}
               </div>
               <h1 className="font-isenheim text-black mb-4">
                 {data.hero.story.title}
               </h1>
-              <p className="text-black/80 leading-relaxed">
+              <p
+                className="text-black"
+                style={{
+                  fontFamily: "Helvetica Light, Helvetica, sans-serif",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                }}
+              >
                 {data.hero.story.description1}
               </p>
-              <p className="mt-10">{data.hero.story.description2}</p>
+              <p
+                className="mt-10 text-black"
+                style={{
+                  fontFamily: "Helvetica Light, Helvetica, sans-serif",
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                }}
+              >
+                {data.hero.story.description2}
+              </p>
             </div>
 
             <div
@@ -725,7 +762,7 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-52 justify-items-center max-w-[1160px] mx-auto">
               {data.philosophy.cards.map((c, idx) => (
                 <ValueCard
                   key={idx}

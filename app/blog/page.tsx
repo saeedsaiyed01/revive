@@ -491,7 +491,7 @@ export default function BlogPage() {
 				<div className="relative mx-auto w-[1440px] min-h-[2800px]">
 					{/* UpperBG overlay (double height) */}
 					<div
-						className="absolute overflow-hidden w-[1385px] h-[2094px] top-[162px] left-[28px] opacity-100 rounded-t-[50px]"
+						className="absolute overflow-hidden w-[1610px] h-[2094px] top-[162px] left-1/2 -translate-x-1/2 opacity-100 rounded-t-[50px]"
 						style={{
 							backgroundImage: "url('/Images/UpperBG.png')",
 							backgroundSize: "100% auto",

@@ -403,9 +403,9 @@ export default function FourthPage() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-4xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         <div
-          className="relative mx-auto max-w-[1520px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          className="relative mx-auto max-w-[2385px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",

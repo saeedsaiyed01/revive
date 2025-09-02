@@ -69,12 +69,17 @@ export default function Navbar(props) {
     <header
       className="w-full z-50 absolute top-0 left-0 right-0"
     >
-      <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-4">
+      <nav className="mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] h-[112px] flex items-center">
         <div className="flex items-center justify-between w-full">
           <div className="flex-shrink-0">
             <Link href="/" aria-label="Home">
               {isHome ? (
-                <img src={content.logo.src} alt={content.logo.alt} width={86} height={70} />
+                <div
+                  className="flex items-center justify-center"
+                  style={{ width: "121px", height: "88px" }}
+                >
+                  <img src={content.logo.src} alt={content.logo.alt} width={86} height={70} />
+                </div>
               ) : (
                 <div
                   className="rounded-[20px] bg-white flex items-center justify-center"
@@ -200,7 +205,7 @@ export default function Navbar(props) {
         {isAccountPopupOpen && (
           <div className="fixed inset-0 z-50 flex items-start justify-end pt-20">
             <div 
-              className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+              className="absolute inset-0 bg-white/20 backdrop-blur-sm"
               onClick={() => setIsAccountPopupOpen(false)}
             />
             

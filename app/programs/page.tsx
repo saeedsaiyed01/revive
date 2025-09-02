@@ -382,9 +382,9 @@ export default function ProgramsPage() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-2xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
+      <div className="hidden lg:block relative z-10 mx-auto max-w-screen-4  xl px-[clamp(16px,4vw,32px)] py-12 md:py-24">
         <div
-          className="relative mx-auto max-w-[1385px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
+          className="relative mx-auto max-w-[2385px] w-full min-h-[1364px] rounded-[50px] opacity-100 -mt-10 md:-mt-20"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: "cover",
@@ -393,7 +393,7 @@ export default function ProgramsPage() {
           }}
         >
           <div className="text-center pt-2 md:pt-4">
-            <div className="bg-white rounded-[40px] absolute flex flex-col justify-center items-center w-[787px] h-[230px] top-[100px] left-[326px] opacity-100">
+            <div className="bg-white rounded-[40px] absolute flex flex-col justify-center items-center w-[787px] h-[230px] top-[100px] left-1/2 -translate-x-1/2 transform opacity-100">
               <h2 className="text-black font-normal mb-4 font-isenheim text-[35px] leading-[115%]">
                 {data.title}
               </h2>
@@ -406,7 +406,7 @@ export default function ProgramsPage() {
             className="relative z-20 p-6 md:p-12"
             style={{ marginTop: "350px" }}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 xl:gap-12 mx-auto max-w-[1385px]">
               {data.programs.map((program) => (
                 <RetreatCard key={program.id} retreat={program} href="#" />
               ))}

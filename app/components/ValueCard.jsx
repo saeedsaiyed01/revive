@@ -2,7 +2,7 @@ export default function ValueCard({ icon = null, title, description, showIcon = 
   return (
     <div 
       className={[
-        "w-[333px] h-[310px] rounded-[30px] opacity-100 bg-[url('/Images/CardBG.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-6 ",
+        "w-[360px] h-[340px] rounded-[30px] opacity-100 bg-[url('/Images/CardBG.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-8 ",
         showIcon ? "pt-8" : "pt-10",
         className
       ].join(" ")}
@@ -22,12 +22,12 @@ export default function ValueCard({ icon = null, title, description, showIcon = 
       )}
       
       {/* Title */}
-      <h3 className={["card-title-isenheim text-black mb-4 text-center mt-2 navbar-text", titleClassName].join(" ")}>
+      <h3 className={["card-title-isenheim text-black mb-6 text-center mt-2 navbar-text", titleClassName].join(" ")}>
         {title}
       </h3>
       
       {/* Description */}
-      <p className={["card-description text-black text-center max-w-[280px]", descriptionClassName].join(" ")}>
+      <p className={["card-description about-card-desc text-black text-center max-w-[300px]", descriptionClassName].join(" ")}>
         {description}
       </p>
     </div>

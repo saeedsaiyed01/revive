@@ -127,8 +127,9 @@ export default function CartPage() {
 				<div
 					className="relative mx-auto bg-no-repeat rounded-[50px]"
 					style={{
-						width: '1385px',
+						width: '1650px',
 						height: '1200px',
+						left: '-90px',
 						opacity: 1,
 						backgroundImage: "url('/Images/UpperBG.png')",
 						backgroundRepeat: 'repeat-y',
@@ -137,34 +138,36 @@ export default function CartPage() {
 					}}
 				>
 					<div
-						className="absolute bg-white rounded-[40px]"
+						className="absolute bg-white rounded-[40px] "
 						style={{
-							width: '787px',
+							width: '887px',
 							height: '895px',
 							top: '100px',
-							left: '14px',
+							left: '62px',
 							opacity: 1,
 						}}
 					>
-						<div className="h-full w-full px-10 pt-10">
-							<h2 className=" text-[50px]  btn-isenheim  leading-[1] text-black">{data.title}</h2>
+						
+						<div className="h-full w-full px-10 pt-10  ">
+						<h2 className=" text-[60px] isenheim-family  leading-[2] text-black mb-[100px]">{data.title}</h2>
 							{data.items.map((item, index) => (
-								<div key={index} className={`flex items-start gap-6 relative ${index === 0 ? 'mt-8' : 'mt-10'}`}>
+								
+								<div key={index} className={`flex items-start gap-6 ${index === 0 ? 'mt-8' : 'mt-10'}`}>
 									<div className="h-[120px] w-[120px] rounded-[16px] bg-[#D9D9D9]" />
 									<div className="flex-1">
-										<div className="text-black  btn-isenheim  text-[48px] leading-[1]">{item.name}</div>
+										<div className="text-black  btn-isenheim  text-[24px] leading-[1]">{item.name}</div>
 										<p className="mt-2 text-[14px] leading-snug text-black/70 font-helvetica max-w-[360px]">
 											{item.description}
 										</p>
 									</div>
-									<div className="absolute right-0 top-2 text-black font-helvetica text-[18px]">{item.price}</div>
+									<div className="text-black font-helvetica text-[18px] pt-2 ml-auto">{item.price}</div>
 								</div>
 							))}
 
 							<div className="mt-16">
 								<div className="h-[2px] w-full bg-[#E7C48B]" />
 								<div className="mt-6 flex items-baseline justify-between">
-									<span className="text-black  btn-isenheim text-[64px] leading-[1]">Total:</span>
+									<span className="text-black  btn-isenheim text-[32px] leading-[1]">Total:</span>
 									<span className="text-black font-helvetica text-[18px]">{data.total}</span>
 								</div>
 							</div>
@@ -173,19 +176,19 @@ export default function CartPage() {
 
 					<div
 						className="absolute bg-white rounded-[40px]"
-						style={{ width: '518px', height: '895px', top: '100px', left: '825px', opacity: 1 }}
+						style={{ width: '518px', height: '895px', top: '100px', left: '1000px', opacity: 1 }}
 					/>
 
 					<h2
 						className="absolute text-black btn-isenheim y mt-[-100px]"
-						style={{ width: '287px', height: '31px', top: '296px', left: '942px', fontWeight: 400, fontSize: '25px', lineHeight: '100%' }}
+						style={{ width: '287px', height: '31px', top: '296px', left: '1117px', fontWeight: 400, fontSize: '25px', lineHeight: '100%' }}
 					>
 						{data.form.title}
 					</h2>
 
 					<div
 						className="absolute bg-transparent text-black mt-[-100px]"
-						style={{ width: '449px', height: '498px', top: '392px', left: '852px', opacity: 1 }}
+						style={{ width: '449px', height: '498px', top: '392px', left: '1027px', opacity: 1 }}
 					>
 						{data.form.fields.map((field, index) => (
 							<div key={index}>
@@ -223,7 +226,7 @@ export default function CartPage() {
 							width: '272px',
 							height: '82px',
 							top: '955px',
-							left: '950px',
+							left: '1125px',
 							borderRadius: '30px',
 							fontWeight: 400,
 							fontSize: '25px',
