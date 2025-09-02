@@ -393,11 +393,11 @@ export default function ProgramsPage() {
           }}
         >
           <div className="text-center pt-2 md:pt-4">
-            <div className="bg-white rounded-[40px] absolute flex flex-col justify-center items-center w-[787px] h-[230px] top-[100px] left-1/2 -translate-x-1/2 transform opacity-100">
+            <div className="bg-white rounded-[40px] absolute flex flex-col justify-center items-center w-[787px] h-[230px] top-[100px] left-1/2 -translate-x-1/2 transform opacity-100 px-10">
               <h2 className="text-black font-normal mb-4 font-isenheim text-[35px] leading-[115%]">
                 {data.title}
               </h2>
-              <p className="text-[#595959] max-w-3xl mx-auto text-center text-[17px]">
+              <p className="text-[#595959] mx-auto text-center text-[17px] leading-[150%] max-w-[560px]">
                 {data.subtitle}
               </p>
             </div>
@@ -413,7 +413,7 @@ export default function ProgramsPage() {
             </div>
             <div className="text-center mt-12">
               <button
-                className="text-white transition-colors shadow-lg w-[272px] h-[82px] rounded-[30px] btn-isenheim text-[25px] leading-[30px]"
+                className="text-white transition-colors shadow-lg w-[272px] h-[182px] rounded-[30px] btn-isenheim  text-[25px] leading-[30px]"
                 style={{
                   backgroundImage: "url('/Images/default-bg.png')",
                   backgroundSize: "cover",
@@ -449,7 +449,7 @@ export default function ProgramsPage() {
           />
 
           {/* Info Card */}
-          <div className="absolute rounded-[30px] bg-white flex items-center w-[1011px] h-[138px] top-[110px] left-[395px] opacity-100">
+          <div className="absolute rounded-[30px] bg-white flex items-center w-[1011px] h-[138px] top-[230px] left-[395px] opacity-100">
             <div className="w-full grid grid-cols-3 gap-8 px-10">
               <div className="text-left">
                 <div className="text-black font-helvetica text-[18px] leading-[140%]">

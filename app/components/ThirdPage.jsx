@@ -135,10 +135,10 @@ export default function ThirdPage() {
               backgroundRepeat: 'no-repeat'
             }}
           >
-            <div className="relative z-20 p-6 md:p-12 h-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0">
-              <div className="w-full lg:w-1/2 lg:pr-8">
+            <div className="relative z-20 p-6 md:p-12 h-full flex flex-col lg:flex-row items-start justify-between gap-8 md:gap-12">
+              <div className="w-full lg:w-1/2 lg:pr-0">
                 <div
-                  className="h-full rounded-[20px] md:rounded-[30px] p-6 md:p-8 flex flex-col justify-between"
+                  className="h-full min-h-[791px] max-w-[620px] mx-auto rounded-[20px] md:rounded-[30px] p-6 md:p-8 flex flex-col justify-between"
                   style={{
                     backgroundImage: "url('/Images/CardBG.png')",
                     backgroundSize: 'cover',
@@ -148,7 +148,7 @@ export default function ThirdPage() {
                 >
                   <div>
                     <div
-                      className="inline-block px-3 md:px-4 py-2 text-white text-xs md:text-sm rounded-[6px] md:rounded-[8px] mb-4 md:mb-6"
+                      className="inline-block px-3 md:px-4 py-2 text-white text-xs md:text-sm rounded-[6px] md:rounded-[18px] mb-4 md:mb-6"
                       style={{
                         backgroundImage: "url('/Images/default-bg.png')",
                         backgroundSize: 'cover',
@@ -160,7 +160,7 @@ export default function ThirdPage() {
                     </div>
 
                     {/* Main Title */}
-                    <h2 className="font-isenheim text-black text-2xl md:text-4xl font-normal mb-3 md:mb-4 leading-tight text-left">
+                    <h2 className="font-isenheim text-black text-3xl md:text-5xl lg:text-6xl font-normal mb-3 md:mb-4 leading-tight text-left">
                       Rita: A Legacy of Expertise
                     </h2>
 
@@ -169,7 +169,7 @@ export default function ThirdPage() {
                       Unveiling Rita's Approach
                     </h3>
                     {/* Body Text - Exact content from image */}
-                    <div className="space-y-3 md:space-y-4 text-black text-sm md:text-base leading-relaxed text-left">
+                    <div className="space-y-4 text-black text-base md:text-lg leading-7 md:leading-8 text-left">
                       <p>
                         We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
                       </p>
@@ -181,7 +181,7 @@ export default function ThirdPage() {
                 </div>
 
                 {/* Read More Button - Now below the card */}
-                <div className="mt-4 md:mt-6 flex justify-center lg:justify-end">
+                <div className="mt-4 md:mt-6 flex justify-center lg:justify-left ml-84">
                   <button
                     className="text-white font-normal transition-colors btn-isenheim w-[clamp(200px,60vw,272px)] h-[clamp(60px,15vw,82px)] rounded-[20px] text-[clamp(14px,3vw,28px)]"
                     style={{
@@ -196,12 +196,12 @@ export default function ThirdPage() {
                 </div>
               </div>
 
-              <div className="w-1/2 pl-8 relative">
+              <div className="w-full lg:w-1/2 lg:pl-0 relative">
                 <div
-                  className="rounded-[30px] overflow-hidden"
+                  className="rounded-[30px] overflow-hidden mx-auto"
                   style={{
-                    width: '550px',
-                    height: '750px'
+                    width: 'clamp(520px, 40vw, 650px)',
+                    height: 'clamp(700px, 52vw, 885px)'
                   }}
                 >
                   <div
@@ -215,23 +215,15 @@ export default function ThirdPage() {
                   />
 
                   <div
-                    className="absolute bottom-3 md:bottom-6 right-3 md:right-6  mr-42 rounded-[15px] md:rounded-[30px] p-3 md:p-4 shadow-lg bg-white"
+                    className="absolute bottom-3 md:bottom-6 right-3 md:right-6  mr-12 rounded-[15px] md:rounded-[30px] p-3 md:p-4 shadow-lg bg-white "
                     style={{
                       width: 'clamp(200px, 50vw, 258px)',
                       height: 'clamp(80px, 20vh, 118px)'
                     }}
                   >
                     <div className="flex items-center gap-2 md:gap-3 h-full">
-                      <div className="w-8 md:w-12 h-8 md:h-12 rounded-full overflow-hidden">
-                        <div
-                          className="w-full h-full rounded-full"
-                          style={{
-                            backgroundImage: "url('/Images/MiniCardImg.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat'
-                          }}
-                        />
+                      <div className="w-8 md:w-18 h-8 md:h-22 overflow-hidden">
+                        <img src="/Images/MiniCardImg.png" alt="Rita profile" className="w-full h-full object-cover rounded-[10px]" />
                       </div>
 
                       {/* Content */}

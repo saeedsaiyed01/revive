@@ -545,7 +545,7 @@ export default function ConnectSection() {
               width: "1011px",
               height: "138px",
               top: "60px",
-              left: "50%",
+              left: "60%",
               transform: "translateX(-50%)",
               borderRadius: "30px"
             }}

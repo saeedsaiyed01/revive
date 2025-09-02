@@ -35,13 +35,13 @@ const shopPageData = {
       src: "/Images/rockFooter.png",
       width: 440,
       height: 437,
-      top: 2066,
+      top: 2256,
       left: -130,
     },
     info: {
       width: 1011,
       height: 138,
-      top: 2310,
+      top: 2480,
       left: 214.5,
       radius: 30,
       phone: "+966 53 867 4556",
@@ -68,14 +68,14 @@ export default function ShopPage() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          {/* Stone Overlay Background */}
+          {/* Stone Overlay Background - repeat twice vertically and align right */}
           <div
             className="absolute inset-0 bg-no-repeat"
             style={{
               backgroundImage: `url('${data.stoneOverlay.image}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
+              backgroundRepeat: "repeat-y",
+              backgroundSize: "100% 50%",
+              backgroundPosition: "right top",
             }}
           />
 
@@ -170,7 +170,7 @@ export default function ShopPage() {
 
                 {/* Central Contact Card */}
                 <div className="relative z-30 flex justify-center pt-16 mr-5">
-                  <div className="bg-white rounded-[25px] shadow-lg p-6 w-[215px] max-w-sm">
+                  <div className="bg-white rounded-[25px] shadow-lg p-6 w-[15px] max-w-sm">
                     <div className="text-center space-y-6">
                       {/* Phone */}
                       <div>
@@ -225,7 +225,7 @@ export default function ShopPage() {
           {/* Page frame */}
           <div
             className="relative mx-auto"
-            style={{ width: "1440px", minHeight: "2600px" }}
+            style={{ width: "1440px", minHeight: "2700px" }}
           >
             <div
               className="absolute bg-no-repeat rounded-[40px] overflow-hidden"
@@ -237,9 +237,10 @@ export default function ShopPage() {
                 transform: "translateX(-50%)",
                 borderRadius: `${data.stoneOverlay.borderRadius}px`,
                 backgroundImage: `url('${data.stoneOverlay.image}')`,
+                // Repeat exactly twice vertically
                 backgroundRepeat: "repeat-y",
-                backgroundSize: "100% auto",
-                backgroundPosition: "center top",
+                backgroundSize: "100% 50%",
+                backgroundPosition: "right top",
               }}
             />
 
@@ -320,39 +321,29 @@ export default function ShopPage() {
             />
 
             <div
-              className="absolute bg-white text-black grid grid-cols-3 items-center px-10"
+              className="absolute bg-white text-black flex items-center justify-between px-6 md:px-8 gap-10 xl:gap-24"
               style={{
-                width: `${data.footer.info.width}px`,
-                height: `${data.footer.info.height}px`,
+                width: "clamp(900px, 70vw, 1200px)",
+                height: "clamp(120px, 16vh, 170px)",
                 top: `${data.footer.info.top}px`,
-                left: "50%",
+                left: "64%",
                 transform: "translateX(-50%)",
                 borderRadius: `${data.footer.info.radius}px`,
                 boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
               }}
             >
-              <div>
-                <div className="text-sm text-black/60">
-                  contact us with phone
-                </div>
-                <div className="text-lg font-medium">
-                  {data.footer.info.phone}
-                </div>
+              <div className="text-center">
+                <div className="text-base text-black/60">contact us with phone</div>
+                <div className="text-xl font-medium">{data.footer.info.phone}</div>
               </div>
               <div className="text-center">
-                <div className="text-sm text-black/60">
-                  contact us with mail
-                </div>
-                <div className="text-lg font-medium">
-                  {data.footer.info.email}
-                </div>
+                <div className="text-base text-black/60">contact us with mail</div>
+                <div className="text-xl font-medium">{data.footer.info.email}</div>
               </div>
-              <div className="text-right">
-                <div className="text-lg font-medium">
-                  {data.footer.info.addressTitle}
-                </div>
-                <div className="text-sm">{data.footer.info.address1}</div>
-                <div className="text-sm">{data.footer.info.address2}</div>
+              <div className="text-center">
+                <div className="text-xl font-medium">{data.footer.info.addressTitle}</div>
+                <div className="text-base">{data.footer.info.address1}</div>
+                <div className="text-base">{data.footer.info.address2}</div>
               </div>
             </div>
           </div>

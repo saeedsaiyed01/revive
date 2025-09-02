@@ -4,32 +4,32 @@ const valueCards = [
   {
     icon: "/logos/MindfulPractices.png",
     title: "Mindful Practices",
-    description: "Cultivate inner peace and clarity through guided meditation and mindfulness exercises."
+    description: "Experience the art of mindfulness through guided techniques designed to calm your mind and enhance inner peace."
   },
   {
     icon: "/logos/Rejuvenation.png",
     title: "Rejuvenation",
-    description: "Restore your body and mind with revitalizing treatments and serene environments."
+    description: "Creating transformative experiences that restore balance and vitality for a more fulfilling life."
   },
   {
     icon: "/logos/SpiritualGrowth.png",
     title: "Spiritual Growth",
-    description: "Deepen your connection to self and the universe through ancient wisdom and practices."
+    description: "Experience the art of mindfulness through guided techniques designed to calm your mind and enhance inner peace."
   },
   {
     icon: "/logos/Healing.png",
     title: "Healing",
-    description: "Experience profound recovery and balance with our holistic healing modalities."
+    description: "Drawing from ancient wisdom and modern techniques to support deep inner healing."
   },
   {
     icon: "/logos/HolisticWellness.png",
     title: "Holistic Wellness",
-    description: "Achieve complete well-being by integrating physical, mental, and spiritual health."
+    description: "Achieve harmony of body, mind, and spirit with a holistic approach to health and well-being toward wellness."
   },
   {
     icon: "/logos/Empowerment.png",
     title: "Empowerment",
-    description: "Unlock your full potential and build resilience with empowering workshops and coaching."
+    description: "Inspiring individuals to embark on their wellness journey and create lasting positive change."
   }
 ];
 

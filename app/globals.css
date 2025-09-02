@@ -92,6 +92,20 @@ html {
   font-style: normal;
 }
 
+.card-description-Helvetica {
+  font-family: Helvetica Light;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  
+}
+
+
+
 .bg-gold-texture {
   background-image: linear-gradient(180deg,#f7d37a 0%, #c79a2f 55%, #8f6b1f 100%), var(--gold-texture);
   background-size: cover;

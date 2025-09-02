@@ -157,7 +157,7 @@ export default function BlogDetailLayout({
       <div className="hidden lg:block">
         <div className="relative mx-auto w-[1440px] min-h-[2800px]">
           <div
-            className="absolute overflow-hidden w-[1385px] h-[2094px] top-[162px] left-[28px] opacity-100 rounded-t-[50px]"
+            className="absolute overflow-hidden w-[1385px] h-[2094px] top-[162px] left-[28px] opacity-100 rounded-[50px]"
             style={{
               backgroundImage: "url('/Images/UpperBG.png')",
               backgroundSize: "100% auto",
@@ -184,7 +184,7 @@ export default function BlogDetailLayout({
           </div>
 
           <div
-            className="absolute overflow-hidden w-[961px] h-[1329px] top-[535px] left-[263px] rounded-[30px] opacity-100"
+            className="absolute overflow-hidden w-[961px] h-[1329px] top-[450px] left-[263px] rounded-[30px] opacity-100"
             style={{
               backgroundImage: contentBackgroundUrl
                 ? `url(${contentBackgroundUrl})`
@@ -195,7 +195,7 @@ export default function BlogDetailLayout({
             }}
           >
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 "
               style={{
                 backgroundImage: "url('/Images/SecondPageBG.png')",
                 backgroundSize: "cover",
@@ -208,7 +208,7 @@ export default function BlogDetailLayout({
                 {title}
               </h1>
             </div>
-            <div className="absolute inset-0 pt-[140px] px-[80px] pb-[40px] font-helvetica font-normal text-[30px] leading-[100%] text-white max-w-5xl mx-auto">
+            <div className="absolute inset-0 pt-[140px] px-[80px] pb-[40px] font-helvetica font-normal text-[30px] leading-[100%] text-white max-w-5xl mx-auto ">
               {children}
             </div>
           </div>
