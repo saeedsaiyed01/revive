@@ -120,7 +120,7 @@ export default function InsightsSection({ size = "md" }) {
       </div>
 
       {/* Desktop Layout */}
-      <div className=" lg:block relative z-10 w-full h-full flex flex-col items-center justify-center">
+      <div className="hidden lg:block relative z-10 w-full h-full flex flex-col items-center justify-center">
         <div className="flex items-center justify-between w-full max-w-4xl mb-6">
           <div
             className="absolute"

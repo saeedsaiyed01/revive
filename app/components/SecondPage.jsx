@@ -56,45 +56,25 @@ export default function SecondPage() {
         </div>
 
         {/* Value Cards */}
-        <div className="space-y-4">
+        <div className="space-y-8">
           {valueCards.map((card, index) => (
             <div
               key={index}
-              className="mx-auto rounded-[20px] overflow-hidden relative"
+              className="mx-auto rounded-[20px] overflow-hidden"
               style={{
                 width: '349px',
-                height: '103px',
                 backgroundImage: 'url(/Images/CardBG.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
               }}
             >
-              {/* Icon on Left */}
-              <div 
-                className="absolute"
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  top: '32px',
-                  left: '45px',
-                  opacity: 1
-                }}
-              >
-                <img src={card.icon} alt={card.title} width={40} height={40} className="ml-[-10px]" />
-              </div>
-              
-              {/* Content on Right */}
-              <div 
-                className="absolute"
-                style={{
-                  top: '10px',
-                  left: '100px',
-                  right: '20px'
-                }}
-              >
-                <h3 className="text-[#1E1E1E] font-normal text-base mb-2" style={{ fontFamily: 'card-title-isenheim' }}>{card.title}</h3>
-                <p className="text-[#1E1E1E] text-sm leading-tight" style={{ fontFamily: 'card-title-isenheim' }}>{card.description}</p>
+              <div className="flex items-start gap-4 p-5">
+                <img src={card.icon} alt={card.title} width={40} height={40} className="w-10 h-10 shrink-0" />
+                <div>
+                  <h3 className="card-title-isenheim text-[#1E1E1E] text-base mb-1 font-normal">{card.title}</h3>
+                  <p className="text-[#1E1E1E] text-sm leading-snug">{card.description}</p>
+                </div>
               </div>
             </div>
           ))}

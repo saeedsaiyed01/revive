@@ -83,7 +83,7 @@ export default function FourthPage() {
                 height: '38px',
                 borderRadius: '20px',
                 opacity: 1,
-                backgroundImage: "url('/Images/default-bg.png')",
+                backgroundImage: "url('/Images/CardBG.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -108,63 +108,72 @@ export default function FourthPage() {
               </div>
             </div>
           </div>
-          <div className="relative px-4 pb-8">
-            <div
-              className="relative rounded-[25px] overflow-hidden shadow-lg"
-              style={{
-                height: '500px',
-                backgroundImage: "url('/Images/CardBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            >
-        
+          <div className="relative px-0 pb-8 overflow-x-hidden">
+            <div className="relative overflow-x-hidden" style={{ width: '100vw', height: '400px', marginLeft: 'calc(-50vw + 50%)' }}>
+              {/* Previous Card peek */}
               <div
-                className="w-full h-2/3"
-                style={{
-                  backgroundImage: `url(${retreats[currentIndex].image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
-                }}
-              />
-
-              <button
-                onClick={prevSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ width: '180px', height: '350px', left: '-140px', top: '25px', opacity: 0.7 }}
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-              >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              {/* Text Overlay */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1/3 p-4 flex flex-col justify-center items-center"
-                style={{
-                  backgroundImage: "url('/Images/CardBG.png')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'left-63',
-                  backgroundRepeat: 'no-repeat'
-                }}
-              >
-                <h3 className="text-black card-title-isenheim text-xl font-normal mb-2">
-                  {retreats[currentIndex].title}
-                </h3>
-                <p className="text-black card-description text-sm leading-relaxed ml-8  ">
-                  {retreats[currentIndex].description}
-                </p>
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${retreats[(currentIndex - 1 + retreats.length) % retreats.length].image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                <div className="h-1/3 p-3" style={{ backgroundImage: "url('/Images/CardBG.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                  <h3 className="text-black font-serif font-bold text-xs mb-1" style={{ fontFamily: 'Isenheim, serif' }}>{retreats[(currentIndex - 1 + retreats.length) % retreats.length].title}</h3>
+                  <p className="text-black text-xs leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>{retreats[(currentIndex - 1 + retreats.length) % retreats.length].description}</p>
+                </div>
               </div>
+
+              {/* Main Card */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 rounded-[25px] overflow-hidden shadow-lg" style={{ width: '300px', height: '400px' }}>
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${retreats[currentIndex].image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 p-4" style={{ backgroundImage: "url('/Images/CardBG.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                  <h3 className="text-black font-serif font-bold text-lg mb-2" style={{ fontFamily: 'Isenheim, serif' }}>{retreats[currentIndex].title}</h3>
+                  <p className="text-black text-sm leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>{retreats[currentIndex].description}</p>
+                </div>
+              </div>
+
+              {/* Next Card peek */}
+              <div
+                className="absolute rounded-[25px] overflow-hidden shadow-lg"
+                style={{ width: '180px', height: '350px', right: '-140px', top: '25px', opacity: 0.7 }}
+              >
+                <div
+                  className="w-full h-2/3"
+                  style={{
+                    backgroundImage: `url(${retreats[(currentIndex + 1) % retreats.length].image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                <div className="h-1/3 p-3" style={{ backgroundImage: "url('/Images/default-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                  <h3 className="text-black font-serif font-bold text-xs mb-1" style={{ fontFamily: 'Isenheim, serif' }}>{retreats[(currentIndex + 1) % retreats.length].title}</h3>
+                  <p className="text-black text-xs leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>{retreats[(currentIndex + 1) % retreats.length].description}</p>
+                </div>
+              </div>
+
+              {/* Nav Arrows outside */}
+              <button onClick={prevSlide} className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10" style={{ left: 'calc(50% - 160px)', backgroundImage: "url('/Images/default-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+              </button>
+              <button onClick={nextSlide} className="absolute left-1/2 -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10" style={{ left: 'calc(50% + 160px)', backgroundImage: "url('/Images/default-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 12H5M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+              </button>
             </div>
           </div>
         </div>

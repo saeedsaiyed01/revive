@@ -12,7 +12,7 @@ export default function ThirdPage() {
         className="relative min-h-screen w-full"
       >
         {/* Mobile Layout */}
-        <div className="lg:hidden relative z-10 min-h-screen"
+        <div className="lg:hidden relative z-10"
           style={{
             backgroundImage: "url('/Images/UpperBG.png')",
             backgroundSize: 'cover',
@@ -20,94 +20,64 @@ export default function ThirdPage() {
             backgroundRepeat: 'no-repeat'
           }}
         >
-            <div className="ml-34">
-            <div
-              className="inline-block px-6 py-2 rounded-full text-white about-card-desc font-medium text-base bg-[url('/Images/default-bg.png')] bg-cover bg-center"
-            >
-              Our Values
+          <div className="px-4 pt-20 pb-20">
+            <div className="flex justify-center">
+              <div
+                className="inline-block px-6 py-2 rounded-full text-white about-card-desc font-medium text-base bg-[url('/Images/default-bg.png')] bg-cover bg-center"
+              >
+                Our Values
+              </div>
             </div>
-          </div>
-          {/* 1st: Rita: A Legacy of Expertise - White box */}
-          <div
-            className="absolute"
-            style={{
-              width: '363px',
-              height: '99px',
-              top: '40px',
-              left: '29px',
-              borderRadius: '20px',
-              opacity: 1,
-              backgroundColor: 'white'
-            }}
-          >
-            
-            <div className="p-4 flex flex-col justify-between h-full ">
-              <h2 className="text-black text-xl card-title-isenheim leading-tight ml-12">
-                Rita: A Legacy of 
+
+            {/* 1st: Rita: A Legacy of Expertise - White box */}
+            <div className="mt-6 bg-white rounded-[20px] p-5 text-center">
+              <h2 className="text-black text-xl card-title-isenheim leading-tight">
+                Rita: A Legacy of
               </h2>
-              <h2 className="text-black text-xl card-title-isenheim leading-tight ml-22">Expertise</h2>
-              {/* <p className="text-black text-sm leading-tight">
-                We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
-              </p> */}
+              <h2 className="text-black text-xl card-title-isenheim leading-tight">Expertise</h2>
             </div>
-          </div>
 
-          {/* 2nd: Image */}
-          <div
-            className="absolute"
-            style={{
-              width: '318px',
-              height: '424px',
-              top: '150px',
-              left: '61px',
-              borderRadius: '20px',
-              opacity: 1,
-              backgroundImage: "url('/Images/GirlCardimg.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-
-          {/* 3rd: Card with content */}
-          <div
-            className="absolute"
-            style={{
-              width: '395px',
-              height: '319px',
-              top: '580px',
-              left: '13px',
-              borderRadius: '20px',
-              opacity: 1,
-              backgroundImage: "url('/Images/CardBG.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <div className="p-6 h-full flex flex-col justify-between ">
-              <div>
-              
-                {/* Main Title */}
-                {/* <h2 className="text-black text-2xl font-normal  leading-tight mb-4">
-                  Rita: A Legacy of Expertise
-                </h2> */}
-
-                {/* Subtitle */}
-                <h3 className="text-black card-title-isenheim  mb-4 leading-tight" style={{ fontSize: '15px' }}>                  Unveiling Rita's Approach
-                </h3>
-                
-                {/* Body Text - Font size 15px */}
-                <div className="space-y-3 about-card-desc text-black leading-relaxed" style={{ fontSize: '15px' }}>
-                  <p>
-                    We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
-                  </p>
-                 
+            {/* 2nd: Image with profile badge */}
+            <div className="mt-6 relative rounded-[20px] overflow-hidden">
+              <img src="/Images/GirlCardimg.png" alt="Rita" className="w-full h-auto rounded-[20px]" />
+              <div
+                className="absolute bottom-3 right-3 rounded-[15px] p-3 shadow-lg bg-white"
+                style={{ width: '220px', height: '90px' }}
+              >
+                <div className="flex items-center gap-2 h-full">
+                  <div className="w-10 h-10 overflow-hidden rounded-[10px]">
+                    <img src="/Images/MiniCardImg.png" alt="Rita profile" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-1 mb-1">
+                      <img src="/logos/Start.png" alt="star" />
+                    </div>
+                    <p className="font-semibold text-gray-600 text-xs">Rita - Founder</p>
+                    <p className="text-gray-600 text-[10px] leading-tight">Wellness expert with over 15 years of experience</p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Read More Button */}
-              <div className="flex justify-end">
+            {/* 3rd: Card with content */}
+            <div
+              className="mt-6 rounded-[20px] p-6"
+              style={{
+                backgroundImage: "url('/Images/CardBG.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <h3 className="text-black card-title-isenheim mb-3 leading-tight" style={{ fontSize: '15px' }}>
+                Unveiling Rita's Approach
+              </h3>
+              <div className="space-y-3 about-card-desc text-black leading-relaxed" style={{ fontSize: '15px' }}>
+                <p>
+                  We differentiate ourselves through a unique blend of diverse wellness practices, all led by our internationally certified wellness expert, Rita. Our retreats are tailored to meet the individual needs of our clients, offering flexible formats from short sessions to immersive multi-day programs.
+                </p>
+              </div>
+              <div className="flex justify-end mt-4">
                 <button
                   className="text-white font-normal transition-colors w-[120px] h-[40px] rounded-[20px] text-[14px]"
                   style={{

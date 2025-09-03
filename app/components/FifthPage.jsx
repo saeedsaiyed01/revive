@@ -153,71 +153,48 @@ export default function FifthPage() {
           </div>
         </div>
 
-        {/* Carousel Section */}
-        <div className="relative mb-8">
-          <div className="relative rounded-[25px] overflow-hidden shadow-lg" style={{ height: '600px' }}>
-            {/* Main Image */}
-            <div
-              className="w-full h-2/3"
-              style={{
-                backgroundImage: `url(${classes[currentIndex].image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            />
+        {/* Carousel Section with side peeks */}
+        <div className="relative mb-8 overflow-x-hidden">
+          <div className="relative overflow-x-hidden" style={{ width: '100vw', height: '600px', marginLeft: 'calc(-50vw + 50%)' }}>
+            {/* Previous Card (peek) */}
+            <div className="absolute rounded-[25px] overflow-hidden shadow-lg" style={{ width: '200px', height: '520px', left: '-150px', top: '40px', opacity: 0.7 }}>
+              <div className="w-full h-2/3" style={{ backgroundImage: `url(${classes[(currentIndex - 1 + classes.length) % classes.length].image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
+              <div className="h-1/3 p-3" style={{ backgroundImage: "url('/Images/CardBG.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <h3 className="text-black font-serif font-bold text-sm mb-1" style={{ fontFamily: 'Isenheim, serif' }}>{classes[(currentIndex - 1 + classes.length) % classes.length].title}</h3>
+                <p className="text-gray-800 text-xs leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>{classes[(currentIndex - 1 + classes.length) % classes.length].description}</p>
+              </div>
+            </div>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-            >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-[#F2D282] flex items-center justify-center shadow-lg"
-            >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Text Overlay */}
-            <div
-              className="absolute bottom-0 left-0 right-0 h-1/3 p-4"
-              style={{
-                backgroundImage: "url('/Images/CardBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
-            >
-              <h3 className="text-black font-serif font-bold text-xl mb-2" style={{ fontFamily: 'Isenheim, serif' }}>
-                {classes[currentIndex].title}
-              </h3>
-              <p className="text-gray-800 text-sm leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>
-                {classes[currentIndex].description}
-              </p>
-
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-600 text-sm">🕐</span>
-                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Time: {classes[currentIndex].time}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-600 text-sm">📍</span>
-                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Place: {classes[currentIndex].place}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-amber-600 text-sm">🧘‍♀️</span>
-                  <span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Equipment: {classes[currentIndex].equipment}</span>
+            {/* Main Card */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 rounded-[25px] overflow-hidden shadow-lg" style={{ width: '320px', height: '600px' }}>
+              <div className="w-full h-2/3" style={{ backgroundImage: `url(${classes[currentIndex].image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 p-4" style={{ backgroundImage: "url('/Images/CardBG.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <h3 className="text-black font-serif font-bold text-xl mb-2" style={{ fontFamily: 'Isenheim, serif' }}>{classes[currentIndex].title}</h3>
+                <p className="text-gray-800 text-sm leading-relaxed mb-3" style={{ fontFamily: 'Helvetica, sans-serif' }}>{classes[currentIndex].description}</p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2"><span className="text-amber-600 text-sm">🕐</span><span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Time: {classes[currentIndex].time}</span></div>
+                  <div className="flex items-center gap-2"><span className="text-amber-600 text-sm">📍</span><span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Place: {classes[currentIndex].place}</span></div>
+                  <div className="flex items-center gap-2"><span className="text-amber-600 text-sm">🧘‍♀️</span><span className="text-gray-800 text-xs" style={{ fontFamily: 'Helvetica, sans-serif' }}>Equipment: {classes[currentIndex].equipment}</span></div>
                 </div>
               </div>
             </div>
+
+            {/* Next Card (peek) */}
+            <div className="absolute rounded-[25px] overflow-hidden shadow-lg" style={{ width: '200px', height: '520px', right: '-150px', top: '40px', opacity: 0.7 }}>
+              <div className="w-full h-2/3" style={{ backgroundImage: `url(${classes[(currentIndex + 1) % classes.length].image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
+              <div className="h-1/3 p-3" style={{ backgroundImage: "url('/Images/CardBG.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <h3 className="text-black font-serif font-bold text-sm mb-1" style={{ fontFamily: 'Isenheim, serif' }}>{classes[(currentIndex + 1) % classes.length].title}</h3>
+                <p className="text-gray-800 text-xs leading-relaxed" style={{ fontFamily: 'Helvetica, sans-serif' }}>{classes[(currentIndex + 1) % classes.length].description}</p>
+              </div>
+            </div>
+
+            {/* Navigation Arrows - outside */}
+            <button onClick={prevSlide} className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10" style={{ left: 'calc(50% - 170px)', backgroundImage: "url('/Images/default-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+            </button>
+            <button onClick={nextSlide} className="absolute left-1/2 -translate-x-1/2 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10" style={{ left: 'calc(50% + 170px)', backgroundImage: "url('/Images/default-bg.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 12H5M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+            </button>
           </div>
         </div>
 

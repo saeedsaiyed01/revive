@@ -175,29 +175,37 @@ export default function Navbar(props) {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4">
-            <div className="rounded-2xl bg-black/30 backdrop-blur-sm p-6">
-              <ul className="space-y-3 text-white">
-                {content.items.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => {
-                        handleTabClick(item.label);
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={[
-                        "navbar-text block w-full py-3 px-4 rounded-xl transition-colors",
-                        activeTab === item.label
-                          ? "bg-white/95 text-[#c79a2f]"
-                          : "hover:bg-white/20"
-                      ].join(" ")}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div className="lg:hidden">
+            <div className="fixed inset-0 z-40">
+              <div
+                className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              <div className="absolute inset-x-0 top-0 pt-[112px] overflow-y-auto">
+                <div className="mx-4 mb-6 rounded-2xl bg-black/60 p-5">
+                  <ul className="space-y-2 text-white">
+                    {content.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => {
+                            handleTabClick(item.label);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={[
+                            "navbar-text block w-full py-4 px-4 rounded-xl transition-colors",
+                            activeTab === item.label
+                              ? "bg-white/95 text-[#c79a2f]"
+                              : "hover:bg-white/20"
+                          ].join(" ")}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}

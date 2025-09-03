@@ -456,9 +456,9 @@ export default function ConnectSection() {
             className="absolute z-50"
             style={{
               width: "252.72311401367188px",
-              height: "251px",
-              top: "6086px",
-              left: "-84px",
+              height: "300px",
+              top: "86px",
+              left: "-94px",
               transform: "rotate(0deg)",
               opacity: 1
             }}
@@ -475,9 +475,9 @@ export default function ConnectSection() {
             className="absolute z-50"
             style={{
               width: "252.72311401367188px",
-              height: "251px",
-              top: "6086px",
-              right: "-84px",
+              height: "302px",
+              top: "86px",
+              right: "-134px",
               transform: "rotate(0deg)",
               opacity: 1
             }}
@@ -491,8 +491,8 @@ export default function ConnectSection() {
 
           {/* Central Contact Card */}
           <div className="relative z-30 flex justify-center pt-16 pb-8">
-            <div className="bg-white rounded-[25px] shadow-lg p-6 w-full max-w-sm">
-              <div className="text-center space-y-6">
+            <div className="bg-white rounded-[25px] shadow-lg p-6 w-60 max-w-sm">
+              <div className="text-center space-y-6 ">
                 {/* Phone */}
                 <div>
                   <p className="font-medium mb-1 text-gray-900 text-lg">+966 53 867 4556</p>
@@ -524,20 +524,6 @@ export default function ConnectSection() {
             alt="Upper Background"
             className="   inset-0 w-full h-[338px] object-cover"
           />
-
-          <div
-            className="absolute ml-[-70px] top-[-180px] z-50"
-            style={{
-              width: "440px",
-              height: "437px"
-            }}
-          >
-            <img
-              src="/Images/rockFooter.png"
-              alt="Rock Footer"
-              className="w-full h-full object-contain"
-            />
-          </div>
 
           <div
             className="absolute bg-white shadow-lg z-30"
