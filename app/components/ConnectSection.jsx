@@ -524,6 +524,23 @@ export default function ConnectSection() {
             alt="Upper Background"
             className="   inset-0 w-full h-[338px] object-cover"
           />
+             <div 
+            className="absolute z-50"
+            style={{
+              width: "440.72311401367188px",
+              height: "437px",
+              top: "-178px",
+              left: "-94px",
+              transform: "rotate(0deg)",
+              opacity: 1
+            }}
+          >
+            <img
+              src="/Images/rockFooter.png"
+              alt="Rock Footer Left"
+              className="w-full h-full object-contain"
+            />
+          </div>
 
           <div
             className="absolute bg-white shadow-lg z-30"
