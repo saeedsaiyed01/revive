@@ -280,7 +280,7 @@ export default function ProgramsPage() {
                   viewBox="0 0 24 24"
                 >
                   <path d="M19 12H5M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                </svg>
+                </svg>s
               </button>
             </div>
           </div>
@@ -413,7 +413,7 @@ export default function ProgramsPage() {
             </div>
             <div className="text-center mt-12">
               <button
-                className="text-white transition-colors shadow-lg w-[272px] h-[182px] rounded-[30px] btn-isenheim  text-[25px] leading-[30px]"
+                className="text-white transition-colors shadow-lg w-[272px] h-[82px] rounded-[30px] btn-isenheim  text-[25px] leading-[30px]"
                 style={{
                   backgroundImage: "url('/Images/default-bg.png')",
                   backgroundSize: "cover",

@@ -362,7 +362,7 @@ export default function FourthPage() {
               </div>
 
               {/* Central Contact Card */}
-              <div className="relative z-30 flex justify-center pt-16">
+              <div className="relative z-30 flex justify-center pt-16 ">
                 <div className="bg-white rounded-[25px] shadow-lg p-6 w-[225px] max-w-sm">
                   <div className="text-center space-y-6">
                     {/* Phone */}
@@ -508,7 +508,7 @@ export default function FourthPage() {
             style={{
               width: "1011px",
               height: "138px",
-              top: "110px",
+              top: "230px",
               left: "395px",
               opacity: 1,
               backgroundSize: "cover",
